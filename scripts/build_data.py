@@ -663,11 +663,20 @@ def main(argv: list[str] | None = None) -> int:
     now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
     guidelines = finalize(records, all_sources, tagger, previous, now.date().isoformat())
 
-    # On a partial run keep everything from sources that were not re-fetched.
-    if only:
-        fresh = {g["id"] for g in guidelines}
-        guidelines += [g for g in previous.values()
-                       if g["id"] not in fresh and not set(g["sources"]) & only]
+    # Keep the previous records of sources not re-fetched (a partial run) or
+    # whose PubMed search failed this time (NCBI outages happen), so a bad
+    # night never empties an organization's list.
+    failed_pubmed = {r["id"] for r in report if any(e.startswith("pubmed") for e in r["errors"])}
+    refetched = {s["id"] for s in active} - failed_pubmed
+    fresh = {g["id"] for g in guidelines}
+    enabled = {s["id"] for s in cfg["sources"] if s.get("enabled", True)}
+    keep = failed_pubmed | (enabled - {s["id"] for s in active})
+    carried = [g for g in previous.values()
+               if g["id"] not in fresh and set(g["sources"]) & keep
+               and not set(g["sources"]) & refetched]
+    if carried:
+        print(f"kept {len(carried)} previous records from sources not refreshed this run", flush=True)
+        guidelines += carried
         guidelines.sort(key=lambda r: (r["date"] or "", r["title"]), reverse=True)
 
     untagged = [g for g in guidelines if not g["conditions"]]

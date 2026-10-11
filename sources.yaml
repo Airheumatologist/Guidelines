@@ -512,11 +512,6 @@ sources:
     pubmed:
       journals: ["Thorax", "BMJ Open Respir Res"]
       title_terms: ["BTS", "British Thoracic Society"]
-    web:
-      - url: https://www.brit-thoracic.org.uk/quality-improvement/guidelines/
-        link_pattern: 'brit-thoracic\.org\.uk/quality-improvement/(guidelines|quality-standards)/[a-z]'
-        keywords: '.'
-        new_only: true
 
   - id: gina-gold
     name: Global Initiative for Asthma / Global Initiative for Chronic Obstructive Lung Disease
@@ -715,11 +710,6 @@ sources:
     pubmed:
       journals: ["Br J Haematol"]
       title_terms: ["BSH", "British Society for Haematology"]
-    web:
-      - url: https://b-s-h.org.uk/guidelines
-        link_pattern: 'b-s-h\.org\.uk/guidelines/guidelines/'
-        keywords: '.'
-        new_only: true
 
   - id: eha
     name: European Hematology Association
@@ -879,11 +869,6 @@ sources:
     pubmed:
       journals: ["J Psychopharmacol", "Br J Psychiatry", "BJPsych Open"]
       title_terms: ["Royal College of Psychiatrists", "British Association for Psychopharmacology", "BAP"]
-    web:
-      - url: https://www.rcpsych.ac.uk/improving-care/campaigning-for-better-mental-health-policy/college-reports
-        link_pattern: 'college-reports/\d{4}-college-reports/|college-reports/[a-z0-9-]{12,}'
-        keywords: '.'
-        new_only: true
 
   - id: canmat
     name: Canadian Network for Mood and Anxiety Treatments
