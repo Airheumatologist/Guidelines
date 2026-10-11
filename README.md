@@ -37,16 +37,15 @@ every issuing society.
 
 * `scripts/build_data.py` rebuilds `site/data/guidelines.json` and the RSS feed
   `site/feed.xml` (newest guidelines, for any feed reader).
-* `.github/workflows/refresh.yml` runs it daily at 05:17 UTC, commits changed
-  data, and deploys `site/` to GitHub Pages once Pages is enabled.
+* `.github/workflows/refresh.yml` runs it daily at 05:17 UTC and on every push
+  to `main`, commits changed data, and deploys `site/` to GitHub Pages.
 * Optional settings: repository secret `NCBI_API_KEY` (faster PubMed access) and
   variable `NCBI_EMAIL` (contact address NCBI asks API users to send).
 
 ### Turning on GitHub Pages
 
-1. Settings → Pages → *Build and deployment* → Source: **GitHub Actions**.
-2. Settings → Secrets and variables → Actions → Variables → add `PAGES_ENABLED` = `true`.
-3. Run the *Refresh guidelines* workflow on `main`.
+Settings → Pages → *Build and deployment* → Source: **GitHub Actions**. The
+next run of *Refresh guidelines* on `main` deploys the site.
 
 Pages on a private repository needs a paid GitHub plan; otherwise make the
 repository public or host `site/` on any static host.
