@@ -12,7 +12,7 @@
       <PublicationTypeList><PublicationType>Practice Guideline</PublicationType></PublicationTypeList>
       <ArticleDate DateType="Electronic"><Year>2024</Year><Month>03</Month><Day>05</Day></ArticleDate>
     </Article>
-    <MeshHeadingList><MeshHeading><DescriptorName>Arthritis, Rheumatoid</DescriptorName></MeshHeading></MeshHeadingList>
+    <MeshHeadingList><MeshHeading><DescriptorName MajorTopicYN="Y">Arthritis, Rheumatoid</DescriptorName></MeshHeading><MeshHeading><DescriptorName MajorTopicYN="N">Myocardial Infarction</DescriptorName></MeshHeading></MeshHeadingList>
   </MedlineCitation>
   <PubmedData><ArticleIdList><ArticleId IdType="pubmed">1000001</ArticleId></ArticleIdList></PubmedData>
 </PubmedArticle>

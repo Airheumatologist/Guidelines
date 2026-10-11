@@ -24,6 +24,8 @@ class ParseTests(unittest.TestCase):
         self.assertEqual(art["doi"], "10.1000/example.1")
         self.assertEqual(art["date"], "2024-03-05")
         self.assertIn("Arthritis, Rheumatoid", art["mesh"])
+        self.assertIn("Myocardial Infarction", art["mesh"])
+        self.assertEqual(art["mesh_major"], ["Arthritis, Rheumatoid"])
         self.assertFalse(art["title"].endswith("."))
         self.assertEqual(book["journal"], "World Health Organization")
         self.assertEqual(book["date"], "2023-07-01")
@@ -117,6 +119,73 @@ class WebTests(unittest.TestCase):
                             "New Guidelines Advance Treatment of Axial Spondyloarthritis in Adults and Youth")
         self.assertEqual(url, "https://rheumatology.org/axial-spondyloarthritis-guideline")
 
+    PR_BODY = ('<a href="/axial-spondyloarthritis-guideline">Axial Spondyloarthritis</a>'
+               '<a href="/osteoarthritis-guideline">Osteoarthritis</a>'
+               '<a href="/axial-spondyloarthritis-guideline#2026-axspa-guidelines-summary">'
+               'View 2026 axSpA Guidelines Summary &rarr;</a>')
+    ACR_TARGET = r"rheumatology\.org/(?!clinical-practice-guidelines)[a-z0-9-]*guideline[a-z0-9-]*/?(?:[?#].*)?$"
+
+    def test_link_fragment_from_cta(self):
+        frag = bd._link_fragment(self.PR_BODY, "https://rheumatology.org/press-releases/x",
+                                 self.ACR_TARGET, "https://rheumatology.org/axial-spondyloarthritis-guideline")
+        self.assertEqual(frag, "2026-axspa-guidelines-summary")
+
+    LANDING = """<html><body>
+      <a href="/lupus-guideline">Lupus</a>
+      <a href="https://assets.contentstack.io/v3/assets/x/blt1/jia-summary-2015.pdf">Summary: 2015 JIA Guidelines</a>
+      <a href="https://assets.contentstack.io/v3/assets/x/blt2/jia-appendix-2026.pdf">Appendix – PICO Questions 2026</a>
+      <a href="https://assets.contentstack.io/v3/assets/x/blt3/jia-guidelines-summary-2026.pdf">Summary: 2026 JIA Guidelines Posted May 13, 2026</a>
+      <a href="https://assets.contentstack.io/v3/assets/x/blt4/axspa-guideline-summary-2026.pdf">Summary: 2026 Axial SpA Guidelines Posted June 24, 2026</a>
+      <a href="https://doi.org/10.1002/art.41042">2019 Update of the ACR Recommendations for JIA</a>
+    </body></html>"""
+    DOC_PAGE = {"document_link": r"assets\.contentstack\.io|doi\.org/10\.", "document_anchor": "summary"}
+
+    def test_resolve_document_uses_slug_acronym(self):
+        # "JIA" shares no token with "juvenile idiopathic arthritis"; the
+        # landing-page slug supplies the acronym. The cross-linked axSpA
+        # summary and the 2015/2019 documents must not win.
+        item = {"title": "ACR Releases Updated Guidelines for Treatment of Juvenile Idiopathic Arthritis",
+                "date": "2026-05-13"}
+        doc = bd._resolve_document(self.LANDING, "https://rheumatology.org/juvenile-idiopathic-arthritis-guideline",
+                                   item, self.DOC_PAGE)
+        self.assertEqual(doc[0], "https://assets.contentstack.io/v3/assets/x/blt3/jia-guidelines-summary-2026.pdf")
+        self.assertEqual(doc[1], "doc")
+        self.assertIsNone(doc[2])
+
+    def test_resolve_document_prefers_year_and_fragment(self):
+        item = {"title": "New Guidelines Advance Treatment of Axial Spondyloarthritis in Adults and Youth",
+                "date": "2026-06-24"}
+        doc = bd._resolve_document(self.LANDING, "https://rheumatology.org/axial-spondyloarthritis-guideline",
+                                   item, self.DOC_PAGE, frag="2026-axspa-guidelines-summary")
+        self.assertEqual(doc[0], "https://assets.contentstack.io/v3/assets/x/blt4/axspa-guideline-summary-2026.pdf")
+
+    def test_resolve_document_returns_doi_of_matching_article(self):
+        body = ('<a href="https://doi.org/10.1002/acr2.11194">2021 ACR Vasculitis Guideline</a>'
+                '<a href="https://assets.contentstack.io/v3/a/b/c/vasculitis-older.pdf">Summary: 2019 Vasculitis</a>')
+        item = {"title": "ACR Releases Vasculitis Guideline", "date": "2021-08-02"}
+        doc = bd._resolve_document(body, "https://rheumatology.org/vasculitis-guideline", item, self.DOC_PAGE)
+        self.assertEqual(doc[1], "doi")
+        self.assertEqual(doc[2], "10.1002/acr2.11194")
+
+    def test_resolve_document_floor(self):
+        # Nothing relevant on the page -> keep the landing-page URL.
+        item = {"title": "ACR Releases Updated Lyme Disease Guideline", "date": "2026-01-01"}
+        self.assertIsNone(bd._resolve_document(self.LANDING, "https://rheumatology.org/lyme-disease-guideline",
+                                               item, self.DOC_PAGE))
+
+    def test_find_indexed_dois(self):
+        class FakeEU:
+            def search(self, term, retmax):
+                self.term = term
+                return 1, ["999"]
+            def fetch(self, ids):
+                return [{"pmid": "999", "doi": "10.1016/j.jacc.2026.07.025",
+                         "title": "Fifth Universal Definition of MI", "journal": "J Am Coll Cardiol",
+                         "date": "2026-09-15", "mesh": [], "keywords": []}]
+        found = bd.find_indexed_dois(FakeEU(), {"10.1016/j.jacc.2026.07.025", "10.1/not-indexed"})
+        self.assertEqual(found["10.1016/j.jacc.2026.07.025"]["pmid"], "999")
+        self.assertNotIn("10.1/not-indexed", found)
+
     def test_new_since_baseline(self):
         a = {"title": "Guideline A", "url": "https://x/a", "date": None}
         b = {"title": "Guideline B", "url": "https://x/b", "date": None}
@@ -163,6 +232,16 @@ class TaggingTests(unittest.TestCase):
         self.assertEqual(names, ["Gout"])
         self.assertEqual(specs, ["Rheumatology"])
         names, _ = self.tag("Guideline on something", mesh=["Atrial Fibrillation"])
+        self.assertIn("Atrial Fibrillation", names)
+
+    def test_minor_mesh_ignored(self):
+        # Minor-topic MeSH (comorbidities, passing mentions) must not tag.
+        rec = {"title": "Guideline on something", "mesh": ["Atrial Fibrillation"],
+               "mesh_major": [], "keywords": []}
+        names, _ = self.tagger.tag(rec)
+        self.assertNotIn("Atrial Fibrillation", names)
+        rec["mesh_major"] = ["Atrial Fibrillation"]
+        names, _ = self.tagger.tag(rec)
         self.assertIn("Atrial Fibrillation", names)
 
     def test_word_boundaries(self):

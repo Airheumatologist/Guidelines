@@ -38,6 +38,15 @@
 #                  strip:        regex removed from the link text (dates, labels)
 #                  follow:       true to open each link and use its own title/date
 #                  follow_limit: how many links to open (default 25)
+#                  target_link:  regex for the guideline page a followed link
+#                                points at (a press release's target); links may
+#                                carry #section fragments marking the new part
+#                  document_link: regex for the document link to prefer on the
+#                                target page (journal DOI > summary PDF);
+#                                default: .pdf / doi.org/10. / /doi/10.
+#                  document_anchor: regex the document link's text or filename
+#                                must match; default: summary|full guideline|
+#                                recommendation
 #                  new_only:     for undated A-Z list pages: the first run stores
 #                                every link as a baseline; links that appear
 #                                later are published, dated the day first seen
@@ -126,7 +135,11 @@ sources:
         keywords: 'guideline|guidance|recommendation'
         strip: '^\d{1,2}/\d{1,2}/\d{2,4}|(ACR News|Clinical Practice Guidelines|Press Release).*$'
         follow: true
-        target_link: 'rheumatology\.org/(?!clinical-practice-guidelines)[a-z0-9-]*guideline[a-z0-9-]*/?$'
+        target_link: 'rheumatology\.org/(?!clinical-practice-guidelines)[a-z0-9-]*guideline[a-z0-9-]*/?(?:[?#].*)?$'
+        # ACR landing pages list every version plus appendices; the new document
+        # is the "Summary: YYYY …" PDF (or the journal DOI once published).
+        document_link: 'assets\.contentstack\.io|doi\.org/10\.|/doi/10\.|wiley\.com/doi/'
+        document_anchor: 'summary|full guideline|recommendation'
 
   - id: eular
     name: European Alliance of Associations for Rheumatology
@@ -146,14 +159,15 @@ sources:
                  "Circ Heart Fail", "Circ Cardiovasc Qual Outcomes", "Circ Genom Precis Med",
                  "Circ Popul Health Outcomes", "Circ Arrhythm Electrophysiol", "Circ Cardiovasc Interv",
                  "Circ Cardiovasc Imaging", "Arterioscler Thromb Vasc Biol", "Heart Rhythm",
-                 "JACC Adv", "JACC Heart Fail", "JACC Cardiovasc Interv", "JACC Cardiovasc Imaging"]
+                 "JACC Adv", "JACC Heart Fail", "JACC Cardiovasc Interv", "JACC Cardiovasc Imaging",
+                 "JACC Clin Electrophysiol"]
       title_terms: ["American Heart Association", "American College of Cardiology", "AHA", "ACC", "American Stroke Association"]
     web:
       # ACC lists its guidelines, decision pathways and statements with JACC DOI links.
       - url: https://www.acc.org/guidelines
         link_pattern: 'jacc\.org/doi/10\.'
         keywords: '.'
-        strip: '^(Guidelines|Expert Consensus Decision Pathways|Scientific Statements|Health Policy Statements|Appropriate Use Criteria|Performance Measures)\s+(\d{4}\s+)?|\[Reaffirmed\]|Go to .*$|Read the \d{4} Guideline'
+        strip: '^(Guidelines|Expert Consensus Decision Pathways|Scientific Statements|Health Policy Statements|Appropriate Use Criteria|Performance Measures|Clinical Performance and Quality Measures|Universal Definitions|Clinical Documents)\s+(\d{4}\s+)?|^New\s+(?=\d{4}\s)|\[Reaffirmed\]|Go to .*$|Read the \d{4} Guideline'
     rss:
       - https://www.ahajournals.org/action/showFeed?type=axatoc&feed=rss&jc=circ   # Circulation, ahead of print
 

@@ -54,7 +54,8 @@ GUIDELINE_FILTER = (
     'OR advisory[ti] OR "position paper"[ti] OR "points to consider"[ti] '
     'OR "classification criteria"[ti] OR "technical standard"[ti] OR "care pathway"[ti] '
     'OR "decision pathway"[ti] OR "practice update"[ti] OR "controversies conference"[ti] '
-    'OR "practice parameter"[ti] OR "practice guideline"[pt] OR guideline[pt] '
+    'OR "practice parameter"[ti] OR guidance[ti] OR "appropriate use criteria"[ti] '
+    'OR "practice guideline"[pt] OR guideline[pt] '
     'OR "consensus statement"[pt])'
 )
 # Publication types never wanted. Reviews and meta-analyses are dropped only when
@@ -193,11 +194,14 @@ def parse_pubmed_xml(raw: bytes) -> list[dict]:
                 if eid.get("EIdType") == "doi":
                     doi = (eid.text or "").strip().lower()
         mesh = [_text(d) for d in mc.findall("MeshHeadingList/MeshHeading/DescriptorName")]
+        mesh_major = [_text(d) for d in mc.findall("MeshHeadingList/MeshHeading/DescriptorName")
+                      if d.get("MajorTopicYN") == "Y"]
         keywords = [_text(k) for k in mc.findall("KeywordList/Keyword")]
         ptypes = [_text(p) for p in a.findall("PublicationTypeList/PublicationType")]
         records.append({
             "pmid": pmid, "doi": doi, "title": title, "journal": journal,
-            "date": date, "mesh": mesh, "keywords": keywords, "pub_types": ptypes,
+            "date": date, "mesh": mesh, "mesh_major": mesh_major,
+            "keywords": keywords, "pub_types": ptypes,
         })
     for book in root.findall("PubmedBookArticle"):
         bd = book.find("BookDocument")
@@ -243,7 +247,7 @@ def parse_feed(raw: bytes) -> list[dict]:
                     break
         doi = None
         for key in ("doi", "identifier", "link", "guid"):
-            m = re.search(r"(10\.\d{4,9}/[^\s?#&\"<>]+)", fields.get(key, ""))
+            m = _DOI.search(fields.get(key, ""))
             if m:
                 doi = m.group(1).lower().rstrip(".")
                 break
@@ -338,7 +342,7 @@ def parse_web_links(body: str, base_url: str, page: dict, keep: re.Pattern) -> l
         title = " ".join(title.split()).strip(" -–|:")
         if len(title) < 15:
             continue
-        m = re.search(r"(10\.\d{4,9}/[^\s?#&\"<>]+)", urllib.parse.unquote(url))
+        m = _DOI.search(urllib.parse.unquote(url))
         items.append({"title": title, "url": url, "date": date,
                       "doi": m.group(1).lower().rstrip(".") if m else None})
     return items
@@ -378,11 +382,22 @@ def fetch_web(page: dict, keep: re.Pattern) -> list[dict]:
                 target = _best_link(raw, item["url"], page["target_link"], item["title"])
                 if target:
                     item["url"] = target
+                    base, frag = urllib.parse.urldefrag(target)
+                    frag = frag or _link_fragment(raw, item["url"], page["target_link"], base)
                     try:
-                        t_title, _ = page_meta(http_get(target, retries=1).decode("utf-8", "replace"))
+                        t_body = http_get(base, retries=1).decode("utf-8", "replace")
+                        t_title, t_date = page_meta(t_body)
                         title = t_title or title
+                        item["date"] = item["date"] or t_date
                     except Exception:
-                        pass
+                        t_body = None
+                    if t_body:
+                        # Guideline landing pages are hubs; the document itself
+                        # (journal article, summary PDF) is one hop deeper.
+                        doc = _resolve_document(t_body, base, item, page, frag)
+                        if doc:
+                            item["url"], item["doc"], doi = doc
+                            item["doi"] = item["doi"] or doi
             if title and len(title) >= 15:
                 item["title"] = re.sub(r"\s*[|–-]\s*(American College of Rheumatology|ACR)\s*$", "", title)
             item["date"] = item["date"] or date
@@ -407,6 +422,126 @@ def _best_link(body: str, base_url: str, pattern: str, title: str) -> str | None
             if n > score:
                 best, score = url, n
     return best
+
+
+def _link_fragment(body: str, base_url: str, pattern: str, url: str) -> str | None:
+    """Fragment of a `pattern`-matching link that points at `url`.
+
+    Press releases often link a guideline page twice: a nav-menu link and a CTA
+    like "View 2026 Guidelines Summary →" carrying #section. The fragment marks
+    the section the announcement is about — a strong signal for which document
+    on the page is the new one."""
+    parser = _Anchors()
+    parser.feed(body)
+    rx = re.compile(pattern, re.I)
+    for href, _text in parser.links:
+        if not href:
+            continue
+        full = urllib.parse.urljoin(base_url, href)
+        base, frag = urllib.parse.urldefrag(full)
+        if frag and base.rstrip("/") == url.rstrip("/") and rx.search(full):
+            return frag
+    return None
+
+
+_DOI = re.compile(r"(10\.\d{4,9}/[^\s?#&\"<>]+)")
+_YEAR = re.compile(r"\b(?:19|20)\d{2}\b")
+# Fallback candidates when a source doesn't set document_link / document_anchor.
+_DOC_URL = re.compile(r"\.pdf([?#]|$)|doi\.org/10\.|/doi/10\.", re.I)
+_DOC_ANCHOR = re.compile(r"summary|full guideline|recommendation", re.I)
+
+
+def _year_in(s: str) -> str | None:
+    m = _YEAR.search(s or "")
+    return m.group(0) if m else None
+
+
+def _doc_year(url: str, text: str) -> int | None:
+    for s in (text, urllib.parse.unquote(url)):
+        y = _year_in(s)
+        if y:
+            return int(y)
+    return None
+
+
+def _acronym(words: list[str]) -> str:
+    """Initialism of content words ("juvenile idiopathic arthritis" -> "jia").
+
+    Societies label documents by abbreviation (JIA, axSpA, GIOP) that shares no
+    token with the full name, so acronym matching is the only overlap signal."""
+    acr = "".join(w[0] for w in words)
+    return acr if len(acr) >= 3 else ""
+
+
+def _resolve_document(body: str, url: str, item: dict, page: dict,
+                      frag: str | None = None) -> tuple[str, str, str | None] | None:
+    """The actual guideline document linked from a landing page.
+
+    Candidates are ranked: journal-article DOI links, then document links
+    (PDFs, asset files) whose anchor or filename reads like the guideline
+    itself ("Summary: 2026 … Guideline"). Scoring is content-token overlap
+    with the item title plus the landing-page slug acronym, a bonus for the
+    press-release fragment tokens, and a bonus for matching the item's year.
+    A candidate carrying a different explicit year (an older paper, an
+    appendix) is dropped when the item's year is known. Below the score floor
+    nothing is returned — the caller keeps the landing-page URL, which is a
+    safer wrong answer than a guessed link. Returns (url, kind, doi)."""
+    link_rx = re.compile(page["document_link"], re.I) if page.get("document_link") else _DOC_URL
+    anchor_rx = re.compile(page["document_anchor"], re.I) if page.get("document_anchor") else _DOC_ANCHOR
+    year = int(item["date"][:4]) if item.get("date") else None
+    slug_words = [w for w in re.findall(r"[a-z0-9]+", url.rsplit("/", 1)[-1].lower())
+                  if w not in _WEB_STOP and len(w) > 2]
+    want = _content_tokens(item["title"]) | set(slug_words)
+    acr = _acronym(slug_words)
+    frag_toks = _content_tokens((frag or "").replace("-", " "))
+    parser = _Anchors()
+    parser.feed(body)
+    best = None
+    for href, text in parser.links:
+        if not href:
+            continue
+        full = urllib.parse.urljoin(url, href)
+        doi_m = _DOI.search(urllib.parse.unquote(full))
+        if doi_m:
+            kind = "doi"
+        elif link_rx.search(full) and anchor_rx.search(f"{text} {full}"):
+            kind = "doc"
+        else:
+            continue
+        cyear = _doc_year(full, text)
+        if year and cyear and cyear != year:
+            continue
+        toks = _content_tokens(full.rsplit("/", 1)[-1] + " " + text)
+        score = len(want & toks) + 2 * len(frag_toks & toks)
+        if acr and acr in toks:
+            score += 2
+        # The floor needs a content signal; a shared year is only a tiebreaker.
+        rank = (score + (cyear == year if cyear and year else 0), score, kind == "doi")
+        if best is None or rank > best[0]:
+            best = (rank, full, kind,
+                    doi_m.group(1).lower().rstrip(".") if doi_m else None)
+    if best and best[0][1] >= 1:
+        return best[1], best[2], best[3]
+    return None
+
+
+def find_indexed_dois(eu: EUtils, dois: set[str]) -> dict[str, dict]:
+    """Resolve DOIs harvested from society pages to their PubMed records.
+
+    Society sites link the journal DOI long before the PubMed query returns the
+    record (title lacks the keywords, journal missing from the list, or the
+    paper simply isn't indexed under the expected terms). One batched [AID]
+    esearch plus one efetch upgrades each stub to the real record — proper
+    title, journal, date and PMID."""
+    found: dict[str, dict] = {}
+    dois = sorted(dois)
+    for i in range(0, len(dois), 60):
+        chunk = dois[i:i + 60]
+        _count, ids = eu.search(" OR ".join(f'"{d}"[AID]' for d in chunk), len(chunk) + 5)
+        for rec in eu.fetch(ids):
+            if rec.get("doi") in dois:
+                found[rec["doi"]] = rec
+    return found
 
 
 def new_since_baseline(items: list[dict], page_url: str, web_seen: dict,
@@ -507,7 +642,14 @@ class Tagger:
                                     re.compile("|".join(f"(?:{p})" for p in pats), re.I)))
 
     def tag(self, rec: dict) -> tuple[list[str], list[str]]:
-        haystack = " | ".join([rec["title"], *rec.get("mesh", []), *rec.get("keywords", [])])
+        # Match against the title and major-topic MeSH headings. Minor MeSH
+        # descriptors and author keywords are mostly comorbidities and passing
+        # mentions; including them made guidelines pick up unrelated conditions.
+        # Records with no MeSH at all (books, RSS, website items) fall back to
+        # keywords as the only supplementary signal.
+        mesh = rec["mesh_major"] if "mesh_major" in rec else rec.get("mesh", [])
+        kws = [] if rec.get("mesh") else rec.get("keywords", [])
+        haystack = " | ".join([rec["title"], *mesh, *kws])
         names, specs = [], []
         for name, spec, rx in self.conditions:
             if rx.search(haystack):
@@ -538,6 +680,8 @@ def merge(records: dict, rec: dict, source: dict) -> None:
             if not existing.get(field) and rec.get(field):
                 existing[field] = rec[field]
         existing["mesh"] = sorted(set(existing.get("mesh", [])) | set(rec.get("mesh", [])))
+        existing["mesh_major"] = sorted(set(existing.get("mesh_major", []))
+                                        | set(rec.get("mesh_major", [])))
         existing["keywords"] = sorted(set(existing.get("keywords", [])) | set(rec.get("keywords", [])))
     if source["id"] not in existing["sources"]:
         existing["sources"].append(source["id"])
@@ -663,6 +807,7 @@ def main(argv: list[str] | None = None) -> int:
                 entry["rss"] = (entry["rss"] or 0) + len(kept)
             except Exception as exc:
                 entry["errors"].append(f"rss {feed_url}: {exc}")
+        web_items = []
         for page in src.get("web") or []:
             try:
                 items = fetch_web(page, rss_kw)
@@ -670,20 +815,45 @@ def main(argv: list[str] | None = None) -> int:
                     links = len(items)
                     items = new_since_baseline(items, page["url"], web_seen, previous_urls, today)
                     print(f"{'':<18}  web {page['url']}: {links} links, {len(items)} new", flush=True)
-                items = [i for i in items
-                         if not is_excluded(i["title"], excludes)
-                         and (not i["date"] or int(i["date"][:4]) >= since)]
-                for i in items:
-                    merge(records, {"pmid": None, "doi": i["doi"], "title": i["title"],
-                                    "journal": f"{src['abbr']} website", "date": i["date"],
-                                    "url": i["url"], "mesh": [], "keywords": [], "web": True}, src)
-                entry["web"] = (entry["web"] or 0) + len(items)
-                entry.setdefault("sample", []).extend(f"[web {i['date']}] {i['title'][:100]}" for i in items[:6])
+                items = [i for i in items if not is_excluded(i["title"], excludes)]
+                web_items.extend(items)
+                entry.setdefault("sample", []).extend(
+                    f"[web {i['date']}{'/' + i['doc'] if i.get('doc') else ''}] {i['title'][:100]}"
+                    for i in items[:6])
             except Exception as exc:
                 entry["errors"].append(f"web {page['url']}: {exc}")
+        # Website items carrying a DOI are resolved against PubMed: the real
+        # record (title, journal, date, PMID) replaces the stub, and items
+        # indexed with a pre-since_year date are dropped.
+        indexed = {}
+        dois = {i["doi"] for i in web_items if i.get("doi")}
+        if dois:
+            try:
+                indexed = find_indexed_dois(eu, dois)
+            except Exception as exc:
+                entry["errors"].append(f"doi lookup: {exc}")
+        upgraded = 0
+        for i in web_items:
+            pm = indexed.get(i.get("doi"))
+            if pm:
+                if pm.get("date") and int(pm["date"][:4]) < since:
+                    continue
+                merge(records, pm, src)
+                upgraded += 1
+                continue
+            yr = i["date"] or _year_in(i.get("doi") or "")
+            if yr and int(yr[:4]) < since:
+                continue
+            merge(records, {"pmid": None, "doi": i["doi"], "title": i["title"],
+                            "journal": f"{src['abbr']} website", "date": i["date"],
+                            "url": i["url"], "mesh": [], "keywords": [], "web": True}, src)
+            entry["web"] = (entry["web"] or 0) + 1
+        if upgraded:
+            entry["upgraded"] = upgraded
         report.append(entry)
-        print(f"{src['abbr']:<18} pubmed={entry['pubmed']} rss={entry['rss']} web={entry['web']} "
-              + (f"ERRORS={entry['errors']}" if entry["errors"] else ""), flush=True)
+        print(f"{src['abbr']:<18} pubmed={entry['pubmed']} rss={entry['rss']} web={entry['web']}"
+              + (f" pmid_upgrades={entry['upgraded']}" if entry.get("upgraded") else "")
+              + (f" ERRORS={entry['errors']}" if entry["errors"] else ""), flush=True)
         for title in entry.pop("sample", []):
             print(f"{'':<18}  - {title}", flush=True)
 
