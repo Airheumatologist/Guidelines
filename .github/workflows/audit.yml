@@ -2,7 +2,7 @@ name: Coverage audit
 
 on:
   pull_request:
-    paths: ["scripts/audit_reference.py", ".github/workflows/audit.yml"]
+    paths: ["scripts/**", "sources.yaml", "conditions.yaml", ".github/workflows/audit.yml"]
   workflow_dispatch:
 
 jobs:
@@ -14,6 +14,10 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install pyyaml
+      - name: Rebuild data with this branch's sources
+        env:
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+        run: python scripts/build_data.py
       - name: Compare against reference site
         env:
           NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}

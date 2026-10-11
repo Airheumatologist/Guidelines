@@ -27,6 +27,8 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "scripts"))
+import build_data  # noqa: E402
 UA = "Mozilla/5.0 (compatible; GuidelinesWebApp-audit/1.0; +https://github.com/Airheumatologist/Guidelines)"
 BASE = "https://updatesinmedicine.com"
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
@@ -102,6 +104,29 @@ def pubmed_explain(doi, api_key=None):
             "pubtypes": r.get("pubtype", [])}
 
 
+def query_hits(pmid, src_ids, cfg, api_key=None):
+    """Which of our sources' PubMed queries match this PMID (after title excludes)?"""
+    settings = cfg.get("settings", {})
+    since = int(settings.get("since_year", 2018))
+    by_id = {s["id"]: s for s in cfg["sources"]}
+    hits = []
+    for sid in src_ids:
+        src = by_id.get(sid)
+        if not src or not src.get("pubmed"):
+            continue
+        params = {"db": "pubmed", "term": f"({build_data.build_query(src, since)}) AND {pmid}[uid]",
+                  "retmode": "json"}
+        if api_key:
+            params["api_key"] = api_key
+        try:
+            if json.loads(get(EUTILS + "esearch.fcgi", params))["esearchresult"].get("idlist"):
+                hits.append(sid)
+        except Exception:
+            pass
+        time.sleep(0.35)
+    return hits
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--since", default="2024-01-01")
@@ -149,6 +174,8 @@ def main():
         if e["doi"]:
             try:
                 e["pubmed"] = pubmed_explain(e["doi"], key)
+                if e["pubmed"].get("pmid"):
+                    e["pubmed"]["query_hits"] = query_hits(e["pubmed"]["pmid"], e["covered_by"], cfg, key)
             except Exception as exc:
                 e["pubmed"] = {"error": str(exc)}
 
@@ -169,9 +196,13 @@ def main():
             why = "no DOI (society web page only)"
         elif not pm.get("indexed"):
             why = "not in PubMed yet"
+        elif pm.get("query_hits"):
+            why = (f"in PubMed ({pm.get('journal')}) and matched by {', '.join(pm['query_hits'])} "
+                   "now; was missing from the data used for this audit")
         else:
             why = f"in PubMed ({pm.get('journal')}; {', '.join(pm.get('pubtypes', []))}) but query missed"
-        reasons[why.split(" (")[0] if why.startswith("in PubMed") else why] += 1
+        reasons[why.split(" (")[0] + (" (query matches now)" if pm.get("query_hits") else "")
+                if why.startswith("in PubMed") else why] += 1
         lines.append(f"- {e['date']} **{e['org']}**: {e['title']} [{why}]"
                      + (f" — PubMed title: {pm.get('title')}" if pm.get("title") else "")
                      + f" <{e['url']}>")

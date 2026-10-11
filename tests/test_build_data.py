@@ -1,5 +1,6 @@
 """Offline tests for scripts/build_data.py (no network)."""
 
+import re
 import sys
 import unittest
 from pathlib import Path
@@ -42,7 +43,15 @@ class QueryTests(unittest.TestCase):
         self.assertIn('"Ann Rheum Dis"[ta]', q)
         self.assertIn('"EULAR"[ti] OR "EULAR"[cn]', q)
         self.assertIn('"2018/01/01"[dp]', q)
-        self.assertIn("NOT (erratum[pt]", q)
+        self.assertIn('NOT ("erratum"[pt]', q)
+        # Reviews are dropped only when not also indexed as a guideline.
+        self.assertIn('NOT (("systematic review"[pt] OR "meta-analysis"[pt]) NOT ("practice guideline"[pt]', q)
+
+    def test_allow_pubtypes(self):
+        q = bd.build_query({"pubmed": {"journals": ["Ann Intern Med"], "allow_pubtypes": ["letter", "comment"]}}, 2018)
+        self.assertNotIn('"letter"[pt]', q)
+        self.assertNotIn('"comment"[pt]', q)
+        self.assertIn('"editorial"[pt]', q)
 
     def test_raw_query_used(self):
         q = bd.build_query({"pubmed": {"query": '"Ophthalmology"[ta]'}}, 2020)
@@ -55,6 +64,64 @@ class QueryTests(unittest.TestCase):
         for s in cfg["sources"]:
             self.assertTrue({"id", "name", "abbr", "specialty"} <= s.keys(), s)
             self.assertTrue(s.get("pubmed") or s.get("rss"), s["id"])
+
+
+class WebTests(unittest.TestCase):
+    PAGE = """<html><body>
+      <a href="/clinical-practice-guidelines">Clinical Practice Guidelines</a>
+      <a href="/press-releases/new-guidelines-axspa">6/24/26New Guidelines Advance Treatment of
+         Axial Spondyloarthritis in Adults and Youth</a>
+      <a href="/press-releases/annual-meeting">9/1/26 Registration opens for the annual meeting</a>
+      <a href="https://www.jacc.org/doi/10.1016/j.jacc.2026.07.003">Scientific Statements 2026 Clinical
+         Considerations for the Care of the Tactical Athlete</a>
+      <a href="/Guidelines/Home/GuidelineDetail/1158">AUG 2026 Practice guideline Pharmacologic Treatment
+         for Migraine Prevention in Adults</a>
+    </body></html>"""
+
+    def test_press_release_links(self):
+        page = {"url": "https://rheumatology.org/press-releases",
+                "link_pattern": r"rheumatology\.org/press-releases/", "keywords": "guideline|guidance",
+                "strip": r"^\d{1,2}/\d{1,2}/\d{2}"}
+        items = bd.parse_web_links(self.PAGE, page["url"], page, re.compile("guideline", re.I))
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0]["date"], "2026-06-24")
+        self.assertTrue(items[0]["title"].startswith("New Guidelines Advance Treatment of Axial"))
+        self.assertEqual(items[0]["url"], "https://rheumatology.org/press-releases/new-guidelines-axspa")
+
+    def test_doi_links_and_month_dates(self):
+        page = {"url": "https://www.acc.org/guidelines", "link_pattern": r"jacc\.org/doi/", "keywords": ".",
+                "strip": r"^Scientific Statements\s+(\d{4}\s+)?"}
+        acc = bd.parse_web_links(self.PAGE, page["url"], page, re.compile("x"))
+        self.assertEqual(acc[0]["doi"], "10.1016/j.jacc.2026.07.003")
+        self.assertTrue(acc[0]["title"].startswith("Clinical Considerations"))
+        page = {"url": "https://www.aan.com/practice/guidelines", "link_pattern": r"GuidelineDetail/\d+",
+                "keywords": ".", "strip": r"^[A-Z]{3}\s+\d{4}\s+(Practice guideline)?"}
+        aan = bd.parse_web_links(self.PAGE, page["url"], page, re.compile("x"))
+        self.assertEqual(aan[0]["date"], "2026-08-01")
+        self.assertEqual(aan[0]["title"], "Pharmacologic Treatment for Migraine Prevention in Adults")
+
+    def test_page_meta(self):
+        title, date = bd.page_meta('<meta property="og:title" content="ACR axSpA Guideline &amp; Summary">'
+                                   '<meta property="article:published_time" content="2026-06-24T10:00:00Z">')
+        self.assertEqual(title, "ACR axSpA Guideline & Summary")
+        self.assertEqual(date, "2026-06-24")
+
+    def test_web_item_dropped_once_indexed(self):
+        acr = {"id": "acr", "abbr": "ACR", "specialty": "Rheumatology"}
+        records = {}
+        bd.merge(records, {"pmid": None, "doi": None, "web": True, "journal": "ACR website",
+                           "title": "New Guidelines Advance Treatment of Axial Spondyloarthritis in Adults and Youth",
+                           "date": "2026-06-24", "url": "u", "mesh": [], "keywords": []}, acr)
+        bd.merge(records, {"pmid": None, "doi": None, "web": True, "journal": "ACR website",
+                           "title": "ACR Updates Osteoarthritis Guidance", "date": "2026-09-14",
+                           "url": "v", "mesh": [], "keywords": []}, acr)
+        bd.merge(records, {"pmid": "9", "doi": "10.1/axspa", "journal": "Arthritis Rheumatol",
+                           "title": "2026 ACR Guideline for the Treatment of Axial Spondyloarthritis in Adults and Youth",
+                           "date": "2026-11-01", "mesh": [], "keywords": []}, acr)
+        self.assertEqual(bd.drop_superseded_web(records), 1)
+        titles = {r["title"] for r in records.values()}
+        self.assertIn("ACR Updates Osteoarthritis Guidance", titles)
+        self.assertNotIn("New Guidelines Advance Treatment of Axial Spondyloarthritis in Adults and Youth", titles)
 
 
 class TaggingTests(unittest.TestCase):

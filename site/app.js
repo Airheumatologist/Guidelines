@@ -157,14 +157,15 @@
     data.guidelines.forEach((g) => g.sources.forEach((s) => { counts[s] = (counts[s] || 0) + 1; }));
     const rows = data.sources.map((s) => {
       const r = rep[s.id] || {};
-      const how = [r.pubmed ? "PubMed" : "", r.rss != null ? "RSS" : ""].filter(Boolean).join(" + ") || "–";
+      const how = [r.pubmed ? "PubMed" : "", r.rss != null ? "RSS" : "", r.web != null ? "Website" : ""].filter(Boolean).join(" + ") || "–";
       return `<tr><td><span class="badge">${esc(s.abbr)}</span></td><td>${esc(s.name)}</td>
         <td>${esc(s.specialty === "multi" ? "All specialties" : s.specialty)}</td><td>${how}</td>
         <td>${counts[s.id] || 0}</td><td class="err">${esc((r.errors || []).join("; "))}</td></tr>`;
     }).join("");
     return `<a class="crumb" href="#/">‹ All Diseases</a><h2>Sources and coverage</h2>
       <p class="sub">Guidelines are pulled from each organization's own publications via PubMed (NCBI E-utilities)
-      and the organization's journal RSS feeds. Last update ${esc(new Date(data.generated).toLocaleString())}.</p>
+      plus the organization's journal RSS feeds and, for guidelines released before a journal paper, its own website.
+      Last update ${esc(new Date(data.generated).toLocaleString())}.</p>
       <div class="tbl"><table class="src"><thead><tr><th></th><th>Organization</th><th>Specialty</th><th>Pulled via</th><th>Guidelines</th><th>Last run issues</th></tr></thead>
       <tbody>${rows}</tbody></table></div>`;
   }

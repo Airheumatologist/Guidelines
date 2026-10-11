@@ -4,7 +4,10 @@
 Pulls each organization's guidelines straight from official channels:
   * PubMed via NCBI E-utilities (esearch + efetch), using the query defined
     for that organization in sources.yaml;
-  * the organization's own RSS/Atom feeds, when listed.
+  * the organization's own RSS/Atom feeds, when listed;
+  * the organization's own guideline or press-release web pages, when listed,
+    so guidelines released on a society website before any journal paper
+    (for example ACR's 2026 axial spondyloarthritis guideline) still appear.
 Records are de-duplicated, tagged with conditions and specialties using
 conditions.yaml, merged with the previous data file (so first-seen dates
 survive), and written along with an RSS feed of the newest guidelines.
@@ -30,6 +33,7 @@ import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+from html.parser import HTMLParser
 from pathlib import Path
 
 import yaml
@@ -45,14 +49,30 @@ TOOL = "guidelines-webapp"
 USER_AGENT = "GuidelinesWebApp/1.0 (+https://github.com/Airheumatologist/Guidelines)"
 
 GUIDELINE_FILTER = (
-    '(guideline*[ti] OR recommendation*[ti] OR consensus[ti] '
-    'OR "practice parameter"[ti] OR "practice guideline"[pt] OR guideline[pt])'
+    '(guideline*[ti] OR recommendation*[ti] OR consensus[ti] OR statement*[ti] '
+    'OR advisory[ti] OR "position paper"[ti] OR "points to consider"[ti] '
+    'OR "classification criteria"[ti] OR "technical standard"[ti] OR "care pathway"[ti] '
+    'OR "decision pathway"[ti] OR "practice update"[ti] OR "controversies conference"[ti] '
+    'OR "practice parameter"[ti] OR "practice guideline"[pt] OR guideline[pt] '
+    'OR "consensus statement"[pt])'
 )
-NOT_FILTER = (
-    'NOT (erratum[pt] OR "published erratum"[pt] OR comment[pt] OR editorial[pt] '
-    'OR letter[pt] OR news[pt] OR "systematic review"[pt] OR "meta-analysis"[pt] '
-    'OR "retracted publication"[pt] OR "retraction of publication"[pt])'
-)
+# Publication types never wanted. Reviews and meta-analyses are dropped only when
+# they are not also indexed as a guideline (ASCO, ESMO and EULAR guidelines often
+# carry "Systematic Review" too). A source can re-allow some via allow_pubtypes.
+EXCLUDED_PUBTYPES = ["erratum", "published erratum", "comment", "editorial", "letter",
+                     "news", "retracted publication", "retraction of publication"]
+REVIEW_PUBTYPES = ["systematic review", "meta-analysis"]
+GUIDELINE_PUBTYPES = ["practice guideline", "guideline", "consensus statement"]
+
+
+def not_filter(allow: list[str] | None = None) -> str:
+    allow = {a.lower() for a in allow or []}
+    pt = lambda xs: " OR ".join(f'"{x}"[pt]' for x in xs if x not in allow)  # noqa: E731
+    return (f"NOT ({pt(EXCLUDED_PUBTYPES)}) "
+            f"NOT (({pt(REVIEW_PUBTYPES)}) NOT ({pt(GUIDELINE_PUBTYPES)}))")
+
+
+NOT_FILTER = not_filter()
 MONTHS = {m: i for i, m in enumerate(
     ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
 
@@ -227,6 +247,162 @@ def _parse_any_date(value: str) -> str | None:
     return "-".join(m.groups()) if m else None
 
 
+# ---------------------------------------------------------------- web pages
+
+class _Anchors(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.links: list[tuple[str, str]] = []
+        self._href: str | None = None
+        self._text: list[str] = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "a":
+            self._href, self._text = dict(attrs).get("href"), []
+
+    def handle_data(self, data):
+        if self._href is not None:
+            self._text.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == "a" and self._href is not None:
+            self.links.append((self._href, " ".join(" ".join(self._text).split())))
+            self._href = None
+
+
+_TEXT_DATES = [
+    (re.compile(r"(?<!\d)(\d{1,2})/(\d{1,2})/(\d{4}|\d{2})(?!\d)"), "mdy"),
+    (re.compile(r"\b(\d{4})-(\d{2})-(\d{2})\b"), "iso"),
+    (re.compile(r"\b([A-Za-z]{3})[a-z]*\.? (\d{1,2}), (\d{4})\b"), "mon-d-y"),
+    (re.compile(r"\b([A-Za-z]{3})[a-z]*\.? (\d{4})\b"), "mon-y"),
+]
+
+
+def date_in_text(text: str) -> str | None:
+    """Find a publication date written in link text ("6/24/26", "AUG 2026", ...)."""
+    for rx, kind in _TEXT_DATES:
+        for m in rx.finditer(text):
+            g = m.groups()
+            try:
+                if kind == "mdy":
+                    y = int(g[2]) + (2000 if len(g[2]) == 2 else 0)
+                    return dt.date(y, int(g[0]), int(g[1])).isoformat()
+                if kind == "iso":
+                    return dt.date(int(g[0]), int(g[1]), int(g[2])).isoformat()
+                mon = MONTHS.get(g[0][:3].lower())
+                if not mon:
+                    continue
+                if kind == "mon-d-y":
+                    return dt.date(int(g[2]), mon, int(g[1])).isoformat()
+                return dt.date(int(g[1]), mon, 1).isoformat()
+            except ValueError:
+                continue
+    return None
+
+
+def parse_web_links(body: str, base_url: str, page: dict, keep: re.Pattern) -> list[dict]:
+    """Pick guideline links from a society web page.
+
+    page: {url, link_pattern (regex on the absolute link), strip (optional regex
+    removed from the link text, e.g. dates or category labels), keywords
+    (optional regex the text must match; defaults to the rss_keywords)}."""
+    parser = _Anchors()
+    parser.feed(body)
+    link_rx = re.compile(page["link_pattern"], re.I)
+    strip_rx = re.compile(page["strip"], re.I) if page.get("strip") else None
+    kw = re.compile(page["keywords"], re.I) if page.get("keywords") else keep
+    seen, items = set(), []
+    for href, text in parser.links:
+        if not href:
+            continue
+        url = urllib.parse.urljoin(base_url, href)
+        if url in seen or not link_rx.search(url) or not kw.search(text):
+            continue
+        seen.add(url)
+        date = date_in_text(text)
+        title = strip_rx.sub(" ", text) if strip_rx else text
+        title = " ".join(title.split()).strip(" -–|:")
+        if len(title) < 15:
+            continue
+        m = re.search(r"(10\.\d{4,9}/[^\s?#&\"<>]+)", urllib.parse.unquote(url))
+        items.append({"title": title, "url": url, "date": date,
+                      "doi": m.group(1).lower().rstrip(".") if m else None})
+    return items
+
+
+def page_meta(body: str) -> tuple[str | None, str | None]:
+    """Title and publication date of a linked page (og:title, <h1>, article dates)."""
+    def meta(prop):
+        m = (re.search(rf'<meta[^>]+(?:property|name)="{prop}"[^>]+content="([^"]+)"', body, re.I)
+             or re.search(rf'<meta[^>]+content="([^"]+)"[^>]+(?:property|name)="{prop}"', body, re.I))
+        return html.unescape(m.group(1)).strip() if m else None
+    title = meta("og:title") or meta("citation_title")
+    if not title:
+        m = re.search(r"<h1[^>]*>(.*?)</h1>", body, re.I | re.S)
+        title = html.unescape(re.sub(r"<[^>]+>", "", m.group(1))).strip() if m else None
+    raw_date = (meta("article:published_time") or meta("citation_publication_date")
+                or meta("date") or (re.search(r'<time[^>]+datetime="([^"]+)"', body, re.I) or [None, None])[1])
+    date = None
+    if raw_date:
+        date = _parse_any_date(raw_date) or date_in_text(raw_date.replace("/", "-"))
+    return (" ".join(title.split()) if title else None), date
+
+
+def fetch_web(page: dict, keep: re.Pattern, follow_limit: int = 25) -> list[dict]:
+    body = http_get(page["url"]).decode("utf-8", "replace")
+    items = parse_web_links(body, page["url"], page, keep)
+    if page.get("follow"):
+        for item in items[:follow_limit]:
+            try:
+                title, date = page_meta(http_get(item["url"], retries=1).decode("utf-8", "replace"))
+            except Exception:
+                continue
+            if title and len(title) >= 15:
+                item["title"] = re.sub(r"\s*[|–-]\s*(American College of Rheumatology|ACR)\s*$", "", title)
+            item["date"] = item["date"] or date
+    return items
+
+
+_WEB_STOP = {"the", "of", "and", "for", "in", "with", "a", "an", "to", "on", "new", "updated",
+             "update", "updates", "releases", "release", "guideline", "guidelines", "guidance",
+             "recommendations", "recommendation", "treatment", "management", "advance", "adults",
+             "american", "college", "society", "association", "clinical", "practice", "patients"}
+
+
+def _content_tokens(title: str) -> set[str]:
+    return {w for w in re.findall(r"[a-z0-9]+", title.lower()) if w not in _WEB_STOP and len(w) > 2}
+
+
+def drop_superseded_web(records: dict) -> int:
+    """Drop website-only items once the same guideline is indexed in PubMed.
+
+    A press release title rarely equals the journal title, so an item that only
+    came from a web page (no PMID, no DOI) is dropped when a PubMed record from
+    the same organization, dated no earlier than 60 days before it, shares most
+    of its content words."""
+    recs = {id(r): r for r in records.values()}.values()
+    indexed = [r for r in recs if r.get("pmid")]
+    drop = []
+    for r in recs:
+        if r.get("pmid") or r.get("doi") or not r.get("web"):
+            continue
+        toks = _content_tokens(r["title"])
+        if not toks:
+            continue
+        for p in indexed:
+            if not set(p["sources"]) & set(r["sources"]):
+                continue
+            if r.get("date") and p.get("date") and p["date"] < (
+                    dt.date.fromisoformat(r["date"]) - dt.timedelta(days=60)).isoformat():
+                continue
+            if len(toks & _content_tokens(p["title"])) / len(toks) >= 0.6:
+                drop.append(r)
+                break
+    for key in [k for k, v in records.items() if any(v is d for d in drop)]:
+        del records[key]
+    return len(drop)
+
+
 # ---------------------------------------------------------------- queries
 
 def build_query(src: dict, since_year: int) -> str:
@@ -243,7 +419,7 @@ def build_query(src: dict, since_year: int) -> str:
         if journals:
             parts.append("(" + " OR ".join(f'"{j}"[ta]' for j in journals) + ")")
         core = " AND ".join(parts)
-    return f'{core} AND ("{since_year}/01/01"[dp] : "3000"[dp]) {NOT_FILTER}'
+    return f'{core} AND ("{since_year}/01/01"[dp] : "3000"[dp]) {not_filter(pm.get("allow_pubtypes"))}'
 
 
 # ---------------------------------------------------------------- tagging
@@ -289,6 +465,10 @@ def merge(records: dict, rec: dict, source: dict) -> None:
     if existing is None:
         existing = dict(rec, sources=[])
     else:
+        if rec.get("pmid") and not existing.get("pmid"):
+            # The journal record wins over a web-page or feed item for the same DOI.
+            for field in ("title", "journal", "date"):
+                existing[field] = rec[field] or existing.get(field)
         for field in ("pmid", "doi", "journal", "date", "url"):
             if not existing.get(field) and rec.get(field):
                 existing[field] = rec[field]
@@ -331,6 +511,7 @@ def finalize(records: dict, sources: dict, tagger: Tagger, previous: dict, today
             "specialties": sorted(specialties) or ["General"],
             "conditions": sorted(conditions),
             "first_seen": prev["first_seen"] if prev else today,
+            **({"web": True} if rec.get("web") and not rec.get("pmid") else {}),
         })
     out.sort(key=lambda r: (r["date"] or "", r["title"]), reverse=True)
     return out
@@ -387,7 +568,8 @@ def main(argv: list[str] | None = None) -> int:
     records: dict = {}
     report = []
     for src in active:
-        entry = {"id": src["id"], "abbr": src["abbr"], "pubmed": None, "rss": None, "errors": []}
+        entry = {"id": src["id"], "abbr": src["abbr"], "pubmed": None, "rss": None, "web": None,
+                 "errors": []}
         if src.get("pubmed"):
             q = build_query(src, since)
             try:
@@ -412,11 +594,28 @@ def main(argv: list[str] | None = None) -> int:
                 entry["rss"] = (entry["rss"] or 0) + len(kept)
             except Exception as exc:
                 entry["errors"].append(f"rss {feed_url}: {exc}")
+        for page in src.get("web") or []:
+            try:
+                items = [i for i in fetch_web(page, rss_kw)
+                         if not is_excluded(i["title"], excludes)
+                         and (not i["date"] or int(i["date"][:4]) >= since)]
+                for i in items:
+                    merge(records, {"pmid": None, "doi": i["doi"], "title": i["title"],
+                                    "journal": f"{src['abbr']} website", "date": i["date"],
+                                    "url": i["url"], "mesh": [], "keywords": [], "web": True}, src)
+                entry["web"] = (entry["web"] or 0) + len(items)
+                entry.setdefault("sample", []).extend(i["title"][:110] for i in items[:3])
+            except Exception as exc:
+                entry["errors"].append(f"web {page['url']}: {exc}")
         report.append(entry)
-        print(f"{src['abbr']:<18} pubmed={entry['pubmed']} rss={entry['rss']} "
+        print(f"{src['abbr']:<18} pubmed={entry['pubmed']} rss={entry['rss']} web={entry['web']} "
               + (f"ERRORS={entry['errors']}" if entry["errors"] else ""), flush=True)
         for title in entry.pop("sample", []):
             print(f"{'':<18}  - {title}", flush=True)
+
+    dropped = drop_superseded_web(records)
+    if dropped:
+        print(f"dropped {dropped} website items now indexed in PubMed", flush=True)
 
     now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
     guidelines = finalize(records, all_sources, tagger, previous, now.date().isoformat())
