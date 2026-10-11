@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["site/**", "sources.yaml", "conditions.yaml", "scripts/**"]
+    paths: ["site/**", "sources.yaml", "conditions.yaml", "scripts/**", ".github/workflows/**"]
   pull_request:
 
 permissions:
