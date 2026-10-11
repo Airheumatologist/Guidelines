@@ -38,7 +38,9 @@
 #                  strip:        regex removed from the link text (dates, labels)
 #                  follow:       true to open each link and use its own title/date
 #                  follow_limit: how many links to open (default 25)
-#                  require_date: true to drop links whose date cannot be found
+#                  new_only:     for undated A-Z list pages: the first run stores
+#                                every link as a baseline; links that appear
+#                                later are published, dated the day first seen
 #                Website items are dropped automatically once the guideline is
 #                indexed in PubMed.
 #
@@ -89,9 +91,7 @@ sources:
       - url: https://publications.iarc.who.int/Book-And-Report-Series/Who-Classification-Of-Tumours
         link_pattern: 'publications\.iarc\.who\.int/Book-And-Report-Series/Who-Classification-Of-Tumours/.+'
         keywords: '.'
-        follow_limit: 40
-        follow: true
-        require_date: true
+        new_only: true
       - url: https://www.who.int/publications/who-guidelines
         link_pattern: 'iris\.who\.int/handle/|who\.int/publications/i/item/'
         keywords: 'guideline|recommendation|position paper'
@@ -182,13 +182,6 @@ sources:
     pubmed:
       journals: ["J Clin Endocrinol Metab"]
       title_terms: ["Endocrine Society"]
-    web:
-      - url: https://www.endocrine.org/clinical-practice-guidelines
-        link_pattern: 'endocrine\.org/clinical-practice-guidelines/(?!methodology|guidelines-in-development)[a-z]'
-        keywords: '.'
-        follow_limit: 60
-        follow: true
-        require_date: true
 
   # ---------------------------------------------------- Infectious diseases
   - id: idsa
@@ -202,9 +195,7 @@ sources:
       - url: https://www.idsociety.org/practice-guideline/all-practice-guidelines/
         link_pattern: 'idsociety\.org/practice-guideline/(?!all-practice|practice-guidelines)[A-Za-z]'
         keywords: '.'
-        follow_limit: 150
-        follow: true
-        require_date: true
+        new_only: true
 
   # ------------------------------------------------------------ Pulmonology
   - id: ats
@@ -380,9 +371,7 @@ sources:
       - url: https://www.acog.org/clinical/clinical-guidance/clinical-practice-update
         link_pattern: 'acog\.org/clinical/clinical-guidance/[a-z-]+/articles/'
         keywords: '.'
-        follow_limit: 40
-        follow: true
-        require_date: true
+        new_only: true
 
   # -------------------------------------------------------------- Pediatrics
   - id: aap
@@ -515,13 +504,6 @@ sources:
     pubmed:
       journals: ["Chest"]
       title_terms: ["CHEST", "American College of Chest Physicians"]
-    web:
-      - url: https://www.chestnet.org/guidelines-and-topic-collections
-        link_pattern: 'chestnet\.org/guidelines-and-topic-collections/.+|journal\.chestnet\.org/article/'
-        keywords: '.'
-        follow_limit: 60
-        follow: true
-        require_date: true
 
   - id: bts
     name: British Thoracic Society
@@ -534,9 +516,7 @@ sources:
       - url: https://www.brit-thoracic.org.uk/quality-improvement/guidelines/
         link_pattern: 'brit-thoracic\.org\.uk/quality-improvement/(guidelines|quality-standards)/[a-z]'
         keywords: '.'
-        follow_limit: 60
-        follow: true
-        require_date: true
+        new_only: true
 
   - id: gina-gold
     name: Global Initiative for Asthma / Global Initiative for Chronic Obstructive Lung Disease
@@ -548,8 +528,7 @@ sources:
       - url: https://ginasthma.org/reports/
         link_pattern: 'ginasthma\.org/20\d\d-gina-'
         keywords: '.'
-        follow: true
-        require_date: true
+        new_only: true
 
   - id: aasm
     name: American Academy of Sleep Medicine
@@ -631,9 +610,7 @@ sources:
         link_pattern: 'green-top-guidelines/[a-z]'
         keywords: '.'
         strip: '\(No\. \w+\)'
-        follow_limit: 120
-        follow: true
-        require_date: true
+        new_only: true
 
   - id: eshre
     name: European Society of Human Reproduction and Embryology
@@ -661,9 +638,7 @@ sources:
       - url: https://ics.ac.uk/guidance
         link_pattern: 'ics\.ac\.uk/(resource|guidance)/[a-z0-9]'
         keywords: 'guid|standard|code of practice|management|transfer|repatriation|stewardship|referring'
-        follow_limit: 40
-        follow: true
-        require_date: true
+        new_only: true
 
   - id: cps
     name: Canadian Paediatric Society
@@ -675,9 +650,7 @@ sources:
       - url: https://cps.ca/en/documents
         link_pattern: 'cps\.ca/en/documents/position/'
         keywords: '.'
-        follow_limit: 60
-        follow: true
-        require_date: true
+        new_only: true
 
   - id: estro
     name: European Society for Radiotherapy and Oncology
@@ -746,9 +719,7 @@ sources:
       - url: https://b-s-h.org.uk/guidelines
         link_pattern: 'b-s-h\.org\.uk/guidelines/guidelines/'
         keywords: '.'
-        follow_limit: 60
-        follow: true
-        require_date: true
+        new_only: true
 
   - id: eha
     name: European Hematology Association
@@ -912,9 +883,7 @@ sources:
       - url: https://www.rcpsych.ac.uk/improving-care/campaigning-for-better-mental-health-policy/college-reports
         link_pattern: 'college-reports/\d{4}-college-reports/|college-reports/[a-z0-9-]{12,}'
         keywords: '.'
-        follow_limit: 40
-        follow: true
-        require_date: true
+        new_only: true
 
   - id: canmat
     name: Canadian Network for Mood and Anxiety Treatments
@@ -933,9 +902,7 @@ sources:
       - url: https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/
         link_pattern: 'entnet\.org/'
         keywords: 'clinical practice guideline|consensus statement|position statement'
-        follow_limit: 60
-        follow: true
-        require_date: true
+        new_only: true
 
   - id: acsm
     name: American College of Sports Medicine

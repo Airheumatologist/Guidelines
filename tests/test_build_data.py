@@ -108,23 +108,20 @@ class WebTests(unittest.TestCase):
         self.assertEqual(title, "ACR axSpA Guideline & Summary")
         self.assertEqual(date, "2026-06-24")
 
-    def test_follow_and_require_date(self):
-        pages = {
-            "https://idsa.example/list": b'<a href="/practice-guideline/a/">Guideline A for testing</a>'
-                                         b'<a href="/practice-guideline/b/">Guideline B for testing</a>',
-            "https://idsa.example/practice-guideline/a/":
-                b'<meta property="og:title" content="IDSA Guideline A, 2026 update">'
-                b'<meta property="article:published_time" content="2026-09-16">',
-            "https://idsa.example/practice-guideline/b/": b'<h1>Old guideline B</h1>',
-        }
-        orig = bd.http_get
-        bd.http_get = lambda url, params=None, retries=3: pages[url]
-        try:
-            items = bd.fetch_web({"url": "https://idsa.example/list", "link_pattern": "practice-guideline/",
-                                  "keywords": ".", "follow": True, "require_date": True}, re.compile("."))
-        finally:
-            bd.http_get = orig
-        self.assertEqual([(i["title"], i["date"]) for i in items], [("IDSA Guideline A, 2026 update", "2026-09-16")])
+    def test_new_since_baseline(self):
+        a = {"title": "Guideline A", "url": "https://x/a", "date": None}
+        b = {"title": "Guideline B", "url": "https://x/b", "date": None}
+        dated = {"title": "Guideline C", "url": "https://x/c", "date": "2026-01-02"}
+        seen = {}
+        # First sighting: baseline only, undated links are not published.
+        self.assertEqual(bd.new_since_baseline([a, dated], "https://x", seen, {}, "2026-10-11"), [dated])
+        self.assertEqual(seen["https://x"], ["https://x/a", "https://x/c"])
+        # A link posted later is published, dated the day it was first seen.
+        out = bd.new_since_baseline([a, b, dated], "https://x", seen, {}, "2026-10-12")
+        self.assertEqual([(i["url"], i["date"]) for i in out], [("https://x/b", "2026-10-12"), ("https://x/c", "2026-01-02")])
+        # And keeps that date on later runs.
+        out = bd.new_since_baseline([a, b], "https://x", seen, {"https://x/b": "2026-10-12"}, "2026-11-01")
+        self.assertEqual(out[0]["date"], "2026-10-12")
 
     def test_web_item_dropped_once_indexed(self):
         acr = {"id": "acr", "abbr": "ACR", "specialty": "Rheumatology"}

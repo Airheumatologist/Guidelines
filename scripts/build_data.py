@@ -43,6 +43,7 @@ SOURCES_FILE = ROOT / "sources.yaml"
 CONDITIONS_FILE = ROOT / "conditions.yaml"
 DATA_FILE = ROOT / "site" / "data" / "guidelines.json"
 FEED_FILE = ROOT / "site" / "feed.xml"
+WEB_SEEN_FILE = ROOT / "site" / "data" / "web_seen.json"
 
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
 TOOL = "guidelines-webapp"
@@ -374,10 +375,27 @@ def fetch_web(page: dict, keep: re.Pattern) -> list[dict]:
             if title and len(title) >= 15:
                 item["title"] = re.sub(r"\s*[|–-]\s*(American College of Rheumatology|ACR)\s*$", "", title)
             item["date"] = item["date"] or date
-    if page.get("require_date"):
-        # Alphabetical society lists mix decades of guidelines; keep only dated ones.
-        items = [i for i in items if i["date"]]
     return items
+
+
+def new_since_baseline(items: list[dict], page_url: str, web_seen: dict,
+                       previous_urls: dict, today: str) -> list[dict]:
+    """For society list pages without dates (alphabetical A-Z lists).
+
+    The first time a page is read, every link on it is stored as the baseline
+    and nothing is published. Afterwards a link that was not in the baseline is
+    a newly posted guideline and is published, dated the day it first appeared."""
+    if page_url not in web_seen:
+        web_seen[page_url] = sorted({i["url"] for i in items})
+        return [i for i in items if i["date"]]
+    baseline = set(web_seen[page_url])
+    out = []
+    for i in items:
+        if i["date"]:
+            out.append(i)
+        elif i["url"] not in baseline:
+            out.append(dict(i, date=previous_urls.get(i["url"]) or today))
+    return out
 
 
 _WEB_STOP = {"the", "of", "and", "for", "in", "with", "a", "an", "to", "on", "new", "updated",
@@ -581,6 +599,10 @@ def main(argv: list[str] | None = None) -> int:
     previous_data = json.loads(DATA_FILE.read_text()) if DATA_FILE.exists() else {}
     previous = {g["id"]: g for g in previous_data.get("guidelines", [])}
 
+    web_seen = json.loads(WEB_SEEN_FILE.read_text()) if WEB_SEEN_FILE.exists() else {}
+    previous_urls = {g["url"]: g["date"] for g in previous.values() if g.get("web")}
+    today = dt.date.today().isoformat()
+
     records: dict = {}
     report = []
     for src in active:
@@ -612,7 +634,12 @@ def main(argv: list[str] | None = None) -> int:
                 entry["errors"].append(f"rss {feed_url}: {exc}")
         for page in src.get("web") or []:
             try:
-                items = [i for i in fetch_web(page, rss_kw)
+                items = fetch_web(page, rss_kw)
+                if page.get("new_only"):
+                    links = len(items)
+                    items = new_since_baseline(items, page["url"], web_seen, previous_urls, today)
+                    print(f"{'':<18}  web {page['url']}: {links} links, {len(items)} new", flush=True)
+                items = [i for i in items
                          if not is_excluded(i["title"], excludes)
                          and (not i["date"] or int(i["date"][:4]) >= since)]
                 for i in items:
@@ -667,6 +694,7 @@ def main(argv: list[str] | None = None) -> int:
     DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
     DATA_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     write_feed(guidelines, all_sources, now.isoformat())
+    WEB_SEEN_FILE.write_text(json.dumps(web_seen, indent=1) + "\n", encoding="utf-8")
     return 0
 
 

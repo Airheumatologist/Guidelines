@@ -48,7 +48,7 @@ jobs:
         run: |
           git config user.name "guidelines-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add site/data/guidelines.json site/feed.xml
+          git add site/data/guidelines.json site/data/web_seen.json site/feed.xml
           if git diff --cached --quiet; then
             echo "No changes."
           else
