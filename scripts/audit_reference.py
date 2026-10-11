@@ -22,8 +22,16 @@ if __name__ == "__main__":
     mode = sys.argv[1] if len(sys.argv) > 1 else "discover"
     if mode == "discover":
         body = get(BASE + "/guidelines/rheumatology")
-        txt = rsc_text(body)
+        txt = rsc_text(body) or body
         print("html bytes", len(body), "rsc bytes", len(txt))
+        vis = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " | ", re.sub(r"(?s)<(script|style)[^>]*>.*?</\1>", " ", body)))
+        print("---- visible text ----")
+        print(vis[:9000])
+        print("---- anchors ----")
+        for h, t in re.findall(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>', body, re.S)[:150]:
+            print(h, "::", re.sub(r"<[^>]+>|\s+", " ", t).strip()[:120])
+        print("---- script tags ----")
+        print(re.findall(r"<script[^>]*>", body)[:20])
         for m in list(re.finditer(r"(?i)spondyl", txt))[:4]:
             print("---- context ----")
             print(txt[max(0, m.start() - 700): m.end() + 700])
