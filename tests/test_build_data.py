@@ -108,6 +108,24 @@ class WebTests(unittest.TestCase):
         self.assertEqual(title, "ACR axSpA Guideline & Summary")
         self.assertEqual(date, "2026-06-24")
 
+    def test_follow_and_require_date(self):
+        pages = {
+            "https://idsa.example/list": b'<a href="/practice-guideline/a/">Guideline A for testing</a>'
+                                         b'<a href="/practice-guideline/b/">Guideline B for testing</a>',
+            "https://idsa.example/practice-guideline/a/":
+                b'<meta property="og:title" content="IDSA Guideline A, 2026 update">'
+                b'<meta property="article:published_time" content="2026-09-16">',
+            "https://idsa.example/practice-guideline/b/": b'<h1>Old guideline B</h1>',
+        }
+        orig = bd.http_get
+        bd.http_get = lambda url, params=None, retries=3: pages[url]
+        try:
+            items = bd.fetch_web({"url": "https://idsa.example/list", "link_pattern": "practice-guideline/",
+                                  "keywords": ".", "follow": True, "require_date": True}, re.compile("."))
+        finally:
+            bd.http_get = orig
+        self.assertEqual([(i["title"], i["date"]) for i in items], [("IDSA Guideline A, 2026 update", "2026-09-16")])
+
     def test_web_item_dropped_once_indexed(self):
         acr = {"id": "acr", "abbr": "ACR", "specialty": "Rheumatology"}
         records = {}

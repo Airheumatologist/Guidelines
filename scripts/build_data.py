@@ -361,11 +361,12 @@ def page_meta(body: str) -> tuple[str | None, str | None]:
     return (" ".join(title.split()) if title else None), date
 
 
-def fetch_web(page: dict, keep: re.Pattern, follow_limit: int = 25) -> list[dict]:
+def fetch_web(page: dict, keep: re.Pattern) -> list[dict]:
     body = http_get(page["url"]).decode("utf-8", "replace")
     items = parse_web_links(body, page["url"], page, keep)
     if page.get("follow"):
-        for item in items[:follow_limit]:
+        items = items[:int(page.get("follow_limit", 25))]
+        for item in items:
             try:
                 title, date = page_meta(http_get(item["url"], retries=1).decode("utf-8", "replace"))
             except Exception:
@@ -373,6 +374,9 @@ def fetch_web(page: dict, keep: re.Pattern, follow_limit: int = 25) -> list[dict
             if title and len(title) >= 15:
                 item["title"] = re.sub(r"\s*[|–-]\s*(American College of Rheumatology|ACR)\s*$", "", title)
             item["date"] = item["date"] or date
+    if page.get("require_date"):
+        # Alphabetical society lists mix decades of guidelines; keep only dated ones.
+        items = [i for i in items if i["date"]]
     return items
 
 
@@ -616,7 +620,7 @@ def main(argv: list[str] | None = None) -> int:
                                     "journal": f"{src['abbr']} website", "date": i["date"],
                                     "url": i["url"], "mesh": [], "keywords": [], "web": True}, src)
                 entry["web"] = (entry["web"] or 0) + len(items)
-                entry.setdefault("sample", []).extend(i["title"][:110] for i in items[:3])
+                entry.setdefault("sample", []).extend(f"[web {i['date']}] {i['title'][:100]}" for i in items[:6])
             except Exception as exc:
                 entry["errors"].append(f"web {page['url']}: {exc}")
         report.append(entry)
