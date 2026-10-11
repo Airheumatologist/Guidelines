@@ -37,6 +37,10 @@
 #                                rss_keywords)
 #                  strip:        regex removed from the link text (dates, labels)
 #                  follow:       true to open each link and use its own title/date
+#                  follow_limit: how many links to open (default 25)
+#                  new_only:     for undated A-Z list pages: the first run stores
+#                                every link as a baseline; links that appear
+#                                later are published, dated the day first seen
 #                Website items are dropped automatically once the guideline is
 #                indexed in PubMed.
 #
@@ -84,6 +88,10 @@ sources:
     pubmed:
       query: '("World Health Organization"[pubn] OR "World Health Organization"[cn]) AND (guideline*[ti] OR recommendation*[ti])'
     web:
+      - url: https://publications.iarc.who.int/Book-And-Report-Series/Who-Classification-Of-Tumours
+        link_pattern: 'publications\.iarc\.who\.int/Book-And-Report-Series/Who-Classification-Of-Tumours/.+'
+        keywords: '.'
+        new_only: true
       - url: https://www.who.int/publications/who-guidelines
         link_pattern: 'iris\.who\.int/handle/|who\.int/publications/i/item/'
         keywords: 'guideline|recommendation|position paper'
@@ -118,6 +126,7 @@ sources:
         keywords: 'guideline|guidance|recommendation'
         strip: '^\d{1,2}/\d{1,2}/\d{2,4}|(ACR News|Clinical Practice Guidelines|Press Release).*$'
         follow: true
+        target_link: 'rheumatology\.org/(?!clinical-practice-guidelines)[a-z0-9-]*guideline[a-z0-9-]*/?$'
 
   - id: eular
     name: European Alliance of Associations for Rheumatology
@@ -183,6 +192,11 @@ sources:
     pubmed:
       journals: ["Clin Infect Dis"]
       title_terms: ["Infectious Diseases Society of America", "IDSA"]
+    web:
+      - url: https://www.idsociety.org/practice-guideline/all-practice-guidelines/
+        link_pattern: 'idsociety\.org/practice-guideline/(?!all-practice|practice-guidelines)[A-Za-z]'
+        keywords: '.'
+        new_only: true
 
   # ------------------------------------------------------------ Pulmonology
   - id: ats
@@ -354,6 +368,11 @@ sources:
     specialty: Obstetrics & Gynecology
     pubmed:
       query: '"Obstet Gynecol"[ta] AND ("Practice Bulletin"[ti] OR "Clinical Practice Guideline"[ti] OR "Clinical Consensus"[ti] OR "Clinical Practice Update"[ti] OR "Committee Opinion"[ti] OR "Committee Statement"[ti] OR "Obstetric Care Consensus"[ti] OR "practice guideline"[pt] OR "American College of Obstetricians and Gynecologists"[cn])'
+    web:
+      - url: https://www.acog.org/clinical/clinical-guidance/clinical-practice-update
+        link_pattern: 'acog\.org/clinical/clinical-guidance/[a-z-]+/articles/'
+        keywords: '.'
+        new_only: true
 
   # -------------------------------------------------------------- Pediatrics
   - id: aap
@@ -501,6 +520,11 @@ sources:
     specialty: Pulmonology
     pubmed:
       query: '("Global Initiative for Asthma"[ti] OR "Global Initiative for Chronic Obstructive Lung Disease"[ti] OR "GINA"[ti] OR "GOLD Science Committee"[ti]) AND (strategy[ti] OR report[ti] OR recommendation*[ti] OR guideline*[ti] OR statement*[ti] OR "practice guideline"[pt])'
+    web:
+      - url: https://ginasthma.org/reports/
+        link_pattern: 'ginasthma\.org/20\d\d-gina-'
+        keywords: '.'
+        new_only: true
 
   - id: aasm
     name: American Academy of Sleep Medicine
@@ -577,6 +601,12 @@ sources:
     pubmed:
       journals: ["BJOG"]
       title_terms: ["RCOG", "Royal College of Obstetricians", "Green-top Guideline"]
+    web:
+      - url: https://www.rcog.org.uk/guidance/browse-all-guidance/green-top-guidelines/
+        link_pattern: 'green-top-guidelines/[a-z]'
+        keywords: '.'
+        strip: '\(No\. \w+\)'
+        new_only: true
 
   - id: eshre
     name: European Society of Human Reproduction and Embryology
@@ -600,6 +630,11 @@ sources:
     specialty: Critical Care
     pubmed:
       query: '("J Intensive Care Soc"[ta] AND (guideline*[ti] OR guidance[ti] OR statement*[ti] OR standards[ti] OR "practice guideline"[pt])) OR (("Intensive Care Society"[ti] OR "Intensive Care Society"[cn]) AND (guideline*[ti] OR guidance[ti] OR statement*[ti] OR standards[ti] OR consensus[ti]))'
+    web:
+      - url: https://ics.ac.uk/guidance
+        link_pattern: 'ics\.ac\.uk/(resource|guidance)/[a-z0-9]'
+        keywords: 'guid|standard|code of practice|management|transfer|repatriation|stewardship|referring'
+        new_only: true
 
   - id: cps
     name: Canadian Paediatric Society
@@ -607,6 +642,11 @@ sources:
     specialty: Pediatrics
     pubmed:
       query: '"Paediatr Child Health"[ta] AND ("position statement"[ti] OR "practice point"[ti] OR guideline*[ti] OR statement[ti] OR "Canadian Paediatric Society"[cn])'
+    web:
+      - url: https://cps.ca/en/documents
+        link_pattern: 'cps\.ca/en/documents/position/'
+        keywords: '.'
+        new_only: true
 
   - id: estro
     name: European Society for Radiotherapy and Oncology
@@ -844,6 +884,11 @@ sources:
     specialty: Otolaryngology
     pubmed:
       query: '"Otolaryngol Head Neck Surg"[ta] AND ("clinical practice guideline"[ti] OR "clinical consensus statement"[ti] OR "practice guideline"[pt])'
+    web:
+      - url: https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/
+        link_pattern: 'entnet\.org/'
+        keywords: 'clinical practice guideline|consensus statement|position statement'
+        new_only: true
 
   - id: acsm
     name: American College of Sports Medicine

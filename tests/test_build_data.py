@@ -108,6 +108,30 @@ class WebTests(unittest.TestCase):
         self.assertEqual(title, "ACR axSpA Guideline & Summary")
         self.assertEqual(date, "2026-06-24")
 
+    def test_best_link_picks_matching_guideline_page(self):
+        body = ('<a href="/clinical-practice-guidelines">Clinical Practice Guidelines</a>'
+                '<a href="/osteoarthritis-guideline">Osteoarthritis</a>'
+                '<a href="/axial-spondyloarthritis-guideline">Read the guideline</a>')
+        url = bd._best_link(body, "https://rheumatology.org/press-releases/x",
+                            r"rheumatology\.org/(?!clinical-practice-guidelines)[a-z0-9-]*guideline",
+                            "New Guidelines Advance Treatment of Axial Spondyloarthritis in Adults and Youth")
+        self.assertEqual(url, "https://rheumatology.org/axial-spondyloarthritis-guideline")
+
+    def test_new_since_baseline(self):
+        a = {"title": "Guideline A", "url": "https://x/a", "date": None}
+        b = {"title": "Guideline B", "url": "https://x/b", "date": None}
+        dated = {"title": "Guideline C", "url": "https://x/c", "date": "2026-01-02"}
+        seen = {}
+        # First sighting: baseline only, undated links are not published.
+        self.assertEqual(bd.new_since_baseline([a, dated], "https://x", seen, {}, "2026-10-11"), [dated])
+        self.assertEqual(seen["https://x"], ["https://x/a", "https://x/c"])
+        # A link posted later is published, dated the day it was first seen.
+        out = bd.new_since_baseline([a, b, dated], "https://x", seen, {}, "2026-10-12")
+        self.assertEqual([(i["url"], i["date"]) for i in out], [("https://x/b", "2026-10-12"), ("https://x/c", "2026-01-02")])
+        # And keeps that date on later runs.
+        out = bd.new_since_baseline([a, b], "https://x", seen, {"https://x/b": "2026-10-12"}, "2026-11-01")
+        self.assertEqual(out[0]["date"], "2026-10-12")
+
     def test_web_item_dropped_once_indexed(self):
         acr = {"id": "acr", "abbr": "ACR", "specialty": "Rheumatology"}
         records = {}
