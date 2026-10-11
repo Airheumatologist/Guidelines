@@ -41,6 +41,7 @@
 - {name: Infective Endocarditis, specialty: Cardiology, match: [endocarditis]}
 - {name: Cardiovascular Disease Prevention, specialty: Cardiology, match: [cardiovascular disease prevention, primary prevention of cardiovascular, cardiovascular risk]}
 - {name: Cardiac Arrest and Resuscitation, specialty: Cardiology, match: [cardiac arrest, cardiopulmonary resuscitation, resuscitation]}
+- {name: Cardiovascular-Kidney-Metabolic Syndrome, specialty: Cardiology, match: [cardiovascular-kidney-metabolic]}
 - {name: Myocarditis, specialty: Cardiology, match: [myocarditis]}
 - {name: Cardiac Rehabilitation, specialty: Cardiology, match: [cardiac rehabilitation]}
 - {name: Congenital Heart Disease, specialty: Cardiology, match: [congenital heart disease]}
@@ -144,6 +145,7 @@
 - {name: Leukemia, specialty: Hematology, match: [leukemia, leukaemia]}
 - {name: Multiple Myeloma, specialty: Hematology, match: [myeloma]}
 - {name: Myelodysplastic and Myeloproliferative Neoplasms, specialty: Hematology, match: [myelodysplastic, myeloproliferative, polycythemia vera, myelofibrosis, essential thrombocythemia]}
+- {name: Amyloidosis, specialty: Hematology, match: [amyloidosis]}
 - {name: Sickle Cell Disease, specialty: Hematology, match: [sickle cell]}
 - {name: Thalassemia and Anemia, specialty: Hematology, match: ['thalass\w*', iron deficiency, anemia, anaemia]}
 - {name: Immune Thrombocytopenia, specialty: Hematology, match: [immune thrombocytopenia, 'thrombocytopeni\w*']}
@@ -217,6 +219,7 @@
 - {name: Benign Prostatic Hyperplasia, specialty: Urology, match: [benign prostatic, lower urinary tract symptoms, '\bLUTS\b']}
 - {name: Erectile Dysfunction, specialty: Urology, match: [erectile dysfunction]}
 - {name: Male Infertility, specialty: Urology, match: [male infertility]}
+- {name: Neurogenic Bladder, specialty: Urology, match: [neuro-urology, neurourology, neurogenic bladder, neurogenic lower urinary]}
 - {name: Microhematuria, specialty: Urology, match: [hematuria, haematuria]}
 
 # --------------------------------------------------------------- Ophthalmology
