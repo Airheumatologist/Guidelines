@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-11T12:53:22+00:00",
+ "generated": "2026-10-11T15:20:01+00:00",
  "sources": [
   {
    "id": "who",
@@ -692,7 +692,7 @@
     "kept": 87
    },
    "rss": null,
-   "web": null,
+   "web": 0,
    "errors": []
   },
   {
@@ -901,7 +901,7 @@
     "kept": 380
    },
    "rss": null,
-   "web": null,
+   "web": 0,
    "errors": []
   },
   {
@@ -1099,7 +1099,7 @@
     "kept": 71
    },
    "rss": null,
-   "web": null,
+   "web": 0,
    "errors": []
   },
   {
@@ -1209,7 +1209,7 @@
     "kept": 29
    },
    "rss": null,
-   "web": null,
+   "web": 0,
    "errors": []
   },
   {
@@ -1242,7 +1242,7 @@
     "kept": 31
    },
    "rss": null,
-   "web": null,
+   "web": 1,
    "errors": []
   },
   {
@@ -1253,7 +1253,7 @@
     "kept": 23
    },
    "rss": null,
-   "web": null,
+   "web": 0,
    "errors": []
   },
   {
@@ -1583,7 +1583,7 @@
     "kept": 30
    },
    "rss": null,
-   "web": null,
+   "web": 0,
    "errors": []
   },
   {
@@ -1653,6 +1653,922 @@
    "errors": []
   }
  ],
+ "condition_terms": {
+  "Rheumatoid Arthritis": [
+   "rheumatoid arthritis"
+  ],
+  "Systemic Lupus Erythematosus": [
+   "systemic lupus",
+   "lupus erythematosus",
+   "lupus nephritis",
+   "SLE"
+  ],
+  "Gout": [
+   "gout",
+   "hyperuricemia",
+   "hyperuricaemia"
+  ],
+  "Psoriatic Arthritis": [
+   "psoriatic arthritis"
+  ],
+  "Axial Spondyloarthritis": [
+   "spondyloarthritis",
+   "ankylosing spondylitis",
+   "spondyloarthropath"
+  ],
+  "Osteoarthritis": [
+   "osteoarthritis"
+  ],
+  "Osteoporosis": [
+   "osteoporosis",
+   "bone mineral density",
+   "fragility fracture"
+  ],
+  "Systemic Sclerosis": [
+   "systemic sclerosis",
+   "scleroderma"
+  ],
+  "Sjögren Disease": [
+   "sj öo gren"
+  ],
+  "Vasculitis": [
+   "vasculitis",
+   "vasculitides",
+   "ANCA",
+   "giant cell arteritis",
+   "takayasu",
+   "polyarteritis",
+   "granulomatosis with polyangiitis",
+   "polymyalgia rheumatica",
+   "behçet",
+   "behcet",
+   "kawasaki"
+  ],
+  "Idiopathic Inflammatory Myopathies": [
+   "myositis",
+   "dermatomyositis",
+   "polymyositis",
+   "inflammatory myopath"
+  ],
+  "Antiphospholipid Syndrome": [
+   "antiphospholipid"
+  ],
+  "Juvenile Idiopathic Arthritis": [
+   "juvenile idiopathic arthritis"
+  ],
+  "Fibromyalgia": [
+   "fibromyalgia"
+  ],
+  "Glucocorticoid-Induced Osteoporosis": [
+   "glucocorticoid-induced osteoporosis"
+  ],
+  "Hypertension": [
+   "hypertension",
+   "high blood pressure",
+   "blood pressure"
+  ],
+  "Heart Failure": [
+   "heart failure",
+   "cardiomyopath"
+  ],
+  "Atrial Fibrillation": [
+   "atrial fibrillation",
+   "atrial flutter"
+  ],
+  "Coronary Artery Disease": [
+   "coronary artery disease",
+   "coronary heart disease",
+   "chronic coronary",
+   "angina",
+   "ischemic heart disease",
+   "ischaemic heart disease"
+  ],
+  "Acute Coronary Syndromes": [
+   "acute coronary syndrome",
+   "myocardial infarction",
+   "STEMI",
+   "NSTEMI"
+  ],
+  "Dyslipidemia": [
+   "dyslipid",
+   "cholesterol",
+   "hypercholesterol",
+   "lipid management",
+   "hypertriglyceridemia"
+  ],
+  "Valvular Heart Disease": [
+   "valvular heart disease",
+   "aortic stenosis",
+   "mitral regurgitation",
+   "valve disease"
+  ],
+  "Ventricular Arrhythmias and Sudden Death": [
+   "ventricular arrhythmia",
+   "sudden cardiac death",
+   "ventricular tachycardia"
+  ],
+  "Syncope": [
+   "syncope"
+  ],
+  "Peripheral Artery Disease": [
+   "peripheral arter disease",
+   "lower extremity arter disease"
+  ],
+  "Aortic Disease": [
+   "aortic disease",
+   "aortic aneurysm",
+   "aortic dissection"
+  ],
+  "Pericarditis": [
+   "pericardi"
+  ],
+  "Infective Endocarditis": [
+   "endocarditis"
+  ],
+  "Cardiovascular Disease Prevention": [
+   "cardiovascular disease prevention",
+   "primary prevention of cardiovascular",
+   "cardiovascular risk"
+  ],
+  "Cardiac Arrest and Resuscitation": [
+   "cardiac arrest",
+   "cardiopulmonary resuscitation",
+   "resuscitation"
+  ],
+  "Cardiovascular-Kidney-Metabolic Syndrome": [
+   "cardiovascular-kidney-metabolic"
+  ],
+  "Myocarditis": [
+   "myocarditis"
+  ],
+  "Cardiac Rehabilitation": [
+   "cardiac rehabilitation"
+  ],
+  "Congenital Heart Disease": [
+   "congenital heart disease"
+  ],
+  "Cardio-Oncology": [
+   "cardio-oncology",
+   "cardiotoxicity"
+  ],
+  "Diabetes Mellitus": [
+   "standards of medical care in diabetes",
+   "diabetes"
+  ],
+  "Type 1 Diabetes": [
+   "type 1 diabetes"
+  ],
+  "Obesity": [
+   "obesity",
+   "overweight",
+   "weight management"
+  ],
+  "Thyroid Disease": [
+   "thyroid",
+   "hypothyroidism",
+   "hyperthyroidism",
+   "graves"
+  ],
+  "Adrenal Disorders": [
+   "adrenal",
+   "cushing",
+   "pheochromocytoma",
+   "aldosteronism"
+  ],
+  "Pituitary Disorders": [
+   "pituitary",
+   "acromegaly",
+   "prolactinoma",
+   "hypopituitarism"
+  ],
+  "Hypogonadism": [
+   "hypogonadism",
+   "testosterone"
+  ],
+  "Polycystic Ovary Syndrome": [
+   "polycystic ovary"
+  ],
+  "Hypoglycemia": [
+   "hypoglyc"
+  ],
+  "Primary Hyperparathyroidism": [
+   "hyperparathyroidism",
+   "parathyroid"
+  ],
+  "Vitamin D Deficiency": [
+   "vitamin d"
+  ],
+  "Menopause": [
+   "menopaus"
+  ],
+  "Gender-Affirming Care": [
+   "gender dysphoria",
+   "gender-affirming",
+   "transgender",
+   "gender incongruence"
+  ],
+  "HIV": [
+   "HIV",
+   "human immunodeficiency virus",
+   "pre-exposure prophylaxis"
+  ],
+  "Tuberculosis": [
+   "tuberculosis",
+   "TB"
+  ],
+  "Malaria": [
+   "malaria"
+  ],
+  "COVID-19": [
+   "covid-19",
+   "sars-cov-2",
+   "coronavirus disease 2019"
+  ],
+  "RSV Infection": [
+   "RSV",
+   "respiratory syncytial"
+  ],
+  "Influenza": [
+   "influenza"
+  ],
+  "Viral Hepatitis": [
+   "hepatitis b",
+   "hepatitis c",
+   "hepatitis e",
+   "hepatitis delta",
+   "HBV",
+   "HCV",
+   "viral hepatitis"
+  ],
+  "Sepsis and Septic Shock": [
+   "sepsis",
+   "septic shock"
+  ],
+  "Pneumonia": [
+   "pneumonia"
+  ],
+  "Urinary Tract Infection": [
+   "urinary tract infection",
+   "cystitis",
+   "pyelonephritis",
+   "bacteriuria"
+  ],
+  "Clostridioides difficile Infection": [
+   "clostridioides difficile",
+   "clostridium difficile",
+   "c difficile"
+  ],
+  "Skin and Soft Tissue Infections": [
+   "skin and soft tissue infection",
+   "cellulitis",
+   "diabetic foot infection"
+  ],
+  "Fungal Infections": [
+   "aspergillosis",
+   "candidiasis",
+   "cryptococc",
+   "histoplasmosis",
+   "fungal infection",
+   "coccidioidomycosis",
+   "mucormycosis"
+  ],
+  "Antimicrobial Resistance": [
+   "antimicrobial resistance",
+   "antimicrobial-resistant",
+   "multidrug-resistant",
+   "carbapenem-resistant",
+   "gram-negative infection",
+   "antimicrobial stewardship"
+  ],
+  "Sexually Transmitted Infections": [
+   "sexually transmitted",
+   "syphilis",
+   "gonorrh",
+   "chlamydia"
+  ],
+  "Lyme Disease": [
+   "lyme"
+  ],
+  "Bone and Joint Infections": [
+   "osteomyelitis",
+   "prosthetic joint infection",
+   "septic arthritis"
+  ],
+  "Vaccination": [
+   "vaccin",
+   "immuni sz ation"
+  ],
+  "Neglected Tropical Diseases": [
+   "leishmaniasis",
+   "schistosomiasis",
+   "dengue",
+   "chagas",
+   "trypanosomiasis",
+   "leprosy",
+   "rabies"
+  ],
+  "Febrile Neutropenia": [
+   "febrile neutropenia",
+   "neutropeni"
+  ],
+  "Asthma": [
+   "asthma"
+  ],
+  "COPD": [
+   "chronic obstructive pulmonary",
+   "COPD"
+  ],
+  "Interstitial Lung Disease": [
+   "interstitial lung disease",
+   "pulmonary fibrosis",
+   "idiopathic pulmonary fibrosis",
+   "ILD",
+   "sarcoidosis"
+  ],
+  "Pulmonary Hypertension": [
+   "pulmonary hypertension",
+   "pulmonary arterial hypertension"
+  ],
+  "Venous Thromboembolism": [
+   "venous thromboembolism",
+   "pulmonary embolism",
+   "deep vein thrombosis",
+   "thromboprophylaxis",
+   "VTE",
+   "anticoagula",
+   "antithrombotic"
+  ],
+  "Obstructive Sleep Apnea": [
+   "sleep apnea",
+   "sleep apnoea",
+   "sleep-disordered breathing"
+  ],
+  "Bronchiectasis": [
+   "bronchiectasis"
+  ],
+  "Cystic Fibrosis": [
+   "cystic fibrosis"
+  ],
+  "Lung Cancer": [
+   "lung cancer",
+   "non-small cell lung",
+   "small cell lung",
+   "NSCLC"
+  ],
+  "Chronic Cough": [
+   "chronic cough",
+   "cough"
+  ],
+  "Pleural Disease": [
+   "pleural"
+  ],
+  "Acute Respiratory Distress Syndrome": [
+   "acute respiratory distress syndrome",
+   "ARDS",
+   "mechanical ventilation",
+   "respiratory failure"
+  ],
+  "Smoking Cessation": [
+   "smoking cessation",
+   "tobacco",
+   "nicotine"
+  ],
+  "Inflammatory Bowel Disease": [
+   "inflammatory bowel disease",
+   "crohn",
+   "ulcerative colitis"
+  ],
+  "Gastroesophageal Reflux Disease": [
+   "gastroesophageal reflux",
+   "gastro-oesophageal reflux",
+   "GERD",
+   "barrett"
+  ],
+  "Helicobacter pylori Infection": [
+   "helicobacter pylori",
+   "h pylori"
+  ],
+  "Irritable Bowel Syndrome": [
+   "irritable bowel"
+  ],
+  "Celiac Disease": [
+   "celiac",
+   "coeliac"
+  ],
+  "Eosinophilic Esophagitis": [
+   "eosinophilic esophagitis",
+   "eosinophilic oesophagitis"
+  ],
+  "Gastrointestinal Bleeding": [
+   "gastrointestinal bleeding",
+   "gastrointestinal hemorrhage",
+   "upper GI bleeding",
+   "lower GI bleeding"
+  ],
+  "Pancreatitis": [
+   "pancreatitis"
+  ],
+  "Cirrhosis and Portal Hypertension": [
+   "cirrhosis",
+   "portal hypertension",
+   "ascites",
+   "hepatic encephalopathy",
+   "varice"
+  ],
+  "Steatotic Liver Disease (MASLD)": [
+   "MASLD",
+   "MASH",
+   "NAFLD",
+   "NASH",
+   "fatty liver",
+   "steatotic liver",
+   "steatohepatitis"
+  ],
+  "Alcohol-Related Liver Disease": [
+   "alcohol-related liver",
+   "alcohol-associated liver",
+   "alcoholic hepatitis",
+   "alcoholic liver"
+  ],
+  "Autoimmune and Cholestatic Liver Disease": [
+   "autoimmune hepatitis",
+   "primary biliary",
+   "primary sclerosing cholangitis",
+   "cholestatic"
+  ],
+  "Colorectal Cancer and Screening": [
+   "colorectal cancer",
+   "colon cancer",
+   "rectal cancer",
+   "colonoscopy",
+   "colorectal neoplasia"
+  ],
+  "Hepatocellular Carcinoma": [
+   "hepatocellular carcinoma",
+   "liver cancer"
+  ],
+  "Acute Liver Failure": [
+   "acute liver failure",
+   "liver transplant"
+  ],
+  "Dyspepsia and Gastroparesis": [
+   "dyspepsia",
+   "gastroparesis"
+  ],
+  "Diverticulitis": [
+   "diverticul"
+  ],
+  "Colorectal Polyps and Polyposis": [
+   "polyps",
+   "polyposis",
+   "polypectomy"
+  ],
+  "Pancreatic Cysts and Ampullary Lesions": [
+   "pancreatic cyst",
+   "ampullary"
+  ],
+  "Constipation": [
+   "constipation"
+  ],
+  "Chronic Kidney Disease": [
+   "chronic kidney disease",
+   "kidney disease",
+   "kidney health",
+   "CKD",
+   "kidney failure",
+   "dialysis",
+   "kidney transplant"
+  ],
+  "Acute Kidney Injury": [
+   "acute kidney injury"
+  ],
+  "Glomerular Diseases": [
+   "glomerul",
+   "IgA nephropathy",
+   "nephrotic syndrome",
+   "membranous nephropathy"
+  ],
+  "Kidney Stones": [
+   "kidney stone",
+   "nephrolithiasis",
+   "urolithiasis"
+  ],
+  "Anemia in CKD": [
+   "anemia in chronic kidney",
+   "anaemia in chronic kidney"
+  ],
+  "Polycystic Kidney Disease": [
+   "polycystic kidney"
+  ],
+  "Electrolyte Disorders": [
+   "hyponatremia",
+   "hyponatraemia",
+   "hyperkalemia",
+   "hyperkalaemia",
+   "electrolyte"
+  ],
+  "Breast Cancer": [
+   "breast cancer"
+  ],
+  "Prostate Cancer": [
+   "prostate cancer"
+  ],
+  "Ovarian Cancer": [
+   "ovarian cancer"
+  ],
+  "Cervical Cancer and Screening": [
+   "cervical cancer",
+   "cervical screening",
+   "human papillomavirus",
+   "HPV"
+  ],
+  "Endometrial Cancer": [
+   "endometrial cancer",
+   "uterine cancer"
+  ],
+  "Pancreatic Cancer": [
+   "pancreatic cancer",
+   "pancreatic adenocarcinoma"
+  ],
+  "Gastric and Esophageal Cancer": [
+   "gastric cancer",
+   "esophageal cancer",
+   "oesophageal cancer",
+   "gastroesophageal cancer",
+   "esophagogastric junction",
+   "esophageal and esophagogastric"
+  ],
+  "Melanoma and Skin Cancer": [
+   "melanoma",
+   "basal cell carcinoma",
+   "squamous cell carcinoma of the skin",
+   "skin cancer"
+  ],
+  "Head and Neck Cancer": [
+   "head and neck cancer",
+   "oropharyngeal cancer",
+   "nasopharyngeal"
+  ],
+  "Bladder and Kidney Cancer": [
+   "bladder cancer",
+   "urothelial",
+   "renal cell carcinoma",
+   "kidney cancer"
+  ],
+  "Lymphoma": [
+   "lymphoma"
+  ],
+  "Leukemia": [
+   "leukemia",
+   "leukaemia"
+  ],
+  "Multiple Myeloma": [
+   "myeloma"
+  ],
+  "Myelodysplastic and Myeloproliferative Neoplasms": [
+   "myelodysplastic",
+   "myeloproliferative",
+   "polycythemia vera",
+   "myelofibrosis",
+   "essential thrombocythemia"
+  ],
+  "Amyloidosis": [
+   "amyloidosis"
+  ],
+  "Sickle Cell Disease": [
+   "sickle cell"
+  ],
+  "Thalassemia and Anemia": [
+   "thalass",
+   "iron deficiency",
+   "anemia",
+   "anaemia"
+  ],
+  "Immune Thrombocytopenia": [
+   "immune thrombocytopenia",
+   "thrombocytopeni"
+  ],
+  "Hemophilia and Bleeding Disorders": [
+   "hemophilia",
+   "haemophilia",
+   "von willebrand",
+   "bleeding disorder"
+  ],
+  "Transfusion Medicine": [
+   "transfusion",
+   "blood management"
+  ],
+  "Immune-Related Adverse Events": [
+   "immune-related adverse",
+   "immune checkpoint inhibitor"
+  ],
+  "Cancer Survivorship and Supportive Care": [
+   "survivorship",
+   "supportive care",
+   "antiemetic",
+   "cancer pain",
+   "cachexia"
+  ],
+  "Cancer Screening": [
+   "cancer screening"
+  ],
+  "Sarcoma": [
+   "sarcoma"
+  ],
+  "Brain Tumors": [
+   "glioma",
+   "glioblastoma",
+   "brain tumou r",
+   "brain metastas"
+  ],
+  "Thyroid Cancer": [
+   "thyroid cancer",
+   "thyroid carcinoma",
+   "thyroid nodule"
+  ],
+  "Stroke": [
+   "stroke",
+   "transient ischemic attack",
+   "intracerebral hemorrhage",
+   "subarachnoid hemorrhage"
+  ],
+  "Epilepsy": [
+   "epilep",
+   "seizure",
+   "status epilepticus"
+  ],
+  "Multiple Sclerosis": [
+   "multiple sclerosis",
+   "neuromyelitis optica"
+  ],
+  "Parkinson Disease": [
+   "parkinson"
+  ],
+  "Dementia": [
+   "dementia",
+   "alzheimer",
+   "cognitive impairment"
+  ],
+  "Migraine and Headache": [
+   "migraine",
+   "headache"
+  ],
+  "Neuromuscular Disorders": [
+   "myasthenia",
+   "amyotrophic lateral sclerosis",
+   "guillain-barr ée",
+   "neuropathy",
+   "muscular dystrophy",
+   "spinal muscular atrophy"
+  ],
+  "Traumatic Brain Injury": [
+   "traumatic brain injury",
+   "concussion"
+  ],
+  "Depression": [
+   "depress"
+  ],
+  "Schizophrenia": [
+   "schizophrenia",
+   "psychosis"
+  ],
+  "Bipolar Disorder": [
+   "bipolar"
+  ],
+  "Anxiety Disorders": [
+   "anxiety",
+   "panic disorder",
+   "post-traumatic stress",
+   "PTSD",
+   "obsessive-compulsive"
+  ],
+  "Substance Use Disorders": [
+   "substance use",
+   "alcohol use disorder",
+   "opioid use disorder",
+   "addiction",
+   "unhealthy alcohol use"
+  ],
+  "Eating Disorders": [
+   "eating disorder",
+   "anorexia nervosa",
+   "bulimia"
+  ],
+  "ADHD": [
+   "attention-deficit",
+   "ADHD"
+  ],
+  "Autism Spectrum Disorder": [
+   "autism"
+  ],
+  "Suicide Prevention": [
+   "suicid",
+   "self-harm"
+  ],
+  "Delirium": [
+   "delirium"
+  ],
+  "Anaphylaxis": [
+   "anaphylaxis"
+  ],
+  "Food Allergy": [
+   "food allergy",
+   "peanut allergy"
+  ],
+  "Allergic Rhinitis and Chronic Rhinosinusitis": [
+   "rhinitis",
+   "rhinosinusitis"
+  ],
+  "Urticaria and Angioedema": [
+   "urticaria",
+   "angioedema"
+  ],
+  "Drug Allergy": [
+   "drug allergy",
+   "drug hypersensitivity",
+   "penicillin allergy"
+  ],
+  "Primary Immunodeficiency": [
+   "immunodeficienc",
+   "inborn errors of immunity"
+  ],
+  "Psoriasis": [
+   "psoriasis"
+  ],
+  "Atopic Dermatitis": [
+   "atopic dermatitis",
+   "eczema"
+  ],
+  "Acne and Rosacea": [
+   "acne",
+   "rosacea"
+  ],
+  "Hidradenitis Suppurativa": [
+   "hidradenitis"
+  ],
+  "Alopecia": [
+   "alopecia"
+  ],
+  "Bullous Diseases": [
+   "pemphig"
+  ],
+  "Vitiligo": [
+   "vitiligo"
+  ],
+  "Hypertensive Disorders of Pregnancy": [
+   "preeclampsia",
+   "pre-eclampsia",
+   "eclampsia",
+   "hypertension in pregnancy",
+   "gestational hypertension"
+  ],
+  "Gestational Diabetes": [
+   "gestational diabetes"
+  ],
+  "Pregnancy and Antenatal Care": [
+   "pregnan",
+   "antenatal",
+   "prenatal",
+   "intrapartum",
+   "labor induction",
+   "induction of labour",
+   "postpartum",
+   "cesarean",
+   "caesarean",
+   "preterm birth"
+  ],
+  "Postpartum Hemorrhage": [
+   "postpartum hemorrhage",
+   "postpartum haemorrhage"
+  ],
+  "Contraception": [
+   "contracept",
+   "family planning"
+  ],
+  "Endometriosis": [
+   "endometriosis"
+  ],
+  "Infertility": [
+   "infertility",
+   "fertility"
+  ],
+  "Abnormal Uterine Bleeding": [
+   "uterine bleeding",
+   "heavy menstrual bleeding",
+   "fibroids",
+   "leiomyoma"
+  ],
+  "Pelvic Floor Disorders": [
+   "pelvic organ prolapse",
+   "urinary incontinence",
+   "overactive bladder"
+  ],
+  "Neonatal Care": [
+   "neonat",
+   "newborn",
+   "preterm infant",
+   "hyperbilirubinemia"
+  ],
+  "Bronchiolitis": [
+   "bronchiolitis"
+  ],
+  "Acute Otitis Media": [
+   "otitis media"
+  ],
+  "Febrile Infant": [
+   "febrile infant",
+   "fever in infants children"
+  ],
+  "Child Growth and Nutrition": [
+   "malnutrition",
+   "breastfeeding",
+   "infant feeding",
+   "wasting",
+   "stunting",
+   "child growth"
+  ],
+  "Benign Prostatic Hyperplasia": [
+   "benign prostatic",
+   "lower urinary tract symptoms",
+   "LUTS"
+  ],
+  "Erectile Dysfunction": [
+   "erectile dysfunction"
+  ],
+  "Male Infertility": [
+   "male infertility"
+  ],
+  "Neurogenic Bladder": [
+   "neuro-urology",
+   "neurourology",
+   "neurogenic bladder",
+   "neurogenic lower urinary"
+  ],
+  "Microhematuria": [
+   "hematuria",
+   "haematuria"
+  ],
+  "Glaucoma": [
+   "glaucoma"
+  ],
+  "Diabetic Retinopathy": [
+   "diabetic retinopathy"
+  ],
+  "Age-Related Macular Degeneration": [
+   "macular degeneration"
+  ],
+  "Cataract": [
+   "cataract"
+  ],
+  "Dry Eye and Ocular Surface Disease": [
+   "dry eye",
+   "blepharitis",
+   "conjunctivitis",
+   "keratitis"
+  ],
+  "Uveitis": [
+   "uveitis"
+  ],
+  "Perioperative Care": [
+   "perioperative",
+   "preoperative",
+   "postoperative"
+  ],
+  "Pain Management and Opioids": [
+   "opioid prescribing",
+   "chronic pain",
+   "low back pain",
+   "pain management",
+   "analgesi"
+  ],
+  "Palliative and End-of-Life Care": [
+   "palliative",
+   "end of life",
+   "end-of-life"
+  ],
+  "Nutrition": [
+   "nutrition",
+   "enteral",
+   "parenteral",
+   "diet",
+   "dietary"
+  ],
+  "Physical Activity": [
+   "physical activity",
+   "sedentary"
+  ],
+  "Fluid and Shock Management": [
+   "fluid therapy",
+   "resuscitation fluid",
+   "shock"
+  ],
+  "Older Adults and Frailty": [
+   "frailty",
+   "older adults",
+   "falls prevention",
+   "polypharmacy"
+  ]
+ },
  "guidelines": [
   {
    "id": "pmid-42805503",
@@ -3136,9 +4052,9 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "t-american-college-of-rheumatology-updates-osteoarthritis-guidance-reinforcing-per",
-   "title": "American College of Rheumatology Updates Osteoarthritis Guidance, Reinforcing Personalized, Comprehensive Care",
-   "url": "https://rheumatology.org/press-releases/american-college-of-rheumatology-updates-osteoarthritis-guidance-reinforcing-personalized-comprehensive-care",
+   "id": "t-osteoarthritis-guideline",
+   "title": "Osteoarthritis Guideline",
+   "url": "https://rheumatology.org/osteoarthritis-guideline",
    "pubmed": null,
    "doi": null,
    "journal": "ACR website",
@@ -8021,26 +8937,6 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "t-new-guidelines-advance-treatment-of-axial-spondyloarthritis-in-adults-and-youth",
-   "title": "New Guidelines Advance Treatment of Axial Spondyloarthritis in Adults and Youth",
-   "url": "https://rheumatology.org/press-releases/new-guidelines-advance-treatment-of-axial-spondyloarthritis-in-adults-and-youth",
-   "pubmed": null,
-   "doi": null,
-   "journal": "ACR website",
-   "date": "2026-06-24",
-   "sources": [
-    "acr"
-   ],
-   "specialties": [
-    "Rheumatology"
-   ],
-   "conditions": [
-    "Axial Spondyloarthritis"
-   ],
-   "first_seen": "2026-10-11",
-   "web": true
-  },
-  {
    "id": "pmid-42339539",
    "title": "Heart Failure Occurring in the Perinatal Period: A Scientific Statement From the American Heart Association",
    "url": "https://doi.org/10.1161/cir.0000000000001450",
@@ -8102,6 +8998,26 @@
     "Vaccination"
    ],
    "first_seen": "2026-10-11"
+  },
+  {
+   "id": "t-axial-spondyloarthritis-guideline",
+   "title": "Axial Spondyloarthritis Guideline",
+   "url": "https://rheumatology.org/axial-spondyloarthritis-guideline",
+   "pubmed": null,
+   "doi": null,
+   "journal": "ACR website",
+   "date": "2026-06-24",
+   "sources": [
+    "acr"
+   ],
+   "specialties": [
+    "Rheumatology"
+   ],
+   "conditions": [
+    "Axial Spondyloarthritis"
+   ],
+   "first_seen": "2026-10-11",
+   "web": true
   },
   {
    "id": "pmid-42337945",
@@ -10218,26 +11134,6 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "t-the-american-college-of-rheumatology-releases-updated-guidelines-for-treatment-o",
-   "title": "The American College of Rheumatology Releases Updated Guidelines for Treatment of Juvenile Idiopathic Arthritis",
-   "url": "https://rheumatology.org/press-releases/the-american-college-of-rheumatology-releases-updated-guidelines-for-treatment-of-juvenile-idiopathic-arthritis",
-   "pubmed": null,
-   "doi": null,
-   "journal": "ACR website",
-   "date": "2026-05-13",
-   "sources": [
-    "acr"
-   ],
-   "specialties": [
-    "Rheumatology"
-   ],
-   "conditions": [
-    "Juvenile Idiopathic Arthritis"
-   ],
-   "first_seen": "2026-10-11",
-   "web": true
-  },
-  {
    "id": "pmid-42125794",
    "title": "Secondary Prevention After Coronary Artery Bypass Graft Surgery: 2026 Update: A Scientific Statement From the American Heart Association",
    "url": "https://doi.org/10.1161/cir.0000000000001434",
@@ -10257,6 +11153,26 @@
     "Diabetes Mellitus"
    ],
    "first_seen": "2026-10-11"
+  },
+  {
+   "id": "t-juvenile-idiopathic-arthritis-guidelines",
+   "title": "Juvenile Idiopathic Arthritis Guidelines",
+   "url": "https://rheumatology.org/juvenile-idiopathic-arthritis-guideline",
+   "pubmed": null,
+   "doi": null,
+   "journal": "ACR website",
+   "date": "2026-05-13",
+   "sources": [
+    "acr"
+   ],
+   "specialties": [
+    "Rheumatology"
+   ],
+   "conditions": [
+    "Juvenile Idiopathic Arthritis"
+   ],
+   "first_seen": "2026-10-11",
+   "web": true
   },
   {
    "id": "pmid-42127996",
@@ -30297,6 +31213,24 @@
     "Pregnancy and Antenatal Care"
    ],
    "first_seen": "2026-10-11"
+  },
+  {
+   "id": "t-repatriation-of-international-critical-care-patients-to-uk-hospitals-may-2025",
+   "title": "Repatriation of International Critical Care Patients to UK Hospitals May 2025",
+   "url": "https://ics.ac.uk/resource/guidance-for-the-repatriation-of-international-critical-care-patients-to-uk-hospitals-may-2025-pdf.html",
+   "pubmed": null,
+   "doi": null,
+   "journal": "ICS website",
+   "date": "2025-05-01",
+   "sources": [
+    "ics"
+   ],
+   "specialties": [
+    "Critical Care"
+   ],
+   "conditions": [],
+   "first_seen": "2026-10-11",
+   "web": true
   },
   {
    "id": "pmid-40288780",
