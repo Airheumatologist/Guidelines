@@ -14,6 +14,7 @@ For ingestion gaps that carry a DOI, PubMed is queried to explain the miss
 Usage: python scripts/audit_reference.py [--since 2024-01-01] [--out audit]
 """
 import argparse
+import datetime as dt
 import html
 import json
 import re
@@ -127,6 +128,37 @@ def query_hits(pmid, src_ids, cfg, api_key=None):
     return hits
 
 
+def clause_report(pmid, src_ids, cfg, api_key=None):
+    """For a missed PMID, say which clause of each source's generated query fails."""
+    since = int(cfg.get("settings", {}).get("since_year", 2018))
+    by_id = {s["id"]: s for s in cfg["sources"]}
+    out = []
+    for sid in src_ids:
+        pm = (by_id.get(sid) or {}).get("pubmed") or {}
+        clauses = {"type": build_data.GUIDELINE_FILTER,
+                   "date": f'("{since}/01/01"[dp] : "3000"[dp])',
+                   "not": "all[sb] " + build_data.not_filter(pm.get("allow_pubtypes"))}
+        if pm.get("query"):
+            clauses = {"query": f"({pm['query']})", **{k: v for k, v in clauses.items() if k != "type"}}
+        if pm.get("title_terms"):
+            clauses["org"] = "(" + " OR ".join(f'"{t}"[ti] OR "{t}"[cn]' for t in pm["title_terms"]) + ")"
+        if pm.get("journals") and not pm.get("query"):
+            clauses["journal"] = "(" + " OR ".join(f'"{j}"[ta]' for j in pm["journals"]) + ")"
+        failed = []
+        for name, c in clauses.items():
+            params = {"db": "pubmed", "term": f"({c}) AND {pmid}[uid]", "retmode": "json"}
+            if api_key:
+                params["api_key"] = api_key
+            try:
+                if not json.loads(get(EUTILS + "esearch.fcgi", params))["esearchresult"].get("idlist"):
+                    failed.append(name)
+            except Exception as exc:
+                failed.append(f"{name}?{exc}")
+            time.sleep(0.35)
+        out.append(f"{sid}: fails {'+'.join(failed) or 'nothing (cap?)'}")
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--since", default="2024-01-01")
@@ -137,6 +169,7 @@ def main():
     ours = data["guidelines"]
     our_dois = {g["doi"].lower() for g in ours if g.get("doi")}
     our_tokens = [(tokens(g["title"]), g) for g in ours]
+    web_items = [g for g in ours if g.get("web")]
     cfg = yaml.safe_load((ROOT / "sources.yaml").read_text())
     covered = {}
     for s in cfg["sources"]:
@@ -161,10 +194,24 @@ def main():
                     break
         e["doi"] = d
         e["covered_by"] = sorted({covered[p] for p in org_parts(e["org"]) if p in covered})
+        if not hit:
+            # Website items carry press-release titles: same organization, within
+            # 30 days and two shared content words count as the same guideline.
+            ct = build_data._content_tokens(e["title"])
+            for g in web_items:
+                if (set(g["sources"]) & set(e["covered_by"]) and g.get("date")
+                        and abs((dt.date.fromisoformat(g["date"]) - dt.date.fromisoformat(e["date"])).days) <= 30
+                        and len(ct & build_data._content_tokens(g["title"])) >= 2):
+                    hit = "web"
+                    e["web_match"] = g["title"]
+                    break
         (found if hit else missing).append(e)
 
     gap_ingest = [e for e in missing if e["covered_by"]]
     gap_source = [e for e in missing if not e["covered_by"]]
+    for e in found:
+        if e.get("web_match"):
+            print(f"  via society website: {e['org']}: {e['title']}  <=  {e['web_match']}")
     print(f"found {len(found)}, missing {len(missing)} "
           f"(ingestion gaps {len(gap_ingest)}, organizations not in sources.yaml {len(gap_source)})")
 
@@ -176,6 +223,8 @@ def main():
                 e["pubmed"] = pubmed_explain(e["doi"], key)
                 if e["pubmed"].get("pmid"):
                     e["pubmed"]["query_hits"] = query_hits(e["pubmed"]["pmid"], e["covered_by"], cfg, key)
+                    if not e["pubmed"]["query_hits"]:
+                        e["pubmed"]["clauses"] = clause_report(e["pubmed"]["pmid"], e["covered_by"], cfg, key)
             except Exception as exc:
                 e["pubmed"] = {"error": str(exc)}
 
@@ -200,7 +249,8 @@ def main():
             why = (f"in PubMed ({pm.get('journal')}) and matched by {', '.join(pm['query_hits'])} "
                    "now; was missing from the data used for this audit")
         else:
-            why = f"in PubMed ({pm.get('journal')}; {', '.join(pm.get('pubtypes', []))}) but query missed"
+            why = (f"in PubMed ({pm.get('journal')}; {', '.join(pm.get('pubtypes', []))}) but query missed"
+                   + (f": {'; '.join(pm['clauses'])}" if pm.get("clauses") else ""))
         reasons[why.split(" (")[0] + (" (query matches now)" if pm.get("query_hits") else "")
                 if why.startswith("in PubMed") else why] += 1
         lines.append(f"- {e['date']} **{e['org']}**: {e['title']} [{why}]"

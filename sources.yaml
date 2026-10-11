@@ -387,7 +387,7 @@ sources:
     specialty: Ophthalmology
     pubmed:
       # Preferred Practice Patterns plus the Ophthalmic Technology Assessments ("A Report by the AAO").
-      query: '("Ophthalmology"[ta] OR "Ophthalmol Retina"[ta] OR "Ophthalmol Glaucoma"[ta] OR "Ophthalmol Sci"[ta]) AND ("Preferred Practice Pattern"[ti] OR "Report by the American Academy of Ophthalmology"[ti] OR ("American Academy of Ophthalmology"[ti] AND (statement*[ti] OR guideline*[ti] OR consensus[ti])))'
+      query: '("Ophthalmology"[ta] OR "Ophthalmol Retina"[ta] OR "Ophthalmol Glaucoma"[ta] OR "Ophthalmol Sci"[ta]) AND ("Preferred Practice Pattern"[ti] OR ("American Academy of Ophthalmology"[ti] AND (report[ti] OR statement*[ti] OR guideline*[ti] OR consensus[ti])))'
 
 
   # ------------------------------------------- Added after the coverage audit
@@ -461,8 +461,7 @@ sources:
     abbr: AACE
     specialty: Endocrinology
     pubmed:
-      journals: ["Endocr Pract"]
-      title_terms: ["AACE", "American Association of Clinical Endocrinolog"]
+      query: '("Endocr Pract"[ta] OR "AACE Clin Case Rep"[ta]) AND ("American Association of Clinical Endocrinology"[ti] OR "American Association of Clinical Endocrinologists"[ti] OR AACE[ti]) AND (consensus[ti] OR guideline*[ti] OR statement*[ti] OR algorithm[ti] OR "practice guideline"[pt])'
 
   - id: ata
     name: American Thyroid Association
@@ -524,16 +523,14 @@ sources:
     abbr: NCS
     specialty: Critical Care
     pubmed:
-      journals: ["Neurocrit Care"]
-      title_terms: ["Neurocritical Care Society", "NCS"]
+      query: '"Neurocrit Care"[ta] AND ("practice guideline"[pt] OR guideline*[ti] OR "consensus statement"[pt] OR "Neurocritical Care Society"[ti])'
 
   - id: acep
     name: American College of Emergency Physicians
     abbr: ACEP
     specialty: Emergency Medicine
     pubmed:
-      journals: ["Ann Emerg Med", "J Am Coll Emerg Physicians Open"]
-      title_terms: ["ACEP", "American College of Emergency Physicians"]
+      query: '("Ann Emerg Med"[ta] OR "J Am Coll Emerg Physicians Open"[ta]) AND ("Clinical Policy"[ti] OR "practice update"[ti] OR ((guideline*[ti] OR statement*[ti] OR consensus[ti]) AND (ACEP[ti] OR "American College of Emergency Physicians"[ti])))'
 
   - id: esaic
     name: European Society of Anaesthesiology and Intensive Care
@@ -564,16 +561,14 @@ sources:
     abbr: SMFM
     specialty: Obstetrics & Gynecology
     pubmed:
-      journals: ["Am J Obstet Gynecol", "Am J Obstet Gynecol MFM"]
-      title_terms: ["SMFM", "Society for Maternal-Fetal Medicine"]
+      query: '("Am J Obstet Gynecol"[ta] OR "Am J Obstet Gynecol MFM"[ta] OR "Pregnancy (Hoboken)"[ta]) AND ("Society for Maternal-Fetal Medicine"[ti] OR SMFM[ti])'
 
   - id: sogc
     name: Society of Obstetricians and Gynaecologists of Canada
     abbr: SOGC
     specialty: Obstetrics & Gynecology
     pubmed:
-      journals: ["J Obstet Gynaecol Can"]
-      title_terms: ["SOGC", "Society of Obstetricians and Gynaecologists of Canada"]
+      query: '"J Obstet Gynaecol Can"[ta] AND ("practice guideline"[pt] OR "Guideline No"[ti] OR "Technical Update"[ti] OR "Committee Opinion"[ti] OR SOGC[ti] OR "Society of Obstetricians and Gynaecologists of Canada"[ti])'
 
   - id: rcog
     name: Royal College of Obstetricians and Gynaecologists
@@ -600,12 +595,11 @@ sources:
       title_terms: ["FIGO", "International Federation of Gynecology and Obstetrics"]
 
   - id: ics
-    name: International Continence Society
+    name: Intensive Care Society (UK)
     abbr: ICS
-    specialty: Urology
+    specialty: Critical Care
     pubmed:
-      journals: ["Neurourol Urodyn", "Continence (Amst)"]
-      title_terms: ["ICS", "International Continence Society"]
+      query: '("J Intensive Care Soc"[ta] AND (guideline*[ti] OR guidance[ti] OR statement*[ti] OR standards[ti] OR "practice guideline"[pt])) OR (("Intensive Care Society"[ti] OR "Intensive Care Society"[cn]) AND (guideline*[ti] OR guidance[ti] OR statement*[ti] OR standards[ti] OR consensus[ti]))'
 
   - id: cps
     name: Canadian Paediatric Society
@@ -699,7 +693,7 @@ sources:
     abbr: BSG
     specialty: Gastroenterology & Hepatology
     pubmed:
-      journals: ["Gut", "Frontline Gastroenterol"]
+      journals: ["Gut", "Frontline Gastroenterol", "Colorectal Dis"]
       title_terms: ["BSG", "British Society of Gastroenterology"]
 
   - id: asge-esge
@@ -739,8 +733,7 @@ sources:
     abbr: EADV
     specialty: Dermatology
     pubmed:
-      journals: ["J Eur Acad Dermatol Venereol", "JEADV Clin Pract"]
-      title_terms: ["EADV", "European Academy of Dermatology", "EuroGuiDerm", "European Dermatology Forum", "EDF", "EADO"]
+      title_terms: ["EADV", "European Academy of Dermatology", "EuroGuiDerm", "European Dermatology Forum", "EADO"]
 
   - id: bsr
     name: British Society for Rheumatology
@@ -843,8 +836,7 @@ sources:
     abbr: CANMAT
     specialty: Psychiatry
     pubmed:
-      journals: ["Can J Psychiatry", "Bipolar Disord"]
-      title_terms: ["CANMAT"]
+      title_terms: ["CANMAT", "Canadian Network for Mood and Anxiety Treatments"]
 
   - id: aao-hns
     name: American Academy of Otolaryngology–Head and Neck Surgery
@@ -858,8 +850,7 @@ sources:
     abbr: ACSM
     specialty: Sports Medicine
     pubmed:
-      journals: ["Med Sci Sports Exerc", "Curr Sports Med Rep"]
-      title_terms: ["ACSM", "American College of Sports Medicine"]
+      query: '("Med Sci Sports Exerc"[ta] OR "Curr Sports Med Rep"[ta]) AND ("Position Stand"[ti] OR ((statement*[ti] OR consensus[ti] OR guideline*[ti]) AND ("American College of Sports Medicine"[ti] OR ACSM[ti])))'
 
   - id: ags
     name: American Geriatrics Society
