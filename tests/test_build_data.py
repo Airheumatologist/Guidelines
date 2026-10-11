@@ -42,6 +42,8 @@ class QueryTests(unittest.TestCase):
         q = bd.build_query({"pubmed": {"journals": ["Ann Rheum Dis"], "title_terms": ["EULAR"]}}, 2018)
         self.assertIn('"Ann Rheum Dis"[ta]', q)
         self.assertIn('"EULAR"[ti] OR "EULAR"[cn]', q)
+        q2 = bd.build_query({"pubmed": {"title_terms": ["Heart Failure Society of America"]}}, 2018)
+        self.assertIn('"Heart Failure Society of America"[ti:~2]', q2)
         self.assertIn('"2018/01/01"[dp]', q)
         self.assertIn('NOT ("erratum"[pt]', q)
         # Reviews are dropped only when not also indexed as a guideline.

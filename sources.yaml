@@ -413,7 +413,7 @@ sources:
     abbr: SCAI
     specialty: Cardiology
     pubmed:
-      journals: ["J Soc Cardiovasc Angiogr Interv", "Catheter Cardiovasc Interv"]
+      journals: ["J Soc Cardiovasc Angiogr Interv", "Catheter Cardiovasc Interv", "JACC Cardiovasc Interv"]
       title_terms: ["SCAI", "Society for Cardiovascular Angiography"]
 
   - id: ase

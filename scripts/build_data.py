@@ -69,7 +69,20 @@ def not_filter(allow: list[str] | None = None) -> str:
     allow = {a.lower() for a in allow or []}
     pt = lambda xs: " OR ".join(f'"{x}"[pt]' for x in xs if x not in allow)  # noqa: E731
     return (f"NOT ({pt(EXCLUDED_PUBTYPES)}) "
-            f"NOT (({pt(REVIEW_PUBTYPES)}) NOT ({pt(GUIDELINE_PUBTYPES)}))")
+            f"NOT (({pt(REVIEW_PUBTYPES)}) NOT ({pt(GUIDELINE_PUBTYPES)}) "
+            f"NOT (guideline*[ti] OR statement*[ti] OR recommendation*[ti] OR consensus[ti]))")
+
+
+def title_term(t: str) -> str:
+    """A society name in the title or as corporate author.
+
+    PubMed silently ignores a quoted phrase that is missing from its phrase
+    index (e.g. "Heart Failure Society of America"), so multi-word names are
+    also searched by proximity, which does not depend on that index."""
+    q = f'"{t}"[ti] OR "{t}"[cn]'
+    if " " in t:
+        q += f' OR "{t}"[ti:~2]'
+    return q
 
 
 NOT_FILTER = not_filter()
@@ -413,8 +426,7 @@ def build_query(src: dict, since_year: int) -> str:
         parts = [GUIDELINE_FILTER]
         terms = pm.get("title_terms") or []
         if terms:
-            parts.append("(" + " OR ".join(
-                f'"{t}"[ti] OR "{t}"[cn]' for t in terms) + ")")
+            parts.append("(" + " OR ".join(title_term(t) for t in terms) + ")")
         journals = pm.get("journals") or []
         if journals:
             parts.append("(" + " OR ".join(f'"{j}"[ta]' for j in journals) + ")")

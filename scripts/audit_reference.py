@@ -141,7 +141,7 @@ def clause_report(pmid, src_ids, cfg, api_key=None):
         if pm.get("query"):
             clauses = {"query": f"({pm['query']})", **{k: v for k, v in clauses.items() if k != "type"}}
         if pm.get("title_terms"):
-            clauses["org"] = "(" + " OR ".join(f'"{t}"[ti] OR "{t}"[cn]' for t in pm["title_terms"]) + ")"
+            clauses["org"] = "(" + " OR ".join(build_data.title_term(t) for t in pm["title_terms"]) + ")"
         if pm.get("journals") and not pm.get("query"):
             clauses["journal"] = "(" + " OR ".join(f'"{j}"[ta]' for j in pm["journals"]) + ")"
         failed = []
