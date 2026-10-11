@@ -375,7 +375,7 @@ def fetch_web(page: dict, keep: re.Pattern) -> list[dict]:
                 continue
             if page.get("target_link"):
                 # A press release usually links the guideline page itself; point there.
-                target = _first_link(raw, item["url"], page["target_link"])
+                target = _best_link(raw, item["url"], page["target_link"], item["title"])
                 if target:
                     item["url"] = target
                     try:
@@ -389,16 +389,24 @@ def fetch_web(page: dict, keep: re.Pattern) -> list[dict]:
     return items
 
 
-def _first_link(body: str, base_url: str, pattern: str) -> str | None:
+def _best_link(body: str, base_url: str, pattern: str, title: str) -> str | None:
+    """The link matching `pattern` whose slug shares the most words with `title`.
+
+    Site menus list every guideline page, so the first match is not enough."""
     parser = _Anchors()
     parser.feed(body)
     rx = re.compile(pattern, re.I)
-    for href, _ in parser.links:
-        if href:
-            url = urllib.parse.urljoin(base_url, href)
-            if rx.search(url):
-                return url
-    return None
+    want = _content_tokens(title)
+    best, score = None, 0
+    for href, text in parser.links:
+        if not href:
+            continue
+        url = urllib.parse.urljoin(base_url, href)
+        if rx.search(url):
+            n = len(want & _content_tokens(url.rsplit("/", 2)[-2] + " " + url.rsplit("/", 1)[-1] + " " + text))
+            if n > score:
+                best, score = url, n
+    return best
 
 
 def new_since_baseline(items: list[dict], page_url: str, web_seen: dict,

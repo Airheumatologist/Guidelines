@@ -108,6 +108,15 @@ class WebTests(unittest.TestCase):
         self.assertEqual(title, "ACR axSpA Guideline & Summary")
         self.assertEqual(date, "2026-06-24")
 
+    def test_best_link_picks_matching_guideline_page(self):
+        body = ('<a href="/clinical-practice-guidelines">Clinical Practice Guidelines</a>'
+                '<a href="/osteoarthritis-guideline">Osteoarthritis</a>'
+                '<a href="/axial-spondyloarthritis-guideline">Read the guideline</a>')
+        url = bd._best_link(body, "https://rheumatology.org/press-releases/x",
+                            r"rheumatology\.org/(?!clinical-practice-guidelines)[a-z0-9-]*guideline",
+                            "New Guidelines Advance Treatment of Axial Spondyloarthritis in Adults and Youth")
+        self.assertEqual(url, "https://rheumatology.org/axial-spondyloarthritis-guideline")
+
     def test_new_since_baseline(self):
         a = {"title": "Guideline A", "url": "https://x/a", "date": None}
         b = {"title": "Guideline B", "url": "https://x/b", "date": None}

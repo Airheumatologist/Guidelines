@@ -126,7 +126,7 @@ sources:
         keywords: 'guideline|guidance|recommendation'
         strip: '^\d{1,2}/\d{1,2}/\d{2,4}|(ACR News|Clinical Practice Guidelines|Press Release).*$'
         follow: true
-        target_link: 'rheumatology\.org/[a-z0-9-]*guideline[a-z0-9-]*/?$'
+        target_link: 'rheumatology\.org/(?!clinical-practice-guidelines)[a-z0-9-]*guideline[a-z0-9-]*/?$'
 
   - id: eular
     name: European Alliance of Associations for Rheumatology
