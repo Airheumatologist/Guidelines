@@ -369,13 +369,36 @@ def fetch_web(page: dict, keep: re.Pattern) -> list[dict]:
         items = items[:int(page.get("follow_limit", 25))]
         for item in items:
             try:
-                title, date = page_meta(http_get(item["url"], retries=1).decode("utf-8", "replace"))
+                raw = http_get(item["url"], retries=1).decode("utf-8", "replace")
+                title, date = page_meta(raw)
             except Exception:
                 continue
+            if page.get("target_link"):
+                # A press release usually links the guideline page itself; point there.
+                target = _first_link(raw, item["url"], page["target_link"])
+                if target:
+                    item["url"] = target
+                    try:
+                        t_title, _ = page_meta(http_get(target, retries=1).decode("utf-8", "replace"))
+                        title = t_title or title
+                    except Exception:
+                        pass
             if title and len(title) >= 15:
                 item["title"] = re.sub(r"\s*[|–-]\s*(American College of Rheumatology|ACR)\s*$", "", title)
             item["date"] = item["date"] or date
     return items
+
+
+def _first_link(body: str, base_url: str, pattern: str) -> str | None:
+    parser = _Anchors()
+    parser.feed(body)
+    rx = re.compile(pattern, re.I)
+    for href, _ in parser.links:
+        if href:
+            url = urllib.parse.urljoin(base_url, href)
+            if rx.search(url):
+                return url
+    return None
 
 
 def new_since_baseline(items: list[dict], page_url: str, web_seen: dict,
@@ -698,6 +721,10 @@ def main(argv: list[str] | None = None) -> int:
         "sources": [{k: s[k] for k in ("id", "name", "abbr", "specialty")} for s in cfg["sources"]
                     if s.get("enabled", True)],
         "report": report,
+        # Plain synonyms per condition so the app's search finds "ankylosing" etc.
+        "condition_terms": {c["name"]: [t for t in (" ".join(re.sub(r"\\[wbds]|[\\()?*+|\[\]^${}.:]", " ", m).split())
+                                                    for m in c["match"]) if t]
+                            for c in yaml.safe_load(CONDITIONS_FILE.read_text())},
         "guidelines": guidelines,
     }
     DATA_FILE.parent.mkdir(parents=True, exist_ok=True)

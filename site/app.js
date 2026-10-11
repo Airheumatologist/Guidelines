@@ -173,11 +173,13 @@
   function viewSearch(term) {
     setTab("");
     const t = term.toLowerCase();
-    const conds = sortedKeys(byCondition).filter((c) => c.toLowerCase().includes(t));
+    const terms = data.condition_terms || {};
+    const alias = (c) => [c, ...(terms[c] || [])].join(" ").toLowerCase();
+    const conds = sortedKeys(byCondition).filter((c) => alias(c).includes(t));
     const specs = sortedKeys(bySpecialty).filter((s) => s.toLowerCase().includes(t));
     const words = t.split(/\s+/).filter(Boolean);
     const hits = data.guidelines.filter((g) => {
-      const hay = [g.title, g.journal, ...g.conditions, ...g.specialties,
+      const hay = [g.title, g.journal, ...g.conditions.map(alias), ...g.specialties,
         ...g.sources.map((s) => `${sourcesById[s]?.abbr} ${sourcesById[s]?.name}`)].join(" ").toLowerCase();
       return words.every((w) => hay.includes(w));
     });
