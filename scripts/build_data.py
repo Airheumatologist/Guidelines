@@ -50,7 +50,8 @@ GUIDELINE_FILTER = (
 )
 NOT_FILTER = (
     'NOT (erratum[pt] OR "published erratum"[pt] OR comment[pt] OR editorial[pt] '
-    'OR letter[pt] OR news[pt] OR "retracted publication"[pt] OR "retraction of publication"[pt])'
+    'OR letter[pt] OR news[pt] OR "systematic review"[pt] OR "meta-analysis"[pt] '
+    'OR "retracted publication"[pt] OR "retraction of publication"[pt])'
 )
 MONTHS = {m: i for i, m in enumerate(
     ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
@@ -259,7 +260,8 @@ class Tagger:
     def __init__(self, conditions: list[dict]):
         self.conditions = []
         for c in conditions:
-            pats = [p if re.search(r"\\b", p) else rf"\b{p}\b" for p in c["match"]]
+            # Whole words; a trailing plural "s" is allowed ("cancers", "guidelines").
+            pats = [p if re.search(r"\\b", p) else rf"\b{p}(?:e?s)?\b" for p in c["match"]]
             self.conditions.append((c["name"], c["specialty"],
                                     re.compile("|".join(f"(?:{p})" for p in pats), re.I)))
 

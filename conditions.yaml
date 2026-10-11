@@ -41,6 +41,8 @@
 - {name: Infective Endocarditis, specialty: Cardiology, match: [endocarditis]}
 - {name: Cardiovascular Disease Prevention, specialty: Cardiology, match: [cardiovascular disease prevention, primary prevention of cardiovascular, cardiovascular risk]}
 - {name: Cardiac Arrest and Resuscitation, specialty: Cardiology, match: [cardiac arrest, cardiopulmonary resuscitation, resuscitation]}
+- {name: Myocarditis, specialty: Cardiology, match: [myocarditis]}
+- {name: Cardiac Rehabilitation, specialty: Cardiology, match: [cardiac rehabilitation]}
 - {name: Congenital Heart Disease, specialty: Cardiology, match: [congenital heart disease]}
 - {name: Cardio-Oncology, specialty: Cardiology, match: [cardio-oncology, cardiotoxicity]}
 
@@ -64,6 +66,7 @@
 - {name: Tuberculosis, specialty: Infectious Diseases, match: [tuberculosis, '\bTB\b']}
 - {name: Malaria, specialty: Infectious Diseases, match: [malaria]}
 - {name: COVID-19, specialty: Infectious Diseases, match: [covid-19, sars-cov-2, coronavirus disease 2019]}
+- {name: RSV Infection, specialty: Infectious Diseases, match: ['\bRSV\b', respiratory syncytial]}
 - {name: Influenza, specialty: Infectious Diseases, match: [influenza]}
 - {name: Viral Hepatitis, specialty: Gastroenterology & Hepatology, match: [hepatitis b, hepatitis c, hepatitis e, hepatitis delta, '\bHBV\b', '\bHCV\b', viral hepatitis]}
 - {name: Sepsis and Septic Shock, specialty: Critical Care, match: [sepsis, septic shock]}
@@ -85,7 +88,7 @@
 - {name: COPD, specialty: Pulmonology, match: [chronic obstructive pulmonary, '\bCOPD\b']}
 - {name: Interstitial Lung Disease, specialty: Pulmonology, match: [interstitial lung disease, pulmonary fibrosis, idiopathic pulmonary fibrosis, '\bILD\b', sarcoidosis]}
 - {name: Pulmonary Hypertension, specialty: Pulmonology, match: [pulmonary hypertension, pulmonary arterial hypertension]}
-- {name: Venous Thromboembolism, specialty: Hematology, match: [venous thromboembolism, pulmonary embolism, deep vein thrombosis, thromboprophylaxis, '\bVTE\b', 'anticoagula\w*']}
+- {name: Venous Thromboembolism, specialty: Hematology, match: [venous thromboembolism, pulmonary embolism, deep vein thrombosis, thromboprophylaxis, '\bVTE\b', 'anticoagula\w*', antithrombotic]}
 - {name: Obstructive Sleep Apnea, specialty: Pulmonology, match: [sleep apnea, sleep apnoea, sleep-disordered breathing]}
 - {name: Bronchiectasis, specialty: Pulmonology, match: [bronchiectasis]}
 - {name: Cystic Fibrosis, specialty: Pulmonology, match: [cystic fibrosis]}
@@ -112,10 +115,13 @@
 - {name: Hepatocellular Carcinoma, specialty: Oncology, match: [hepatocellular carcinoma, liver cancer]}
 - {name: Acute Liver Failure, specialty: Gastroenterology & Hepatology, match: [acute liver failure, 'liver transplant\w*']}
 - {name: Dyspepsia and Gastroparesis, specialty: Gastroenterology & Hepatology, match: [dyspepsia, gastroparesis]}
+- {name: Diverticulitis, specialty: Gastroenterology & Hepatology, match: [diverticul\w*]}
+- {name: Colorectal Polyps and Polyposis, specialty: Gastroenterology & Hepatology, match: [polyps, polyposis, polypectomy]}
+- {name: Pancreatic Cysts and Ampullary Lesions, specialty: Gastroenterology & Hepatology, match: [pancreatic cyst\w*, ampullary]}
 - {name: Constipation, specialty: Gastroenterology & Hepatology, match: [constipation]}
 
 # ------------------------------------------------------------------ Nephrology
-- {name: Chronic Kidney Disease, specialty: Nephrology, match: [chronic kidney disease, '\bCKD\b', kidney failure, dialysis, 'kidney transplant\w*']}
+- {name: Chronic Kidney Disease, specialty: Nephrology, match: [chronic kidney disease, kidney disease, kidney health, '\bCKD\b', kidney failure, dialysis, 'kidney transplant\w*']}
 - {name: Acute Kidney Injury, specialty: Nephrology, match: [acute kidney injury]}
 - {name: Glomerular Diseases, specialty: Nephrology, match: ['glomerul\w*', IgA nephropathy, nephrotic syndrome, membranous nephropathy]}
 - {name: Kidney Stones, specialty: Urology, match: ['kidney stone\w*', nephrolithiasis, urolithiasis]}
@@ -130,7 +136,7 @@
 - {name: Cervical Cancer and Screening, specialty: Oncology, match: [cervical cancer, cervical screening, human papillomavirus, '\bHPV\b']}
 - {name: Endometrial Cancer, specialty: Oncology, match: [endometrial cancer, uterine cancer]}
 - {name: Pancreatic Cancer, specialty: Oncology, match: [pancreatic cancer, pancreatic adenocarcinoma]}
-- {name: Gastric and Esophageal Cancer, specialty: Oncology, match: [gastric cancer, esophageal cancer, oesophageal cancer, gastroesophageal cancer]}
+- {name: Gastric and Esophageal Cancer, specialty: Oncology, match: [gastric cancer, esophageal cancer, oesophageal cancer, gastroesophageal cancer, esophagogastric junction, esophageal and esophagogastric]}
 - {name: Melanoma and Skin Cancer, specialty: Oncology, match: [melanoma, basal cell carcinoma, squamous cell carcinoma of the skin, skin cancer]}
 - {name: Head and Neck Cancer, specialty: Oncology, match: [head and neck cancer, oropharyngeal cancer, nasopharyngeal]}
 - {name: Bladder and Kidney Cancer, specialty: Oncology, match: [bladder cancer, urothelial, renal cell carcinoma, kidney cancer]}

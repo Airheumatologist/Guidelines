@@ -44,6 +44,19 @@ settings:
     - '^reply'
     - '^response to'
     - '^comment on'
+    - 'correction$'
+    - 'systematic review'
+    - 'meta-analysis'
+    - 'implementation of'
+    - 'quality indicators'
+    - 'operating procedures'
+    - 'guideline development'
+    - 'concerns about'
+    - 'rethinking'
+    - '^visual guideline'
+    - '^study on'
+    - 'a guide to the'
+    - "what is new in"
 
 sources:
   # ---------------------------------------------------------------- Global
@@ -59,8 +72,8 @@ sources:
     abbr: NICE
     specialty: multi
     pubmed:
-      # NICE's Bookshelf also holds evidence reviews and appendices; keep the guidelines only.
-      query: '("National Institute for Health and Care Excellence"[pubn] OR "National Institute for Health and Care Excellence"[cn]) NOT ("evidence review"[ti] OR "evidence reviews"[ti] OR appendix[ti] OR appendices[ti] OR "economic"[ti] OR "methods"[ti] OR "supplement"[ti] OR "committee"[ti])'
+      # NICE's Bookshelf also holds evidence reviews, appendices and technology appraisals; keep the clinical guidelines only.
+      query: '("National Institute for Health and Care Excellence"[pubn] OR "National Institute for Health and Care Excellence"[cn]) NOT ("evidence review"[ti] OR "evidence reviews"[ti] OR appendix[ti] OR appendices[ti] OR "economic"[ti] OR "methods"[ti] OR "supplement"[ti] OR "committee"[ti] OR "for treating"[ti] OR "for untreated"[ti] OR "for previously treated"[ti] OR "terminated appraisal"[ti])'
 
   - id: uspstf
     name: US Preventive Services Task Force
