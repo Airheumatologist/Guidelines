@@ -67,7 +67,7 @@
 # ---------------------------------------------------------- Infectious Diseases
 - {name: HIV, specialty: Infectious Diseases, match: ['\bHIV\b', human immunodeficiency virus, antiretroviral, acquired immunodeficiency syndrome, 'hiv pre-?exposure prophylaxis', 'pre-?exposure prophylaxis (for|of) hiv']}
 - {name: Tuberculosis, specialty: Infectious Diseases, match: [tuberculosis, '\bTB\b', tuberculous, mycobacterium tuberculosis]}
-- {name: Malaria, specialty: Infectious Diseases, match: [malaria, plasmodium, antimalarial]}
+- {name: Malaria, specialty: Infectious Diseases, match: [malaria, plasmodium]}
 - {name: COVID-19, specialty: Infectious Diseases, match: [covid, 'covid-?19', 'sars-?cov', coronavirus disease 2019]}
 - {name: RSV Infection, specialty: Infectious Diseases, match: ['\bRSV\b', respiratory syncytial]}
 - {name: Influenza, specialty: Infectious Diseases, match: ['\binfluenza\b']}
