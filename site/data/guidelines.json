@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-11T15:20:01+00:00",
+ "generated": "2026-10-11T16:13:42+00:00",
  "sources": [
   {
    "id": "who",
@@ -1774,11 +1774,6 @@
    "peripheral arter disease",
    "lower extremity arter disease"
   ],
-  "Aortic Disease": [
-   "aortic disease",
-   "aortic aneurysm",
-   "aortic dissection"
-  ],
   "Pericarditis": [
    "pericardi"
   ],
@@ -1810,6 +1805,14 @@
   "Cardio-Oncology": [
    "cardio-oncology",
    "cardiotoxicity"
+  ],
+  "Amyloidosis": [
+   "amyloidosis"
+  ],
+  "Aortic Disease": [
+   "aortic disease",
+   "aortic aneurysm",
+   "aortic dissection"
   ],
   "Diabetes Mellitus": [
    "standards of medical care in diabetes",
@@ -1845,9 +1848,6 @@
    "hypogonadism",
    "testosterone"
   ],
-  "Polycystic Ovary Syndrome": [
-   "polycystic ovary"
-  ],
   "Hypoglycemia": [
    "hypoglyc"
   ],
@@ -1858,14 +1858,16 @@
   "Vitamin D Deficiency": [
    "vitamin d"
   ],
-  "Menopause": [
-   "menopaus"
-  ],
   "Gender-Affirming Care": [
    "gender dysphoria",
    "gender-affirming",
    "transgender",
    "gender incongruence"
+  ],
+  "Thyroid Cancer": [
+   "thyroid cancer",
+   "thyroid carcinoma",
+   "thyroid nodule"
   ],
   "HIV": [
    "HIV",
@@ -1890,19 +1892,6 @@
   ],
   "Influenza": [
    "influenza"
-  ],
-  "Viral Hepatitis": [
-   "hepatitis b",
-   "hepatitis c",
-   "hepatitis e",
-   "hepatitis delta",
-   "HBV",
-   "HCV",
-   "viral hepatitis"
-  ],
-  "Sepsis and Septic Shock": [
-   "sepsis",
-   "septic shock"
   ],
   "Pneumonia": [
    "pneumonia"
@@ -1954,10 +1943,6 @@
    "prosthetic joint infection",
    "septic arthritis"
   ],
-  "Vaccination": [
-   "vaccin",
-   "immuni sz ation"
-  ],
   "Neglected Tropical Diseases": [
    "leishmaniasis",
    "schistosomiasis",
@@ -1967,9 +1952,21 @@
    "leprosy",
    "rabies"
   ],
-  "Febrile Neutropenia": [
-   "febrile neutropenia",
-   "neutropeni"
+  "Vaccination": [
+   "vaccin",
+   "immuni sz ation"
+  ],
+  "Smoking Cessation": [
+   "smoking cessation",
+   "tobacco",
+   "nicotine"
+  ],
+  "Cancer Screening": [
+   "cancer screening"
+  ],
+  "Physical Activity": [
+   "physical activity",
+   "sedentary"
   ],
   "Asthma": [
    "asthma"
@@ -1989,15 +1986,6 @@
    "pulmonary hypertension",
    "pulmonary arterial hypertension"
   ],
-  "Venous Thromboembolism": [
-   "venous thromboembolism",
-   "pulmonary embolism",
-   "deep vein thrombosis",
-   "thromboprophylaxis",
-   "VTE",
-   "anticoagula",
-   "antithrombotic"
-  ],
   "Obstructive Sleep Apnea": [
    "sleep apnea",
    "sleep apnoea",
@@ -2009,12 +1997,6 @@
   "Cystic Fibrosis": [
    "cystic fibrosis"
   ],
-  "Lung Cancer": [
-   "lung cancer",
-   "non-small cell lung",
-   "small cell lung",
-   "NSCLC"
-  ],
   "Chronic Cough": [
    "chronic cough",
    "cough"
@@ -2022,16 +2004,23 @@
   "Pleural Disease": [
    "pleural"
   ],
+  "Sepsis and Septic Shock": [
+   "sepsis",
+   "septic shock"
+  ],
   "Acute Respiratory Distress Syndrome": [
    "acute respiratory distress syndrome",
    "ARDS",
    "mechanical ventilation",
    "respiratory failure"
   ],
-  "Smoking Cessation": [
-   "smoking cessation",
-   "tobacco",
-   "nicotine"
+  "Fluid and Shock Management": [
+   "fluid therapy",
+   "resuscitation fluid",
+   "shock"
+  ],
+  "Delirium": [
+   "delirium"
   ],
   "Inflammatory Bowel Disease": [
    "inflammatory bowel disease",
@@ -2096,6 +2085,15 @@
    "primary sclerosing cholangitis",
    "cholestatic"
   ],
+  "Viral Hepatitis": [
+   "hepatitis b",
+   "hepatitis c",
+   "hepatitis e",
+   "hepatitis delta",
+   "HBV",
+   "HCV",
+   "viral hepatitis"
+  ],
   "Colorectal Cancer and Screening": [
    "colorectal cancer",
    "colon cancer",
@@ -2147,11 +2145,6 @@
    "IgA nephropathy",
    "nephrotic syndrome",
    "membranous nephropathy"
-  ],
-  "Kidney Stones": [
-   "kidney stone",
-   "nephrolithiasis",
-   "urolithiasis"
   ],
   "Anemia in CKD": [
    "anemia in chronic kidney",
@@ -2215,6 +2208,36 @@
    "renal cell carcinoma",
    "kidney cancer"
   ],
+  "Lung Cancer": [
+   "lung cancer",
+   "non-small cell lung",
+   "small cell lung",
+   "NSCLC"
+  ],
+  "Sarcoma": [
+   "sarcoma"
+  ],
+  "Brain Tumors": [
+   "glioma",
+   "glioblastoma",
+   "brain tumou r",
+   "brain metastas"
+  ],
+  "Immune-Related Adverse Events": [
+   "immune-related adverse",
+   "immune checkpoint inhibitor"
+  ],
+  "Cancer Survivorship and Supportive Care": [
+   "survivorship",
+   "supportive care",
+   "antiemetic",
+   "cancer pain",
+   "cachexia"
+  ],
+  "Febrile Neutropenia": [
+   "febrile neutropenia",
+   "neutropeni"
+  ],
   "Lymphoma": [
    "lymphoma"
   ],
@@ -2231,9 +2254,6 @@
    "polycythemia vera",
    "myelofibrosis",
    "essential thrombocythemia"
-  ],
-  "Amyloidosis": [
-   "amyloidosis"
   ],
   "Sickle Cell Disease": [
    "sickle cell"
@@ -2258,33 +2278,14 @@
    "transfusion",
    "blood management"
   ],
-  "Immune-Related Adverse Events": [
-   "immune-related adverse",
-   "immune checkpoint inhibitor"
-  ],
-  "Cancer Survivorship and Supportive Care": [
-   "survivorship",
-   "supportive care",
-   "antiemetic",
-   "cancer pain",
-   "cachexia"
-  ],
-  "Cancer Screening": [
-   "cancer screening"
-  ],
-  "Sarcoma": [
-   "sarcoma"
-  ],
-  "Brain Tumors": [
-   "glioma",
-   "glioblastoma",
-   "brain tumou r",
-   "brain metastas"
-  ],
-  "Thyroid Cancer": [
-   "thyroid cancer",
-   "thyroid carcinoma",
-   "thyroid nodule"
+  "Venous Thromboembolism": [
+   "venous thromboembolism",
+   "pulmonary embolism",
+   "deep vein thrombosis",
+   "thromboprophylaxis",
+   "VTE",
+   "anticoagula",
+   "antithrombotic"
   ],
   "Stroke": [
    "stroke",
@@ -2358,15 +2359,9 @@
    "attention-deficit",
    "ADHD"
   ],
-  "Autism Spectrum Disorder": [
-   "autism"
-  ],
   "Suicide Prevention": [
    "suicid",
    "self-harm"
-  ],
-  "Delirium": [
-   "delirium"
   ],
   "Anaphylaxis": [
    "anaphylaxis"
@@ -2458,10 +2453,11 @@
    "fibroids",
    "leiomyoma"
   ],
-  "Pelvic Floor Disorders": [
-   "pelvic organ prolapse",
-   "urinary incontinence",
-   "overactive bladder"
+  "Polycystic Ovary Syndrome": [
+   "polycystic ovary"
+  ],
+  "Menopause": [
+   "menopaus"
   ],
   "Neonatal Care": [
    "neonat",
@@ -2487,6 +2483,9 @@
    "stunting",
    "child growth"
   ],
+  "Autism Spectrum Disorder": [
+   "autism"
+  ],
   "Benign Prostatic Hyperplasia": [
    "benign prostatic",
    "lower urinary tract symptoms",
@@ -2507,6 +2506,16 @@
   "Microhematuria": [
    "hematuria",
    "haematuria"
+  ],
+  "Kidney Stones": [
+   "kidney stone",
+   "nephrolithiasis",
+   "urolithiasis"
+  ],
+  "Pelvic Floor Disorders": [
+   "pelvic organ prolapse",
+   "urinary incontinence",
+   "overactive bladder"
   ],
   "Glaucoma": [
    "glaucoma"
@@ -2541,6 +2550,12 @@
    "pain management",
    "analgesi"
   ],
+  "Older Adults and Frailty": [
+   "frailty",
+   "older adults",
+   "falls prevention",
+   "polypharmacy"
+  ],
   "Palliative and End-of-Life Care": [
    "palliative",
    "end of life",
@@ -2552,21 +2567,6 @@
    "parenteral",
    "diet",
    "dietary"
-  ],
-  "Physical Activity": [
-   "physical activity",
-   "sedentary"
-  ],
-  "Fluid and Shock Management": [
-   "fluid therapy",
-   "resuscitation fluid",
-   "shock"
-  ],
-  "Older Adults and Frailty": [
-   "frailty",
-   "older adults",
-   "falls prevention",
-   "polypharmacy"
   ]
  },
  "guidelines": [
@@ -2639,8 +2639,7 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Hematology"
+    "Cardiology"
    ],
    "conditions": [
     "Amyloidosis",
@@ -2772,8 +2771,8 @@
     "eacts"
    ],
    "specialties": [
-    "Cardiology",
-    "Cardiothoracic Surgery"
+    "Cardiothoracic Surgery",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease"
@@ -2826,8 +2825,8 @@
     "eacts"
    ],
    "specialties": [
-    "Cardiology",
-    "Cardiothoracic Surgery"
+    "Cardiothoracic Surgery",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease"
@@ -2846,8 +2845,8 @@
     "eacts"
    ],
    "specialties": [
-    "Cardiothoracic Surgery",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiothoracic Surgery"
    ],
    "conditions": [
     "Perioperative Care"
@@ -2909,8 +2908,8 @@
     "acp"
    ],
    "specialties": [
-    "Endocrinology",
-    "Internal Medicine"
+    "Internal Medicine",
+    "Obstetrics & Gynecology"
    ],
    "conditions": [
     "Menopause"
@@ -3311,8 +3310,7 @@
     "acg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -3353,7 +3351,7 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Internal Medicine",
+    "Geriatrics",
     "Oncology"
    ],
    "conditions": [
@@ -3434,8 +3432,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Cardiovascular Disease Prevention",
@@ -3677,7 +3675,6 @@
    ],
    "specialties": [
     "Cardiology",
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -4802,8 +4799,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -4937,8 +4934,7 @@
     "acg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -5096,8 +5092,8 @@
     "isth"
    ],
    "specialties": [
-    "Hematology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Hematology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -5751,7 +5747,7 @@
    ],
    "specialties": [
     "Allergy & Immunology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Drug Allergy",
@@ -5846,7 +5842,6 @@
     "figo"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -6073,8 +6068,8 @@
     "smfm"
    ],
    "specialties": [
+    "Anesthesiology",
     "Hematology",
-    "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -6213,7 +6208,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine",
+    "Geriatrics",
     "Neurology"
    ],
    "conditions": [
@@ -6517,7 +6512,7 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Older Adults and Frailty"
@@ -6931,7 +6926,6 @@
     "mascc"
    ],
    "specialties": [
-    "Hematology",
     "Oncology"
    ],
    "conditions": [
@@ -6953,7 +6947,6 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Oncology",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -6974,6 +6967,7 @@
     "ash"
    ],
    "specialties": [
+    "Cardiology",
     "Hematology"
    ],
    "conditions": [
@@ -7125,8 +7119,7 @@
     "esaic"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -7145,7 +7138,6 @@
     "figo"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -7280,8 +7272,7 @@
     "ags"
    ],
    "specialties": [
-    "Geriatrics",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Older Adults and Frailty"
@@ -7849,6 +7840,7 @@
     "esmo"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -7907,7 +7899,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Heart Failure",
@@ -7984,7 +7976,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Older Adults and Frailty"
@@ -8059,8 +8051,7 @@
    ],
    "specialties": [
     "Anesthesiology",
-    "Endocrinology",
-    "Internal Medicine"
+    "Endocrinology"
    ],
    "conditions": [
     "Adrenal Disorders",
@@ -8098,7 +8089,6 @@
    ],
    "specialties": [
     "Anesthesiology",
-    "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -8200,8 +8190,7 @@
    "specialties": [
     "Endocrinology",
     "Gastroenterology & Hepatology",
-    "Internal Medicine",
-    "Oncology"
+    "Internal Medicine"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -8619,7 +8608,7 @@
     "bsr"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Rheumatology"
    ],
    "conditions": [
@@ -8810,6 +8799,7 @@
     "estro"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -9103,9 +9093,9 @@
     "aha-acc"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Hematology",
-    "Internal Medicine"
+    "Hematology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -9386,8 +9376,7 @@
    ],
    "specialties": [
     "Endocrinology",
-    "Geriatrics",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Gender-Affirming Care",
@@ -9714,8 +9703,7 @@
    ],
    "specialties": [
     "Anesthesiology",
-    "Endocrinology",
-    "Internal Medicine"
+    "Endocrinology"
    ],
    "conditions": [
     "Adrenal Disorders",
@@ -9777,8 +9765,8 @@
     "isth"
    ],
    "specialties": [
-    "Hematology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Hematology"
    ],
    "conditions": [
     "Immune Thrombocytopenia",
@@ -10338,8 +10326,8 @@
     "ata"
    ],
    "specialties": [
-    "Endocrinology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Endocrinology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -11564,6 +11552,7 @@
     "bsh"
    ],
    "specialties": [
+    "Cardiology",
     "Hematology"
    ],
    "conditions": [
@@ -11623,9 +11612,9 @@
     "sts"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Cardiothoracic Surgery",
-    "Internal Medicine"
+    "Cardiothoracic Surgery"
    ],
    "conditions": [
     "Atrial Fibrillation",
@@ -11761,8 +11750,8 @@
     "ncs"
    ],
    "specialties": [
+    "Anesthesiology",
     "Critical Care",
-    "Internal Medicine",
     "Neurology"
    ],
    "conditions": [
@@ -12066,9 +12055,9 @@
     "era"
    ],
    "specialties": [
-    "Cardiology",
     "Nephrology",
-    "Neurology"
+    "Neurology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -12105,7 +12094,7 @@
     "aao"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Ophthalmology"
    ],
    "conditions": [
@@ -12802,10 +12791,10 @@
     "sts"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
     "Cardiothoracic Surgery",
-    "Critical Care",
-    "Internal Medicine"
+    "Critical Care"
    ],
    "conditions": [
     "Atrial Fibrillation",
@@ -12995,8 +12984,7 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Cirrhosis and Portal Hypertension",
@@ -13035,6 +13023,7 @@
     "esmo"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -13172,9 +13161,8 @@
     "ata"
    ],
    "specialties": [
-    "Endocrinology",
-    "Internal Medicine",
-    "Oncology"
+    "Anesthesiology",
+    "Endocrinology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -14099,7 +14087,6 @@
     "figo"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology",
     "Psychiatry"
    ],
@@ -14178,8 +14165,7 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Hematology"
+    "Cardiology"
    ],
    "conditions": [
     "Amyloidosis",
@@ -14329,8 +14315,8 @@
     "ash"
    ],
    "specialties": [
-    "Hematology",
-    "Internal Medicine"
+    "Geriatrics",
+    "Hematology"
    ],
    "conditions": [
     "Leukemia",
@@ -14570,8 +14556,7 @@
    ],
    "specialties": [
     "Critical Care",
-    "Internal Medicine",
-    "Psychiatry"
+    "Geriatrics"
    ],
    "conditions": [
     "Delirium",
@@ -14656,7 +14641,7 @@
    ],
    "specialties": [
     "Critical Care",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Older Adults and Frailty"
@@ -15139,8 +15124,8 @@
    ],
    "specialties": [
     "Allergy & Immunology",
+    "Geriatrics",
     "Infectious Diseases",
-    "Internal Medicine",
     "Preventive Medicine",
     "Pulmonology"
    ],
@@ -15490,8 +15475,8 @@
     "eacts"
    ],
    "specialties": [
-    "Cardiothoracic Surgery",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiothoracic Surgery"
    ],
    "conditions": [
     "Perioperative Care"
@@ -15682,7 +15667,7 @@
     "sir"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Radiology"
    ],
    "conditions": [
@@ -15917,7 +15902,7 @@
     "aap"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Pediatrics"
    ],
    "conditions": [
@@ -16084,7 +16069,7 @@
     "aap"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Pediatrics"
    ],
    "conditions": [
@@ -16281,8 +16266,8 @@
     "nice"
    ],
    "specialties": [
-    "Hematology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Hematology"
    ],
    "conditions": [
     "Immune Thrombocytopenia",
@@ -16303,7 +16288,6 @@
     "asco"
    ],
    "specialties": [
-    "Hematology",
     "Oncology"
    ],
    "conditions": [
@@ -16364,7 +16348,7 @@
     "nice"
    ],
    "specialties": [
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -16542,6 +16526,7 @@
     "estro"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -17072,8 +17057,7 @@
     "acg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -17271,6 +17255,7 @@
     "estro"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -17309,8 +17294,8 @@
     "isth"
    ],
    "specialties": [
-    "Hematology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Hematology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -18250,6 +18235,7 @@
     "esmo"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -18288,8 +18274,8 @@
     "sccm"
    ],
    "specialties": [
-    "Critical Care",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Critical Care"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -18754,7 +18740,7 @@
    "specialties": [
     "Cardiology",
     "Endocrinology",
-    "Internal Medicine",
+    "Geriatrics",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -19097,8 +19083,7 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Hematology"
+    "Cardiology"
    ],
    "conditions": [
     "Amyloidosis",
@@ -19599,7 +19584,6 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -19748,7 +19732,7 @@
     "sages"
    ],
    "specialties": [
-    "Oncology",
+    "Gastroenterology & Hepatology",
     "Surgery"
    ],
    "conditions": [
@@ -19827,8 +19811,8 @@
     "aasld"
    ],
    "specialties": [
+    "Anesthesiology",
     "Gastroenterology & Hepatology",
-    "Internal Medicine",
     "Nephrology"
    ],
    "conditions": [
@@ -19852,8 +19836,8 @@
    "specialties": [
     "Cardiology",
     "Gastroenterology & Hepatology",
-    "Internal Medicine",
-    "Oncology"
+    "Geriatrics",
+    "Internal Medicine"
    ],
    "conditions": [
     "Acute Liver Failure",
@@ -20095,7 +20079,7 @@
     "aua"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology",
     "Urology"
    ],
@@ -20117,8 +20101,7 @@
     "asa"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids",
@@ -21148,7 +21131,7 @@
     "sages"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Surgery"
    ],
    "conditions": [
@@ -21487,7 +21470,7 @@
     "nice"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology",
     "Pediatrics"
    ],
@@ -21553,7 +21536,8 @@
    ],
    "specialties": [
     "Cardiology",
-    "Obstetrics & Gynecology"
+    "Obstetrics & Gynecology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -22048,8 +22032,7 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Obstetrics & Gynecology",
-    "Oncology"
+    "Obstetrics & Gynecology"
    ],
    "conditions": [
     "Hepatocellular Carcinoma",
@@ -22387,7 +22370,6 @@
    ],
    "specialties": [
     "Cardiology",
-    "Hematology",
     "Neurology"
    ],
    "conditions": [
@@ -22616,7 +22598,7 @@
     "estro"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Oncology"
    ],
    "conditions": [
@@ -22712,8 +22694,7 @@
     "ata"
    ],
    "specialties": [
-    "Endocrinology",
-    "Oncology"
+    "Endocrinology"
    ],
    "conditions": [
     "Thyroid Cancer",
@@ -22773,7 +22754,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Heart Failure",
@@ -23159,8 +23140,7 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -23455,9 +23435,8 @@
     "sccm"
    ],
    "specialties": [
-    "Critical Care",
-    "Internal Medicine",
-    "Psychiatry"
+    "Anesthesiology",
+    "Critical Care"
    ],
    "conditions": [
     "Delirium",
@@ -24702,8 +24681,7 @@
     "bsg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -24795,7 +24773,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -24979,9 +24957,9 @@
     "acg"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Gastroenterology & Hepatology",
-    "Internal Medicine"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Cirrhosis and Portal Hypertension",
@@ -25082,6 +25060,7 @@
     "apa-psych"
    ],
    "specialties": [
+    "Critical Care",
     "Psychiatry"
    ],
    "conditions": [
@@ -25154,7 +25133,7 @@
     "aap"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Pediatrics"
    ],
    "conditions": [
@@ -25534,7 +25513,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine",
+    "Geriatrics",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -25617,8 +25596,8 @@
     "aasld"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Acute Liver Failure",
@@ -25772,7 +25751,7 @@
     "nice"
    ],
    "specialties": [
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Hepatocellular Carcinoma"
@@ -25901,7 +25880,7 @@
     "sages"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Surgery"
    ],
    "conditions": [
@@ -26260,7 +26239,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Cardiovascular Disease Prevention",
@@ -26404,8 +26383,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Heart Failure",
@@ -26794,8 +26773,7 @@
     "ata"
    ],
    "specialties": [
-    "Endocrinology",
-    "Oncology"
+    "Endocrinology"
    ],
    "conditions": [
     "Thyroid Cancer",
@@ -27094,7 +27072,7 @@
     "nice"
    ],
    "specialties": [
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -27232,8 +27210,7 @@
     "asra"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -27482,8 +27459,7 @@
     "asra"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -27558,8 +27534,7 @@
     "asra"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -27579,8 +27554,7 @@
    ],
    "specialties": [
     "Geriatrics",
-    "Infectious Diseases",
-    "Internal Medicine"
+    "Infectious Diseases"
    ],
    "conditions": [
     "COVID-19",
@@ -27668,6 +27642,7 @@
     "mascc"
    ],
    "specialties": [
+    "Anesthesiology",
     "Internal Medicine",
     "Oncology"
    ],
@@ -28868,7 +28843,6 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -29222,7 +29196,6 @@
     "figo"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -29653,7 +29626,7 @@
     "nice"
    ],
    "specialties": [
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -29728,8 +29701,8 @@
     "nice"
    ],
    "specialties": [
+    "Anesthesiology",
     "Infectious Diseases",
-    "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -29865,6 +29838,7 @@
     "esmo"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -30011,7 +29985,6 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -30216,7 +30189,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -30309,8 +30282,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Hematology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Amyloidosis",
@@ -30423,7 +30395,7 @@
     "sages"
    ],
    "specialties": [
-    "Oncology",
+    "Gastroenterology & Hepatology",
     "Surgery"
    ],
    "conditions": [
@@ -30523,8 +30495,8 @@
     "easl"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Cirrhosis and Portal Hypertension",
@@ -31419,7 +31391,6 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Oncology",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -31494,7 +31465,7 @@
     "aua"
    ],
    "specialties": [
-    "Endocrinology",
+    "Obstetrics & Gynecology",
     "Urology"
    ],
    "conditions": [
@@ -31515,7 +31486,7 @@
    ],
    "specialties": [
     "Endocrinology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Older Adults and Frailty",
@@ -31886,7 +31857,6 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Oncology",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -32002,7 +31972,7 @@
     "aua"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Urology"
    ],
    "conditions": [
@@ -32022,7 +31992,7 @@
     "aua"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Urology"
    ],
    "conditions": [
@@ -32042,7 +32012,7 @@
     "aua"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Urology"
    ],
    "conditions": [
@@ -32161,7 +32131,8 @@
     "eha"
    ],
    "specialties": [
-    "Hematology"
+    "Hematology",
+    "Oncology"
    ],
    "conditions": [
     "Febrile Neutropenia"
@@ -32643,6 +32614,7 @@
     "acp"
    ],
    "specialties": [
+    "Anesthesiology",
     "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
@@ -32741,7 +32713,7 @@
     "figo"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -32941,8 +32913,7 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -33102,7 +33073,6 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Oncology",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -33143,7 +33113,7 @@
     "svs"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -33658,6 +33628,7 @@
     "acp"
    ],
    "specialties": [
+    "Anesthesiology",
     "Internal Medicine",
     "Neurology"
    ],
@@ -33680,7 +33651,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Heart Failure",
@@ -33760,8 +33731,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -33974,7 +33944,7 @@
     "smfm"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology",
     "Psychiatry"
    ],
@@ -34135,8 +34105,7 @@
     "acg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -34196,6 +34165,7 @@
     "mascc"
    ],
    "specialties": [
+    "Anesthesiology",
     "Internal Medicine",
     "Oncology"
    ],
@@ -34354,7 +34324,6 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Oncology",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -34910,8 +34879,8 @@
     "sccm"
    ],
    "specialties": [
+    "Anesthesiology",
     "Critical Care",
-    "Internal Medicine",
     "Psychiatry"
    ],
    "conditions": [
@@ -34933,6 +34902,7 @@
     "esmo"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -35195,8 +35165,7 @@
     "nice"
    ],
    "specialties": [
-    "Endocrinology",
-    "Oncology"
+    "Endocrinology"
    ],
    "conditions": [
     "Thyroid Cancer",
@@ -35216,8 +35185,7 @@
     "nice"
    ],
    "specialties": [
-    "Endocrinology",
-    "Oncology"
+    "Endocrinology"
    ],
    "conditions": [
     "Thyroid Cancer",
@@ -35256,7 +35224,7 @@
     "esmo"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Oncology"
    ],
    "conditions": [
@@ -35378,8 +35346,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Pain Management and Opioids",
@@ -35808,8 +35776,7 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine",
+    "Anesthesiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -36594,7 +36561,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Older Adults and Frailty"
@@ -36822,6 +36789,7 @@
     "bsh"
    ],
    "specialties": [
+    "Cardiology",
     "Hematology",
     "Nephrology"
    ],
@@ -36887,9 +36855,9 @@
     "esc"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Cardiothoracic Surgery",
-    "Internal Medicine"
+    "Cardiothoracic Surgery"
    ],
    "conditions": [
     "Coronary Artery Disease",
@@ -36972,7 +36940,6 @@
    ],
    "specialties": [
     "Anesthesiology",
-    "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -37768,7 +37735,7 @@
    ],
    "specialties": [
     "Anesthesiology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Older Adults and Frailty",
@@ -37842,10 +37809,10 @@
     "eacts"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
     "Cardiothoracic Surgery",
-    "Hematology",
-    "Internal Medicine"
+    "Hematology"
    ],
    "conditions": [
     "Atrial Fibrillation",
@@ -37894,8 +37861,7 @@
     "sccm"
    ],
    "specialties": [
-    "Critical Care",
-    "Psychiatry"
+    "Critical Care"
    ],
    "conditions": [
     "Delirium"
@@ -38205,8 +38171,7 @@
     "easl"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Acute Liver Failure",
@@ -38443,8 +38408,7 @@
    ],
    "specialties": [
     "Anesthesiology",
-    "Internal Medicine",
-    "Psychiatry"
+    "Critical Care"
    ],
    "conditions": [
     "Delirium",
@@ -38828,7 +38792,7 @@
     "aap"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Pediatrics"
    ],
    "conditions": [
@@ -39010,8 +38974,7 @@
     "ags"
    ],
    "specialties": [
-    "Geriatrics",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Older Adults and Frailty"
@@ -39212,6 +39175,7 @@
     "astro"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -39457,7 +39421,7 @@
     "bsr"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Rheumatology"
    ],
    "conditions": [
@@ -39920,7 +39884,7 @@
     "nice"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -39978,7 +39942,7 @@
     "nice"
    ],
    "specialties": [
-    "Endocrinology"
+    "Obstetrics & Gynecology"
    ],
    "conditions": [
     "Menopause"
@@ -40100,8 +40064,7 @@
     "asra"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -40120,8 +40083,7 @@
     "esaic"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -40335,8 +40297,7 @@
    ],
    "specialties": [
     "Endocrinology",
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Cirrhosis and Portal Hypertension",
@@ -40555,8 +40516,8 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Dyspepsia and Gastroparesis",
@@ -41011,8 +40972,7 @@
     "ata"
    ],
    "specialties": [
-    "Endocrinology",
-    "Oncology"
+    "Endocrinology"
    ],
    "conditions": [
     "Thyroid Cancer",
@@ -41098,8 +41058,7 @@
     "hfsa"
    ],
    "specialties": [
-    "Cardiology",
-    "Hematology"
+    "Cardiology"
    ],
    "conditions": [
     "Amyloidosis",
@@ -41295,8 +41254,8 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Celiac Disease",
@@ -41417,7 +41376,7 @@
     "aao"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Ophthalmology"
    ],
    "conditions": [
@@ -41904,7 +41863,7 @@
     "aap"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Pediatrics"
    ],
    "conditions": [
@@ -42015,7 +41974,8 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology"
+    "Cardiology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -42121,7 +42081,7 @@
     "sir"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Radiology"
    ],
    "conditions": [
@@ -42259,8 +42219,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Cardiovascular Disease Prevention",
@@ -42838,6 +42798,7 @@
     "asco"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -42961,8 +42922,8 @@
     "eacts"
    ],
    "specialties": [
-    "Cardiology",
-    "Cardiothoracic Surgery"
+    "Cardiothoracic Surgery",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease"
@@ -43056,6 +43017,7 @@
     "nccn"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology",
     "Preventive Medicine"
    ],
@@ -43270,8 +43232,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -43346,8 +43308,8 @@
     "escmid"
    ],
    "specialties": [
-    "Infectious Diseases",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Infectious Diseases"
    ],
    "conditions": [
     "Antimicrobial Resistance",
@@ -43464,7 +43426,7 @@
     "esmo"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Geriatrics",
     "Oncology"
    ],
    "conditions": [
@@ -43527,7 +43489,6 @@
    ],
    "specialties": [
     "Endocrinology",
-    "Oncology",
     "Radiology"
    ],
    "conditions": [
@@ -43653,7 +43614,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology"
+    "Cardiology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -43733,6 +43695,7 @@
     "asco"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -44014,6 +43977,7 @@
     "nccn"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -44597,8 +44561,7 @@
     "easl"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Hepatocellular Carcinoma"
@@ -44990,8 +44953,7 @@
     "bsg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Acute Liver Failure",
@@ -45011,8 +44973,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -45330,9 +45292,9 @@
     "sccm"
    ],
    "specialties": [
+    "Anesthesiology",
     "Critical Care",
-    "Hematology",
-    "Internal Medicine"
+    "Hematology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -45494,6 +45456,7 @@
    ],
    "specialties": [
     "Endocrinology",
+    "Geriatrics",
     "Internal Medicine",
     "Preventive Medicine"
    ],
@@ -45801,7 +45764,7 @@
     "ers"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Pulmonology"
    ],
    "conditions": [
@@ -45821,7 +45784,8 @@
     "sages"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
+    "Geriatrics",
     "Surgery"
    ],
    "conditions": [
@@ -45842,7 +45806,7 @@
     "aua"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Urology"
    ],
    "conditions": [
@@ -46010,8 +45974,8 @@
     "isth"
    ],
    "specialties": [
-    "Hematology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Hematology"
    ],
    "conditions": [
     "Hemophilia and Bleeding Disorders",
@@ -46298,8 +46262,7 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Hematology"
+    "Cardiology"
    ],
    "conditions": [
     "Amyloidosis",
@@ -46485,8 +46448,8 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Heart Failure",
@@ -47176,7 +47139,7 @@
     "sir"
    ],
    "specialties": [
-    "Oncology",
+    "Gastroenterology & Hepatology",
     "Radiology"
    ],
    "conditions": [
@@ -48365,8 +48328,8 @@
     "sts"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiothoracic Surgery",
-    "Internal Medicine",
     "Pulmonology"
    ],
    "conditions": [
@@ -49008,7 +48971,7 @@
     "aao"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Ophthalmology"
    ],
    "conditions": [
@@ -49048,8 +49011,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -49129,6 +49091,7 @@
     "asco"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -49165,8 +49128,8 @@
     "bsh"
    ],
    "specialties": [
-    "Hematology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Hematology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -49482,8 +49445,8 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Inflammatory Bowel Disease",
@@ -49537,8 +49500,8 @@
     "eau"
    ],
    "specialties": [
+    "Anesthesiology",
     "Hematology",
-    "Internal Medicine",
     "Obstetrics & Gynecology",
     "Urology"
    ],
@@ -49796,7 +49759,7 @@
     "nice"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -50619,6 +50582,7 @@
     "asco"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -50840,8 +50804,8 @@
     "aad"
    ],
    "specialties": [
+    "Anesthesiology",
     "Dermatology",
-    "Internal Medicine",
     "Rheumatology"
    ],
    "conditions": [
@@ -52037,8 +52001,8 @@
     "sts"
    ],
    "specialties": [
-    "Cardiology",
-    "Cardiothoracic Surgery"
+    "Cardiothoracic Surgery",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease"
@@ -52059,7 +52023,7 @@
    "specialties": [
     "Cardiology",
     "Critical Care",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Fluid and Shock Management",
@@ -52973,7 +52937,7 @@
     "acsm"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Psychiatry",
     "Sports Medicine"
    ],
@@ -52995,9 +52959,9 @@
     "eacts"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Cardiothoracic Surgery",
-    "Internal Medicine"
+    "Cardiothoracic Surgery"
    ],
    "conditions": [
     "Acute Coronary Syndromes",
@@ -53197,8 +53161,8 @@
     "sts"
    ],
    "specialties": [
-    "Cardiothoracic Surgery",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiothoracic Surgery"
    ],
    "conditions": [
     "Perioperative Care"
@@ -53333,7 +53297,7 @@
    "specialties": [
     "Cardiology",
     "Cardiothoracic Surgery",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Older Adults and Frailty"
@@ -54001,8 +53965,8 @@
     "isth"
    ],
    "specialties": [
-    "Hematology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Hematology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -54146,8 +54110,7 @@
     "bsg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -54185,7 +54148,6 @@
     "figo"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -54833,7 +54795,7 @@
     "sogc"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -55077,8 +55039,8 @@
     "ash"
    ],
    "specialties": [
-    "Hematology",
-    "Internal Medicine"
+    "Geriatrics",
+    "Hematology"
    ],
    "conditions": [
     "Leukemia",
@@ -56254,7 +56216,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -56488,8 +56449,7 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -56779,7 +56739,7 @@
     "sages"
    ],
    "specialties": [
-    "Oncology",
+    "Gastroenterology & Hepatology",
     "Surgery"
    ],
    "conditions": [
@@ -57316,7 +57276,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Heart Failure",
@@ -57426,7 +57386,7 @@
     "sogc"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology",
     "Pediatrics"
    ],
@@ -57450,8 +57410,7 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -57495,8 +57454,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Acute Liver Failure",
@@ -57519,7 +57477,6 @@
     "acog"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -57539,8 +57496,7 @@
     "nice"
    ],
    "specialties": [
-    "Endocrinology",
-    "Oncology"
+    "Endocrinology"
    ],
    "conditions": [
     "Thyroid Cancer",
@@ -57740,7 +57696,7 @@
     "sages"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Surgery"
    ],
    "conditions": [
@@ -57931,8 +57887,8 @@
     "smfm"
    ],
    "specialties": [
+    "Anesthesiology",
     "Hematology",
-    "Internal Medicine",
     "Obstetrics & Gynecology",
     "Pediatrics"
    ],
@@ -58000,9 +57956,9 @@
     "sts"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiothoracic Surgery",
-    "Hematology",
-    "Internal Medicine"
+    "Hematology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -59262,7 +59218,6 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -59374,7 +59329,7 @@
     "estro"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Oncology"
    ],
    "conditions": [
@@ -59395,8 +59350,7 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Hematology"
+    "Cardiology"
    ],
    "conditions": [
     "Amyloidosis",
@@ -59417,7 +59371,6 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Oncology",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -59686,8 +59639,7 @@
     "ata"
    ],
    "specialties": [
-    "Endocrinology",
-    "Oncology"
+    "Endocrinology"
    ],
    "conditions": [
     "Thyroid Cancer",
@@ -59788,7 +59740,6 @@
    ],
    "specialties": [
     "Endocrinology",
-    "Oncology",
     "Otolaryngology"
    ],
    "conditions": [
@@ -59948,7 +59899,7 @@
     "nice"
    ],
    "specialties": [
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -60300,6 +60251,7 @@
     "sitc"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -60861,7 +60813,7 @@
     "ers"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Geriatrics",
     "Pulmonology"
    ],
    "conditions": [
@@ -61376,8 +61328,8 @@
     "acp"
    ],
    "specialties": [
-    "Internal Medicine",
-    "Oncology"
+    "Gastroenterology & Hepatology",
+    "Internal Medicine"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -63045,7 +62997,7 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Acute Liver Failure",
@@ -63066,8 +63018,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Coronary Artery Disease",
@@ -63635,8 +63587,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -64004,8 +63955,7 @@
     "esaic"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -64333,6 +64283,7 @@
     "esmo"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -64476,8 +64427,7 @@
    ],
    "specialties": [
     "Anesthesiology",
-    "Cardiology",
-    "Internal Medicine"
+    "Cardiology"
    ],
    "conditions": [
     "Cardiac Arrest and Resuscitation",
@@ -65059,7 +65009,7 @@
     "estro"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Oncology"
    ],
    "conditions": [
@@ -65684,7 +65634,8 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology"
+    "Cardiology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease"
@@ -66051,8 +66002,8 @@
     "sts"
    ],
    "specialties": [
-    "Cardiothoracic Surgery",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiothoracic Surgery"
    ],
    "conditions": [
     "Perioperative Care"
@@ -66089,8 +66040,8 @@
    ],
    "specialties": [
     "Cardiology",
+    "Geriatrics",
     "Hematology",
-    "Internal Medicine",
     "Neurology",
     "Oncology"
    ],
@@ -66504,8 +66455,8 @@
     "bsr"
    ],
    "specialties": [
+    "Anesthesiology",
     "Hematology",
-    "Internal Medicine",
     "Obstetrics & Gynecology",
     "Pediatrics",
     "Rheumatology"
@@ -66596,8 +66547,8 @@
     "bsr"
    ],
    "specialties": [
+    "Anesthesiology",
     "Hematology",
-    "Internal Medicine",
     "Obstetrics & Gynecology",
     "Pediatrics",
     "Rheumatology"
@@ -66794,7 +66745,7 @@
     "ats"
    ],
    "specialties": [
-    "Psychiatry",
+    "Critical Care",
     "Pulmonology"
    ],
    "conditions": [
@@ -66893,7 +66844,8 @@
     "eha"
    ],
    "specialties": [
-    "Hematology"
+    "Hematology",
+    "Oncology"
    ],
    "conditions": [
     "Febrile Neutropenia"
@@ -66989,7 +66941,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology"
+    "Cardiology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -67304,8 +67257,8 @@
     "svs"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Internal Medicine",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -67447,9 +67400,9 @@
     "aha-acc"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Hematology",
-    "Internal Medicine"
+    "Hematology"
    ],
    "conditions": [
     "Atrial Fibrillation",
@@ -67903,8 +67856,7 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -68119,7 +68071,7 @@
     "sages"
    ],
    "specialties": [
-    "Oncology",
+    "Gastroenterology & Hepatology",
     "Surgery"
    ],
    "conditions": [
@@ -68565,7 +68517,7 @@
     "nice"
    ],
    "specialties": [
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -69267,8 +69219,7 @@
     "asa"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -69559,7 +69510,6 @@
    ],
    "specialties": [
     "Cardiology",
-    "Hematology",
     "Neurology"
    ],
    "conditions": [
@@ -69656,8 +69606,7 @@
     "sccm"
    ],
    "specialties": [
-    "Critical Care",
-    "Psychiatry"
+    "Critical Care"
    ],
    "conditions": [
     "Acute Respiratory Distress Syndrome",
@@ -69888,7 +69837,7 @@
     "nice"
    ],
    "specialties": [
-    "Psychiatry"
+    "Critical Care"
    ],
    "conditions": [
     "Delirium"
@@ -70230,7 +70179,6 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -70364,8 +70312,7 @@
     "asra"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids",
@@ -70385,8 +70332,7 @@
     "asra"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids",
@@ -70513,7 +70459,7 @@
     "who"
    ],
    "specialties": [
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -71085,8 +71031,8 @@
     "escmid"
    ],
    "specialties": [
-    "Infectious Diseases",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Infectious Diseases"
    ],
    "conditions": [
     "Antimicrobial Resistance",
@@ -71148,8 +71094,8 @@
     "isth"
    ],
    "specialties": [
-    "Hematology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Hematology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -71303,9 +71249,8 @@
     "nice"
    ],
    "specialties": [
-    "Endocrinology",
-    "Internal Medicine",
-    "Oncology"
+    "Anesthesiology",
+    "Endocrinology"
    ],
    "conditions": [
     "Pain Management and Opioids",
@@ -71566,8 +71511,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Congenital Heart Disease",
@@ -71755,7 +71700,7 @@
     "nice"
    ],
    "specialties": [
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Hepatocellular Carcinoma"
@@ -71826,7 +71771,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Acute Coronary Syndromes",
@@ -72021,7 +71966,7 @@
     "asco"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Oncology"
    ],
    "conditions": [
@@ -73156,7 +73101,8 @@
    ],
    "specialties": [
     "Cardiology",
-    "Obstetrics & Gynecology"
+    "Obstetrics & Gynecology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -73456,8 +73402,8 @@
     "sts"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiothoracic Surgery",
-    "Internal Medicine",
     "Pediatrics"
    ],
    "conditions": [
@@ -73628,7 +73574,7 @@
     "eular"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Rheumatology"
    ],
    "conditions": [
@@ -73747,7 +73693,7 @@
     "nice"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Rheumatology"
    ],
    "conditions": [
@@ -73768,7 +73714,7 @@
     "asco"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Oncology"
    ],
    "conditions": [
@@ -73885,6 +73831,7 @@
     "asco"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -73927,8 +73874,8 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -74287,7 +74234,7 @@
     "aao"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Ophthalmology"
    ],
    "conditions": [
@@ -74392,6 +74339,7 @@
     "adlm-cap"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology",
     "Pathology & Laboratory Medicine"
    ],
@@ -74669,6 +74617,7 @@
     "eortc"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -74804,8 +74753,8 @@
     "sages"
    ],
    "specialties": [
+    "Anesthesiology",
     "Infectious Diseases",
-    "Internal Medicine",
     "Surgery"
    ],
    "conditions": [
@@ -74828,8 +74777,7 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Hematology",
-    "Oncology"
+    "Hematology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -74891,8 +74839,7 @@
     "nice"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -74949,7 +74896,7 @@
     "asco"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Oncology"
    ],
    "conditions": [
@@ -76091,8 +76038,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -76152,8 +76098,7 @@
     "acg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -76347,8 +76292,8 @@
     "chest"
    ],
    "specialties": [
+    "Anesthesiology",
     "Hematology",
-    "Internal Medicine",
     "Pulmonology"
    ],
    "conditions": [
@@ -76388,8 +76333,8 @@
     "chest"
    ],
    "specialties": [
+    "Anesthesiology",
     "Hematology",
-    "Internal Medicine",
     "Pulmonology"
    ],
    "conditions": [
@@ -76823,8 +76768,7 @@
     "esaic"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -77691,6 +77635,7 @@
     "acp"
    ],
    "specialties": [
+    "Geriatrics",
     "Infectious Diseases",
     "Internal Medicine"
    ],
@@ -77713,8 +77658,7 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Hematology",
-    "Oncology"
+    "Hematology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -77752,7 +77696,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Older Adults and Frailty"
@@ -78475,7 +78419,7 @@
     "nice"
    ],
    "specialties": [
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -78982,7 +78926,7 @@
     "acr"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Rheumatology"
    ],
    "conditions": [
@@ -79082,8 +79026,7 @@
    ],
    "specialties": [
     "Anesthesiology",
-    "Infectious Diseases",
-    "Internal Medicine"
+    "Infectious Diseases"
    ],
    "conditions": [
     "COVID-19",
@@ -79197,8 +79140,7 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -79295,6 +79237,7 @@
     "astro"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -79544,7 +79487,7 @@
     "uspstf"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Geriatrics",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -79564,8 +79507,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -79602,8 +79544,7 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -81261,7 +81202,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology",
     "Rheumatology"
    ],
@@ -81340,7 +81280,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology",
     "Rheumatology"
    ],
@@ -81541,8 +81480,7 @@
     "acg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -81563,8 +81501,7 @@
     "acg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -82284,7 +82221,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -82347,7 +82283,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -82430,7 +82365,6 @@
     "Cardiology",
     "Critical Care",
     "Endocrinology",
-    "Hematology",
     "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
@@ -82462,7 +82396,6 @@
     "Cardiology",
     "Critical Care",
     "Endocrinology",
-    "Hematology",
     "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
@@ -82546,7 +82479,6 @@
     "eso"
    ],
    "specialties": [
-    "Endocrinology",
     "Neurology",
     "Obstetrics & Gynecology"
    ],
@@ -83550,8 +83482,7 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Acute Liver Failure",
@@ -83900,6 +83831,7 @@
    ],
    "specialties": [
     "Cardiology",
+    "Geriatrics",
     "Internal Medicine"
    ],
    "conditions": [
@@ -83987,7 +83919,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology"
+    "Cardiology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease"
@@ -84064,7 +83997,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine",
+    "Geriatrics",
     "Neurology"
    ],
    "conditions": [
@@ -84086,8 +84019,7 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine",
+    "Anesthesiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -85092,8 +85024,7 @@
     "sccm"
    ],
    "specialties": [
-    "Critical Care",
-    "Psychiatry"
+    "Critical Care"
    ],
    "conditions": [
     "Delirium"
@@ -85330,7 +85261,6 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Oncology",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -85390,9 +85320,9 @@
     "sts"
    ],
    "specialties": [
-    "Cardiology",
+    "Anesthesiology",
     "Cardiothoracic Surgery",
-    "Internal Medicine"
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -85518,7 +85448,6 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -85802,8 +85731,7 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Internal Medicine",
-    "Oncology"
+    "Internal Medicine"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -86478,7 +86406,6 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Oncology",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -86535,8 +86462,7 @@
     "esaic"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -86939,6 +86865,7 @@
     "asco"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -87238,7 +87165,7 @@
     "nice"
    ],
    "specialties": [
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -87314,6 +87241,7 @@
     "estro"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -87529,8 +87457,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -87608,7 +87535,6 @@
     "acog"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology",
     "Oncology"
    ],
@@ -88142,7 +88068,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology",
     "Oncology"
    ],
@@ -88165,7 +88090,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Neurology",
     "Obstetrics & Gynecology"
    ],
@@ -88432,7 +88356,7 @@
     "nice"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -88454,7 +88378,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Cardiovascular Disease Prevention",
@@ -88474,7 +88398,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology",
     "Psychiatry"
    ],
@@ -89100,9 +89023,8 @@
     "sccm"
    ],
    "specialties": [
-    "Critical Care",
-    "Internal Medicine",
-    "Psychiatry"
+    "Anesthesiology",
+    "Critical Care"
    ],
    "conditions": [
     "Delirium",
@@ -89345,6 +89267,7 @@
     "astro"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -89442,7 +89365,6 @@
     "rcog"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -90005,8 +89927,8 @@
     "aap"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Internal Medicine",
     "Pediatrics"
    ],
    "conditions": [
@@ -90046,8 +89968,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Acute Coronary Syndromes",
@@ -90105,6 +90027,7 @@
     "ats"
    ],
    "specialties": [
+    "Critical Care",
     "Psychiatry",
     "Pulmonology"
    ],
@@ -90392,7 +90315,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -90746,7 +90668,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -90766,7 +90687,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -90956,7 +90876,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -91316,7 +91235,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology",
     "Urology"
    ],
@@ -91637,6 +91555,7 @@
     "sitc"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -91656,7 +91575,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -91717,7 +91636,7 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Internal Medicine",
+    "Geriatrics",
     "Pediatrics"
    ],
    "conditions": [
@@ -91928,7 +91847,6 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Oncology",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -91950,8 +91868,7 @@
     "sccm"
    ],
    "specialties": [
-    "Critical Care",
-    "Psychiatry"
+    "Critical Care"
    ],
    "conditions": [
     "Delirium"
@@ -92009,7 +91926,7 @@
     "smfm"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -92307,8 +92224,8 @@
     "aha-acc"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Internal Medicine",
     "Neurology"
    ],
    "conditions": [
@@ -92329,8 +92246,8 @@
     "bsh"
    ],
    "specialties": [
+    "Anesthesiology",
     "Hematology",
-    "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -92475,6 +92392,7 @@
     "esmo"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -92571,7 +92489,7 @@
     "aua"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Urology"
    ],
    "conditions": [
@@ -92670,7 +92588,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
@@ -93401,8 +93318,7 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -93534,7 +93450,7 @@
     "nice"
    ],
    "specialties": [
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -93614,7 +93530,7 @@
     "smfm"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology",
     "Pediatrics"
    ],
@@ -94249,8 +94165,7 @@
     "easl"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Hepatocellular Carcinoma"
@@ -94670,8 +94585,8 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Dyspepsia and Gastroparesis",
@@ -94692,8 +94607,7 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -94712,8 +94626,7 @@
     "asra"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids",
@@ -95079,8 +94992,7 @@
     "hfsa"
    ],
    "specialties": [
-    "Cardiology",
-    "Hematology"
+    "Cardiology"
    ],
    "conditions": [
     "Amyloidosis",
@@ -95101,8 +95013,7 @@
     "hfsa"
    ],
    "specialties": [
-    "Cardiology",
-    "Hematology"
+    "Cardiology"
    ],
    "conditions": [
     "Amyloidosis",
@@ -95122,9 +95033,9 @@
     "sts"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiothoracic Surgery",
-    "Hematology",
-    "Internal Medicine"
+    "Hematology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -95146,8 +95057,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -95244,7 +95155,8 @@
     "bsh"
    ],
    "specialties": [
-    "Hematology"
+    "Hematology",
+    "Oncology"
    ],
    "conditions": [
     "Febrile Neutropenia",
@@ -95383,7 +95295,7 @@
     "nice"
    ],
    "specialties": [
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -95438,9 +95350,8 @@
     "ata"
    ],
    "specialties": [
-    "Endocrinology",
-    "Internal Medicine",
-    "Oncology"
+    "Anesthesiology",
+    "Endocrinology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -95946,7 +95857,7 @@
     "eau"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Urology"
    ],
    "conditions": [
@@ -96455,8 +96366,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -97183,7 +97093,6 @@
    ],
    "specialties": [
     "Cardiology",
-    "Hematology",
     "Pulmonology"
    ],
    "conditions": [
@@ -97208,7 +97117,6 @@
    ],
    "specialties": [
     "Cardiology",
-    "Hematology",
     "Pulmonology"
    ],
    "conditions": [
@@ -97232,7 +97140,7 @@
     "uspstf"
    ],
    "specialties": [
-    "Oncology",
+    "Gastroenterology & Hepatology",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -97813,7 +97721,8 @@
    "specialties": [
     "Cardiology",
     "Nephrology",
-    "Neurology"
+    "Neurology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Acute Kidney Injury",
@@ -97916,8 +97825,8 @@
     "sts"
    ],
    "specialties": [
-    "Cardiothoracic Surgery",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiothoracic Surgery"
    ],
    "conditions": [
     "Perioperative Care"
@@ -98148,9 +98057,9 @@
     "sts"
    ],
    "specialties": [
-    "Cardiology",
+    "Anesthesiology",
     "Cardiothoracic Surgery",
-    "Internal Medicine"
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -98496,8 +98405,7 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Hematology"
+    "Cardiology"
    ],
    "conditions": [
     "Amyloidosis",
@@ -98927,8 +98835,8 @@
     "aha-acc"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Internal Medicine",
     "Neurology"
    ],
    "conditions": [
@@ -99035,8 +98943,7 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Hematology"
+    "Cardiology"
    ],
    "conditions": [
     "Amyloidosis",
@@ -99057,7 +98964,7 @@
     "nice"
    ],
    "specialties": [
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -99301,7 +99208,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Cardiovascular Disease Prevention",
@@ -99321,8 +99228,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -99342,7 +99248,7 @@
     "aao-hns"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Otolaryngology"
    ],
    "conditions": [
@@ -99363,7 +99269,7 @@
     "aao-hns"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Otolaryngology"
    ],
    "conditions": [
@@ -99423,7 +99329,6 @@
    ],
    "specialties": [
     "Anesthesiology",
-    "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -99793,7 +99698,7 @@
     "uspstf"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Geriatrics",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -100064,8 +99969,8 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -100394,8 +100299,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Cardiac Arrest and Resuscitation",
@@ -101061,7 +100966,6 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Oncology",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -101104,8 +101008,7 @@
    ],
    "specialties": [
     "Endocrinology",
-    "Internal Medicine",
-    "Oncology"
+    "Internal Medicine"
    ],
    "conditions": [
     "Palliative and End-of-Life Care",
@@ -101200,8 +101103,7 @@
     "asra"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -101709,8 +101611,7 @@
    ],
    "specialties": [
     "Endocrinology",
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -101751,7 +101652,7 @@
     "sages"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Surgery"
    ],
    "conditions": [
@@ -102985,7 +102886,8 @@
    ],
    "specialties": [
     "Cardiology",
-    "Hematology"
+    "Hematology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -103300,7 +103202,7 @@
     "nice"
    ],
    "specialties": [
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -103340,7 +103242,8 @@
    ],
    "specialties": [
     "Cardiology",
-    "Cardiothoracic Surgery"
+    "Cardiothoracic Surgery",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease"
@@ -103361,7 +103264,8 @@
    ],
    "specialties": [
     "Cardiology",
-    "Cardiothoracic Surgery"
+    "Cardiothoracic Surgery",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease"
@@ -103401,7 +103305,7 @@
     "who"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -103926,9 +103830,9 @@
     "aap"
    ],
    "specialties": [
+    "Anesthesiology",
     "Critical Care",
     "Endocrinology",
-    "Internal Medicine",
     "Pediatrics"
    ],
    "conditions": [
@@ -104231,7 +104135,7 @@
     "aap"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Pediatrics"
    ],
    "conditions": [
@@ -104715,6 +104619,7 @@
     "nice"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -104981,7 +104886,7 @@
     "nice"
    ],
    "specialties": [
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -105017,8 +104922,7 @@
     "aace"
    ],
    "specialties": [
-    "Endocrinology",
-    "Oncology"
+    "Endocrinology"
    ],
    "conditions": [
     "Thyroid Cancer",
@@ -105302,8 +105206,7 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Internal Medicine",
-    "Oncology"
+    "Internal Medicine"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -105796,7 +105699,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Endocrinology"
+    "Obstetrics & Gynecology"
    ],
    "conditions": [
     "Menopause"
@@ -105980,7 +105883,8 @@
    ],
    "specialties": [
     "Cardiology",
-    "Hematology"
+    "Hematology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -106184,7 +106088,6 @@
     "mascc"
    ],
    "specialties": [
-    "Hematology",
     "Infectious Diseases",
     "Oncology"
    ],
@@ -106436,6 +106339,7 @@
     "asco"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -106738,7 +106642,7 @@
     "eau"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Urology"
    ],
    "conditions": [
@@ -107338,8 +107242,7 @@
     "acg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -107473,8 +107376,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Critical Care",
-    "Psychiatry"
+    "Critical Care"
    ],
    "conditions": [
     "Delirium",
@@ -107551,8 +107453,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -107624,6 +107525,7 @@
     "astro"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -107821,8 +107723,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -108398,10 +108300,10 @@
     "sts"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
     "Cardiothoracic Surgery",
-    "Hematology",
-    "Internal Medicine"
+    "Hematology"
    ],
    "conditions": [
     "Pericarditis",
@@ -108773,6 +108675,7 @@
     "nccn"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology",
     "Preventive Medicine"
    ],
@@ -109511,6 +109414,7 @@
     "estro"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -110032,8 +109936,7 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine",
+    "Anesthesiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -110227,8 +110130,8 @@
     "acep"
    ],
    "specialties": [
-    "Emergency Medicine",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Emergency Medicine"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -110563,8 +110466,8 @@
     "aha-acc"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Internal Medicine",
     "Neurology"
    ],
    "conditions": [
@@ -110660,8 +110563,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -110716,6 +110618,7 @@
     "bsg"
    ],
    "specialties": [
+    "Anesthesiology",
     "Gastroenterology & Hepatology",
     "Internal Medicine",
     "Pediatrics",
@@ -110817,7 +110720,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Hypertension",
@@ -110892,7 +110795,7 @@
     "nice"
    ],
    "specialties": [
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -110928,6 +110831,7 @@
     "acp"
    ],
    "specialties": [
+    "Anesthesiology",
     "Internal Medicine"
    ],
    "conditions": [
@@ -110967,7 +110871,7 @@
     "aua"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology",
     "Urology"
    ],
@@ -111271,8 +111175,8 @@
     "ash"
    ],
    "specialties": [
-    "Hematology",
-    "Internal Medicine"
+    "Geriatrics",
+    "Hematology"
    ],
    "conditions": [
     "Leukemia",
@@ -111490,8 +111394,7 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Infectious Diseases",
-    "Oncology"
+    "Infectious Diseases"
    ],
    "conditions": [
     "Acute Liver Failure",
@@ -111969,9 +111872,9 @@
     "aga"
    ],
    "specialties": [
+    "Anesthesiology",
     "Gastroenterology & Hepatology",
-    "Infectious Diseases",
-    "Internal Medicine"
+    "Infectious Diseases"
    ],
    "conditions": [
     "COVID-19",
@@ -112113,7 +112016,7 @@
     "ean"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Neurology"
    ],
    "conditions": [
@@ -112211,7 +112114,7 @@
     "nice"
    ],
    "specialties": [
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -112328,6 +112231,7 @@
     "esmo"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -112793,9 +112697,9 @@
     "smfm"
    ],
    "specialties": [
+    "Anesthesiology",
     "Endocrinology",
     "Hematology",
-    "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -112941,7 +112845,6 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Oncology",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -112982,7 +112885,6 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -113096,6 +112998,7 @@
     "nccn"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -113645,8 +113548,8 @@
     "ash"
    ],
    "specialties": [
-    "Hematology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Hematology"
    ],
    "conditions": [
     "Pain Management and Opioids",
@@ -113703,8 +113606,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -113777,9 +113679,9 @@
     "aga"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Gastroenterology & Hepatology",
-    "Internal Medicine"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Cardiac Arrest and Resuscitation",
@@ -113835,6 +113737,7 @@
     "estro"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -114266,8 +114169,7 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -114865,8 +114767,7 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Hematology"
+    "Cardiology"
    ],
    "conditions": [
     "Amyloidosis",
@@ -115115,9 +115016,9 @@
     "bsg"
    ],
    "specialties": [
+    "Anesthesiology",
     "Gastroenterology & Hepatology",
-    "Hematology",
-    "Internal Medicine"
+    "Hematology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -115380,7 +115281,7 @@
     "ean"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Neurology"
    ],
    "conditions": [
@@ -115539,7 +115440,8 @@
     "scai"
    ],
    "specialties": [
-    "Cardiology"
+    "Cardiology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -115559,7 +115461,6 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -116551,6 +116452,7 @@
     "esmo"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Infectious Diseases",
     "Oncology"
    ],
@@ -116882,8 +116784,8 @@
     "smfm"
    ],
    "specialties": [
+    "Anesthesiology",
     "Hematology",
-    "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -117190,8 +117092,8 @@
     "eular"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Internal Medicine",
     "Oncology",
     "Rheumatology"
    ],
@@ -117472,6 +117374,7 @@
     "nice"
    ],
    "specialties": [
+    "Critical Care",
     "Infectious Diseases",
     "Internal Medicine",
     "Psychiatry",
@@ -117833,9 +117736,9 @@
     "ase"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
     "Infectious Diseases",
-    "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -118115,8 +118018,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -118388,8 +118290,7 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Infectious Diseases",
-    "Oncology"
+    "Infectious Diseases"
    ],
    "conditions": [
     "COVID-19",
@@ -119260,7 +119161,7 @@
     "nice"
    ],
    "specialties": [
-    "Cardiology"
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease"
@@ -119408,9 +119309,8 @@
     "ata"
    ],
    "specialties": [
-    "Endocrinology",
-    "Internal Medicine",
-    "Oncology"
+    "Anesthesiology",
+    "Endocrinology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -119745,6 +119645,7 @@
     "asco"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -120174,7 +120075,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -120519,7 +120420,7 @@
     "uspstf"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Geriatrics",
     "Neurology",
     "Preventive Medicine"
    ],
@@ -121111,8 +121012,7 @@
     "acg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -121192,8 +121092,7 @@
     "acg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -121834,8 +121733,7 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Cirrhosis and Portal Hypertension",
@@ -122034,7 +121932,6 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -122169,7 +122066,7 @@
     "smfm"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -122296,8 +122193,7 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine",
+    "Anesthesiology",
     "Preventive Medicine",
     "Vascular Surgery"
    ],
@@ -122499,7 +122395,7 @@
    ],
    "specialties": [
     "Critical Care",
-    "Hematology"
+    "Oncology"
    ],
    "conditions": [
     "Febrile Neutropenia",
@@ -122596,8 +122492,7 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -122882,7 +122777,7 @@
     "acr"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Rheumatology"
    ],
    "conditions": [
@@ -123464,7 +123359,6 @@
     "nccn"
    ],
    "specialties": [
-    "Hematology",
     "Oncology"
    ],
    "conditions": [
@@ -123543,7 +123437,7 @@
     "who"
    ],
    "specialties": [
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -123596,7 +123490,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -123616,7 +123510,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -123825,8 +123719,7 @@
     "ata"
    ],
    "specialties": [
-    "Endocrinology",
-    "Oncology"
+    "Endocrinology"
    ],
    "conditions": [
     "Thyroid Cancer",
@@ -123866,9 +123759,9 @@
     "svs"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
     "Hematology",
-    "Internal Medicine",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -123965,6 +123858,7 @@
     "esmo"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -124346,8 +124240,8 @@
     "uspstf"
    ],
    "specialties": [
-    "Cardiology",
-    "Preventive Medicine"
+    "Preventive Medicine",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease"
@@ -124480,9 +124374,9 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine",
-    "Neurology",
-    "Psychiatry"
+    "Critical Care",
+    "Geriatrics",
+    "Neurology"
    ],
    "conditions": [
     "Cardiac Arrest and Resuscitation",
@@ -124566,7 +124460,7 @@
     "astro"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Oncology"
    ],
    "conditions": [
@@ -124640,7 +124534,7 @@
     "nice"
    ],
    "specialties": [
-    "Endocrinology"
+    "Obstetrics & Gynecology"
    ],
    "conditions": [
     "Menopause"
@@ -125052,8 +124946,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -125089,8 +124982,7 @@
     "bsg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -125168,9 +125060,8 @@
     "bsg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Internal Medicine",
-    "Oncology"
+    "Anesthesiology",
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -125362,7 +125253,7 @@
     "aasm"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Pulmonology"
    ],
    "conditions": [
@@ -125672,8 +125563,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -125733,8 +125623,8 @@
     "acp"
    ],
    "specialties": [
-    "Internal Medicine",
-    "Oncology"
+    "Gastroenterology & Hepatology",
+    "Internal Medicine"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -125781,6 +125671,7 @@
     "aace"
    ],
    "specialties": [
+    "Anesthesiology",
     "Endocrinology",
     "Internal Medicine"
    ],
@@ -126068,8 +125959,8 @@
     "svs"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Internal Medicine",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -126350,7 +126241,7 @@
    ],
    "specialties": [
     "Cardiology",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Heart Failure",
@@ -126628,8 +126519,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -127510,7 +127400,6 @@
     "Infectious Diseases",
     "Internal Medicine",
     "Obstetrics & Gynecology",
-    "Oncology",
     "Pediatrics",
     "Preventive Medicine"
    ],
@@ -128000,7 +127889,6 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Oncology",
     "Preventive Medicine"
    ],
    "conditions": [
@@ -128099,9 +127987,9 @@
     "ics"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Critical Care",
-    "Internal Medicine"
+    "Critical Care"
    ],
    "conditions": [
     "Atrial Fibrillation",
@@ -128306,8 +128194,7 @@
     "aasld"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Hepatocellular Carcinoma"
@@ -128631,8 +128518,8 @@
     "sogc"
    ],
    "specialties": [
+    "Anesthesiology",
     "Endocrinology",
-    "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -128920,8 +128807,8 @@
     "isth"
    ],
    "specialties": [
-    "Hematology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Hematology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -129363,7 +129250,7 @@
     "aua"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Urology"
    ],
    "conditions": [
@@ -129874,9 +129761,9 @@
     "eacts"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Cardiothoracic Surgery",
-    "Internal Medicine"
+    "Cardiothoracic Surgery"
    ],
    "conditions": [
     "Heart Failure",
@@ -130338,8 +130225,7 @@
    ],
    "specialties": [
     "Gastroenterology & Hepatology",
-    "Internal Medicine",
-    "Oncology"
+    "Internal Medicine"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -130419,7 +130305,7 @@
     "aua"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Urology"
    ],
    "conditions": [
@@ -130605,9 +130491,9 @@
     "eacts"
    ],
    "specialties": [
-    "Cardiology",
+    "Anesthesiology",
     "Cardiothoracic Surgery",
-    "Internal Medicine"
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -130839,8 +130725,8 @@
     "hfsa"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Heart Failure",
@@ -131394,7 +131280,7 @@
    ],
    "specialties": [
     "Allergy & Immunology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Anaphylaxis",
@@ -131660,7 +131546,8 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology"
+    "Cardiology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -131973,7 +131860,7 @@
     "sogc"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -132760,7 +132647,8 @@
    ],
    "specialties": [
     "Cardiology",
-    "Neurology"
+    "Neurology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Acute Coronary Syndromes",
@@ -133237,10 +133125,10 @@
    ],
    "specialties": [
     "Endocrinology",
-    "Hematology",
+    "Geriatrics",
     "Infectious Diseases",
-    "Internal Medicine",
     "Obstetrics & Gynecology",
+    "Oncology",
     "Urology"
    ],
    "conditions": [
@@ -133268,7 +133156,7 @@
    "specialties": [
     "Cardiology",
     "Endocrinology",
-    "Internal Medicine",
+    "Geriatrics",
     "Ophthalmology"
    ],
    "conditions": [
@@ -134194,6 +134082,7 @@
     "asco"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -134411,8 +134300,8 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -134452,7 +134341,7 @@
     "ean"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Neurology"
    ],
    "conditions": [
@@ -134814,8 +134703,7 @@
     "ata"
    ],
    "specialties": [
-    "Endocrinology",
-    "Oncology"
+    "Endocrinology"
    ],
    "conditions": [
     "Thyroid Cancer",
@@ -134835,6 +134723,7 @@
     "acog"
    ],
    "specialties": [
+    "Anesthesiology",
     "Internal Medicine",
     "Obstetrics & Gynecology"
    ],
@@ -134993,7 +134882,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology",
     "Oncology"
    ],
@@ -135036,7 +134925,6 @@
     "acog"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -135058,7 +134946,6 @@
     "acog"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -135137,7 +135024,7 @@
     "smfm"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology",
     "Pediatrics",
     "Psychiatry"
@@ -135623,8 +135510,7 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Hepatocellular Carcinoma",
@@ -135778,8 +135664,7 @@
     "ags"
    ],
    "specialties": [
-    "Geriatrics",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Older Adults and Frailty"
@@ -136139,7 +136024,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -136293,8 +136178,7 @@
     "acg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -136657,8 +136541,8 @@
     "ase"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -136772,8 +136656,7 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening"
@@ -136895,8 +136778,7 @@
     "bsg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Colorectal Cancer and Screening",
@@ -136937,7 +136819,7 @@
    ],
    "specialties": [
     "Critical Care",
-    "Hematology"
+    "Oncology"
    ],
    "conditions": [
     "Febrile Neutropenia",
@@ -137652,8 +137534,7 @@
     "ags"
    ],
    "specialties": [
-    "Geriatrics",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Older Adults and Frailty"
@@ -137879,7 +137760,6 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
     "Cardiothoracic Surgery",
     "Vascular Surgery"
    ],
@@ -138054,7 +137934,7 @@
     "nice"
    ],
    "specialties": [
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Hepatocellular Carcinoma"
@@ -138182,8 +138062,7 @@
     "ata"
    ],
    "specialties": [
-    "Endocrinology",
-    "Oncology"
+    "Endocrinology"
    ],
    "conditions": [
     "Thyroid Cancer",
@@ -138625,8 +138504,7 @@
     "asa"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -138895,10 +138773,10 @@
     "esc"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
     "Critical Care",
-    "Hematology",
-    "Internal Medicine"
+    "Hematology"
    ],
    "conditions": [
     "Fluid and Shock Management",
@@ -138938,7 +138816,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -138959,8 +138837,8 @@
     "eacts"
    ],
    "specialties": [
-    "Cardiology",
-    "Cardiothoracic Surgery"
+    "Cardiothoracic Surgery",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease"
@@ -139472,7 +139350,7 @@
     "nice"
    ],
    "specialties": [
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Hepatocellular Carcinoma"
@@ -139694,8 +139572,7 @@
     "ags"
    ],
    "specialties": [
-    "Geriatrics",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Older Adults and Frailty"
@@ -139772,8 +139649,7 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine",
+    "Anesthesiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -140129,7 +140005,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -140151,7 +140027,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -141162,7 +141038,7 @@
     "astro"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Oncology"
    ],
    "conditions": [
@@ -141498,8 +141374,8 @@
     "hrs"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Internal Medicine",
     "Pulmonology"
    ],
    "conditions": [
@@ -141524,8 +141400,8 @@
     "hrs"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
-    "Internal Medicine",
     "Neurology",
     "Pulmonology"
    ],
@@ -141662,7 +141538,7 @@
     "sogc"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -141767,7 +141643,8 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology"
+    "Cardiology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -141821,8 +141698,7 @@
     "ata"
    ],
    "specialties": [
-    "Endocrinology",
-    "Oncology"
+    "Endocrinology"
    ],
    "conditions": [
     "Thyroid Cancer",
@@ -141982,7 +141858,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -142002,7 +141878,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -142172,7 +142048,7 @@
     "nice"
    ],
    "specialties": [
-    "Psychiatry"
+    "Critical Care"
    ],
    "conditions": [
     "Delirium"
@@ -142210,7 +142086,7 @@
     "nice"
    ],
    "specialties": [
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -142631,8 +142507,8 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Constipation",
@@ -142695,7 +142571,6 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -143040,8 +142915,7 @@
     "ags"
    ],
    "specialties": [
-    "Geriatrics",
-    "Internal Medicine"
+    "Geriatrics"
    ],
    "conditions": [
     "Older Adults and Frailty"
@@ -143251,7 +143125,7 @@
     "esmo"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Oncology"
    ],
    "conditions": [
@@ -143450,6 +143324,7 @@
     "esmo"
    ],
    "specialties": [
+    "Anesthesiology",
     "Internal Medicine",
     "Oncology"
    ],
@@ -143473,8 +143348,8 @@
     "esmo"
    ],
    "specialties": [
+    "Anesthesiology",
     "Gastroenterology & Hepatology",
-    "Internal Medicine",
     "Oncology"
    ],
    "conditions": [
@@ -143496,9 +143371,10 @@
     "esmo"
    ],
    "specialties": [
-    "Internal Medicine",
-    "Oncology",
-    "Psychiatry"
+    "Anesthesiology",
+    "Critical Care",
+    "Geriatrics",
+    "Oncology"
    ],
    "conditions": [
     "Cancer Survivorship and Supportive Care",
@@ -143521,7 +143397,8 @@
    ],
    "specialties": [
     "Cardiology",
-    "Obstetrics & Gynecology"
+    "Obstetrics & Gynecology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Aortic Disease",
@@ -143828,8 +143705,8 @@
     "aga"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Cirrhosis and Portal Hypertension",
@@ -144073,8 +143950,8 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Cardiology"
    ],
    "conditions": [
     "Coronary Artery Disease",
@@ -144777,9 +144654,8 @@
     "sccm"
    ],
    "specialties": [
-    "Critical Care",
-    "Internal Medicine",
-    "Psychiatry"
+    "Anesthesiology",
+    "Critical Care"
    ],
    "conditions": [
     "Delirium",
@@ -144799,9 +144675,8 @@
     "sccm"
    ],
    "specialties": [
-    "Critical Care",
-    "Internal Medicine",
-    "Psychiatry"
+    "Anesthesiology",
+    "Critical Care"
    ],
    "conditions": [
     "Delirium",
@@ -144857,9 +144732,8 @@
     "sccm"
    ],
    "specialties": [
-    "Critical Care",
-    "Internal Medicine",
-    "Psychiatry"
+    "Anesthesiology",
+    "Critical Care"
    ],
    "conditions": [
     "Delirium",
@@ -144944,9 +144818,8 @@
     "sccm"
    ],
    "specialties": [
-    "Critical Care",
-    "Internal Medicine",
-    "Psychiatry"
+    "Anesthesiology",
+    "Critical Care"
    ],
    "conditions": [
     "Delirium",
@@ -145153,7 +145026,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -145173,7 +145046,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -145468,7 +145341,7 @@
     "eular"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Rheumatology"
    ],
    "conditions": [
@@ -146198,6 +146071,7 @@
     "nccn"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology",
     "Preventive Medicine"
    ],
@@ -146317,8 +146191,7 @@
     "aasld"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Acute Liver Failure",
@@ -146869,8 +146742,8 @@
     "nice"
    ],
    "specialties": [
-    "Endocrinology",
-    "Internal Medicine",
+    "Anesthesiology",
+    "Obstetrics & Gynecology",
     "Oncology"
    ],
    "conditions": [
@@ -147030,6 +146903,7 @@
     "bsh"
    ],
    "specialties": [
+    "Geriatrics",
     "Hematology",
     "Internal Medicine",
     "Oncology"
@@ -147212,7 +147086,7 @@
     "svs"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -147293,7 +147167,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -147334,7 +147207,7 @@
     "sogc"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -147432,8 +147305,7 @@
     "asra"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -147452,8 +147324,7 @@
     "asra"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -147600,7 +147471,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology",
     "Pediatrics"
    ],
@@ -147623,7 +147494,7 @@
     "acog"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology",
     "Pediatrics"
    ],
@@ -147682,8 +147553,8 @@
     "ata"
    ],
    "specialties": [
-    "Endocrinology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Endocrinology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -148367,8 +148238,7 @@
     "esaic"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -148406,7 +148276,7 @@
     "sogc"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -148540,7 +148410,7 @@
     "sogc"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -148836,7 +148706,6 @@
     "acog"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology",
     "Rheumatology"
    ],
@@ -148859,7 +148728,6 @@
     "acog"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology",
     "Rheumatology"
    ],
@@ -149280,6 +149148,7 @@
     "esc"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
     "Endocrinology",
     "Hematology",
@@ -149457,7 +149326,7 @@
     "eular"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Rheumatology"
    ],
    "conditions": [
@@ -149519,8 +149388,8 @@
     "svs"
    ],
    "specialties": [
+    "Anesthesiology",
     "Hematology",
-    "Internal Medicine",
     "Nephrology",
     "Vascular Surgery"
    ],
@@ -149705,7 +149574,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -149842,6 +149710,7 @@
     "nccn"
    ],
    "specialties": [
+    "Anesthesiology",
     "Internal Medicine",
     "Oncology"
    ],
@@ -150782,8 +150651,7 @@
     "easl"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Hepatocellular Carcinoma"
@@ -150938,8 +150806,7 @@
    ],
    "specialties": [
     "Anesthesiology",
-    "Hematology",
-    "Internal Medicine"
+    "Hematology"
    ],
    "conditions": [
     "Pain Management and Opioids",
@@ -150960,7 +150827,6 @@
     "sogc"
    ],
    "specialties": [
-    "Endocrinology",
     "Obstetrics & Gynecology",
     "Urology"
    ],
@@ -151060,6 +150926,7 @@
     "nccn"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -151100,8 +150967,7 @@
    ],
    "specialties": [
     "Anesthesiology",
-    "Hematology",
-    "Internal Medicine"
+    "Hematology"
    ],
    "conditions": [
     "Pain Management and Opioids",
@@ -151586,9 +151452,9 @@
     "asge-esge"
    ],
    "specialties": [
+    "Anesthesiology",
     "Gastroenterology & Hepatology",
-    "Infectious Diseases",
-    "Internal Medicine"
+    "Infectious Diseases"
    ],
    "conditions": [
     "HIV",
@@ -152107,8 +151973,7 @@
     "asa"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -152902,7 +152767,6 @@
     "asco"
    ],
    "specialties": [
-    "Hematology",
     "Oncology"
    ],
    "conditions": [
@@ -153449,7 +153313,6 @@
    ],
    "specialties": [
     "Anesthesiology",
-    "Internal Medicine",
     "Pediatrics"
    ],
    "conditions": [
@@ -153529,7 +153392,7 @@
     "sogc"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
@@ -153692,7 +153555,7 @@
     "sogc"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Obstetrics & Gynecology",
     "Urology"
    ],
@@ -154337,8 +154200,8 @@
     "acg"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Psychiatry"
+    "Critical Care",
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Acute Liver Failure",
@@ -154750,8 +154613,8 @@
     "asge-esge"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Pain Management and Opioids",
@@ -155034,8 +154897,7 @@
     "svs"
    ],
    "specialties": [
-    "Cardiology",
-    "Internal Medicine",
+    "Anesthesiology",
     "Vascular Surgery"
    ],
    "conditions": [
@@ -155134,8 +154996,7 @@
     "asa"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -155154,6 +155015,7 @@
     "esmo"
    ],
    "specialties": [
+    "Gastroenterology & Hepatology",
     "Oncology"
    ],
    "conditions": [
@@ -155349,8 +155211,7 @@
     "esaic"
    ],
    "specialties": [
-    "Anesthesiology",
-    "Internal Medicine"
+    "Anesthesiology"
    ],
    "conditions": [
     "Pain Management and Opioids"
@@ -155645,8 +155506,7 @@
     "aasld"
    ],
    "specialties": [
-    "Gastroenterology & Hepatology",
-    "Oncology"
+    "Gastroenterology & Hepatology"
    ],
    "conditions": [
     "Hepatocellular Carcinoma"
@@ -155735,9 +155595,9 @@
     "eacts"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiothoracic Surgery",
-    "Hematology",
-    "Internal Medicine"
+    "Hematology"
    ],
    "conditions": [
     "Perioperative Care",
@@ -155758,10 +155618,10 @@
     "eacts"
    ],
    "specialties": [
+    "Anesthesiology",
     "Cardiology",
     "Cardiothoracic Surgery",
-    "Hematology",
-    "Internal Medicine"
+    "Hematology"
    ],
    "conditions": [
     "Atrial Fibrillation",
@@ -156339,8 +156199,8 @@
     "isth"
    ],
    "specialties": [
-    "Hematology",
-    "Internal Medicine"
+    "Anesthesiology",
+    "Hematology"
    ],
    "conditions": [
     "Perioperative Care"
@@ -156416,7 +156276,7 @@
     "aua"
    ],
    "specialties": [
-    "Internal Medicine",
+    "Anesthesiology",
     "Urology"
    ],
    "conditions": [
@@ -157213,7 +157073,8 @@
    ],
    "specialties": [
     "Cardiology",
-    "Hematology"
+    "Hematology",
+    "Vascular Surgery"
    ],
    "conditions": [
     "Acute Coronary Syndromes",
