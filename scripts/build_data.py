@@ -394,6 +394,7 @@ def main(argv: list[str] | None = None) -> int:
                 for r in recs:
                     merge(records, r, src)
                 entry["pubmed"] = {"matches": count, "kept": len(recs)}
+                entry["sample"] = [r["title"][:110] for r in recs[:4]]
             except Exception as exc:
                 entry["errors"].append(f"pubmed: {exc}")
         for feed_url in src.get("rss") or []:
@@ -412,6 +413,8 @@ def main(argv: list[str] | None = None) -> int:
         report.append(entry)
         print(f"{src['abbr']:<18} pubmed={entry['pubmed']} rss={entry['rss']} "
               + (f"ERRORS={entry['errors']}" if entry["errors"] else ""), flush=True)
+        for title in entry.pop("sample", []):
+            print(f"{'':<18}  - {title}", flush=True)
 
     now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
     guidelines = finalize(records, all_sources, tagger, previous, now.date().isoformat())
@@ -422,6 +425,11 @@ def main(argv: list[str] | None = None) -> int:
         guidelines += [g for g in previous.values()
                        if g["id"] not in fresh and not set(g["sources"]) & only]
         guidelines.sort(key=lambda r: (r["date"] or "", r["title"]), reverse=True)
+
+    untagged = [g for g in guidelines if not g["conditions"]]
+    print(f"\n{len(untagged)} guidelines matched no condition, e.g.:")
+    for g in untagged[:15]:
+        print(f"  - [{','.join(g['sources'])}] {g['title'][:110]}")
 
     failed = [r for r in report if r["errors"] and not r["pubmed"] and not r["rss"]]
     print(f"\n{len(guidelines)} guidelines from {len(active)} sources "

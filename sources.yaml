@@ -59,7 +59,8 @@ sources:
     abbr: NICE
     specialty: multi
     pubmed:
-      query: '("National Institute for Health and Care Excellence"[pubn] OR "National Institute for Health and Care Excellence"[cn])'
+      # NICE's Bookshelf also holds evidence reviews and appendices; keep the guidelines only.
+      query: '("National Institute for Health and Care Excellence"[pubn] OR "National Institute for Health and Care Excellence"[cn]) NOT ("evidence review"[ti] OR "evidence reviews"[ti] OR appendix[ti] OR appendices[ti] OR "economic"[ti] OR "methods"[ti] OR "supplement"[ti] OR "committee"[ti])'
 
   - id: uspstf
     name: US Preventive Services Task Force
@@ -94,8 +95,7 @@ sources:
       journals: ["Circulation", "J Am Coll Cardiol", "Hypertension", "Stroke"]
       title_terms: ["American Heart Association", "American College of Cardiology", "AHA", "ACC", "American Stroke Association"]
     rss:
-      - https://www.ahajournals.org/action/showFeed?type=etoc&feed=rss&jc=circ
-      - https://www.ahajournals.org/action/showFeed?type=axatoc&feed=rss&jc=circ
+      - https://www.ahajournals.org/action/showFeed?type=axatoc&feed=rss&jc=circ   # Circulation, ahead of print
 
   - id: esc
     name: European Society of Cardiology
@@ -138,8 +138,6 @@ sources:
     pubmed:
       journals: ["Am J Respir Crit Care Med", "Ann Am Thorac Soc"]
       title_terms: ["American Thoracic Society", "ATS"]
-    rss:
-      - https://www.atsjournals.org/action/showFeed?type=etoc&feed=rss&jc=ajrccm
 
   - id: ers
     name: European Respiratory Society
@@ -249,8 +247,6 @@ sources:
     pubmed:
       journals: ["Ann Intern Med"]
       title_terms: ["American College of Physicians"]
-    rss:
-      - https://www.acpjournals.org/action/showFeed?type=etoc&feed=rss&jc=aim
 
   # ---------------------------------------------------------- Critical care
   - id: sccm
