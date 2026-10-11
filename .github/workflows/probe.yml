@@ -2,7 +2,7 @@ name: Probe sources
 
 on:
   pull_request:
-    paths: ["scripts/probe.py", "scripts/probe_urls.txt", ".github/workflows/probe.yml"]
+    paths: ["scripts/probe.py", "scripts/probe_urls.txt", "scripts/audit_reference.py", ".github/workflows/probe.yml"]
   workflow_dispatch:
 
 jobs:
@@ -13,4 +13,4 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python scripts/probe.py scripts/probe_urls.txt
+      - run: python scripts/audit_reference.py discover
