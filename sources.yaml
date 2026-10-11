@@ -1,0 +1,336 @@
+# Curated guideline sources.
+#
+# Edit this file to add, remove or tune organizations. Every scheduled run of
+# scripts/build_data.py reads it and rebuilds site/data/guidelines.json.
+#
+# Each source has:
+#   id:          short unique key (lowercase, no spaces)
+#   name:        full organization name shown in the app
+#   abbr:        badge text shown next to each guideline
+#   specialty:   default specialty, or "multi" when the organization spans
+#                specialties (specialty then comes from conditions.yaml only)
+#   enabled:     set to false to switch a source off without deleting it
+#   pubmed:      how to find this organization's guidelines in PubMed
+#                (NCBI E-utilities). Either:
+#                  journals:    NLM journal title abbreviations ([ta])
+#                  title_terms: organization names/acronyms that must appear in
+#                               the title (or as corporate author [cn])
+#                and/or a raw `query` that replaces the generated one.
+#                Generated query =
+#                  (guideline*[ti] OR recommendation*[ti] OR consensus[ti]
+#                   OR "practice parameter"[ti] OR "practice guideline"[pt])
+#                  AND (title_terms[ti] OR title_terms[cn])  -- if given
+#                  AND (journals[ta])                        -- if given
+#   rss:         optional list of the organization's own RSS/Atom feeds.
+#                Items are kept only if their title matches `rss_keywords`.
+#
+# Records found by more than one source (same DOI or title) are merged.
+
+settings:
+  since_year: 2018          # oldest publication year to include
+  max_per_source: 400       # cap on PubMed records per source per run
+  rss_keywords:             # an RSS item must match one of these (case-insensitive)
+    - guideline
+    - recommendation
+    - consensus statement
+    - practice parameter
+    - standards of care
+    - scientific statement
+  exclude_title_patterns:   # dropped wherever they come from
+    - '^correction'
+    - '^erratum'
+    - '^corrigendum'
+    - 'retraction'
+    - '^reply'
+    - '^response to'
+    - '^comment on'
+    - 'correction$'
+    - 'systematic review'
+    - 'meta-analysis'
+    - 'implementation of'
+    - 'quality indicators'
+    - 'operating procedures'
+    - 'guideline development'
+    - 'concerns about'
+    - 'rethinking'
+    - '^visual guideline'
+    - '^study on'
+    - 'a guide to the'
+    - "what is new in"
+
+sources:
+  # ---------------------------------------------------------------- Global
+  - id: who
+    name: World Health Organization
+    abbr: WHO
+    specialty: multi
+    pubmed:
+      query: '("World Health Organization"[pubn] OR "World Health Organization"[cn]) AND (guideline*[ti] OR recommendation*[ti])'
+
+  - id: nice
+    name: National Institute for Health and Care Excellence
+    abbr: NICE
+    specialty: multi
+    pubmed:
+      # NICE's Bookshelf also holds evidence reviews, appendices and technology appraisals; keep the clinical guidelines only.
+      query: '("National Institute for Health and Care Excellence"[pubn] OR "National Institute for Health and Care Excellence"[cn]) NOT ("evidence review"[ti] OR "evidence reviews"[ti] OR appendix[ti] OR appendices[ti] OR "economic"[ti] OR "methods"[ti] OR "supplement"[ti] OR "committee"[ti] OR "for treating"[ti] OR "for untreated"[ti] OR "for previously treated"[ti] OR "terminated appraisal"[ti])'
+
+  - id: uspstf
+    name: US Preventive Services Task Force
+    abbr: USPSTF
+    specialty: Preventive Medicine
+    pubmed:
+      query: '"JAMA"[ta] AND "Preventive Services Task Force"[ti] AND "recommendation statement"[ti]'
+
+  # ---------------------------------------------------------- Rheumatology
+  - id: acr
+    name: American College of Rheumatology
+    abbr: ACR
+    specialty: Rheumatology
+    pubmed:
+      journals: ["Arthritis Rheumatol", "Arthritis Care Res (Hoboken)"]
+      title_terms: ["American College of Rheumatology", "ACR"]
+
+  - id: eular
+    name: European Alliance of Associations for Rheumatology
+    abbr: EULAR
+    specialty: Rheumatology
+    pubmed:
+      journals: ["Ann Rheum Dis", "RMD Open"]
+      title_terms: ["EULAR"]
+
+  # ------------------------------------------------------------ Cardiology
+  - id: aha-acc
+    name: American Heart Association / American College of Cardiology
+    abbr: AHA/ACC
+    specialty: Cardiology
+    pubmed:
+      journals: ["Circulation", "J Am Coll Cardiol", "Hypertension", "Stroke"]
+      title_terms: ["American Heart Association", "American College of Cardiology", "AHA", "ACC", "American Stroke Association"]
+    rss:
+      - https://www.ahajournals.org/action/showFeed?type=axatoc&feed=rss&jc=circ   # Circulation, ahead of print
+
+  - id: esc
+    name: European Society of Cardiology
+    abbr: ESC
+    specialty: Cardiology
+    pubmed:
+      journals: ["Eur Heart J"]
+      title_terms: ["ESC", "European Society of Cardiology"]
+
+  # ---------------------------------------------------------- Endocrinology
+  - id: ada
+    name: American Diabetes Association
+    abbr: ADA
+    specialty: Endocrinology
+    pubmed:
+      query: '"Diabetes Care"[ta] AND ("Standards of Care in Diabetes"[ti] OR "Standards of Medical Care in Diabetes"[ti] OR (consensus[ti] AND "American Diabetes Association"[ti]))'
+
+  - id: endo
+    name: Endocrine Society
+    abbr: Endocrine Society
+    specialty: Endocrinology
+    pubmed:
+      journals: ["J Clin Endocrinol Metab"]
+      title_terms: ["Endocrine Society"]
+
+  # ---------------------------------------------------- Infectious diseases
+  - id: idsa
+    name: Infectious Diseases Society of America
+    abbr: IDSA
+    specialty: Infectious Diseases
+    pubmed:
+      journals: ["Clin Infect Dis"]
+      title_terms: ["Infectious Diseases Society of America", "IDSA"]
+
+  # ------------------------------------------------------------ Pulmonology
+  - id: ats
+    name: American Thoracic Society
+    abbr: ATS
+    specialty: Pulmonology
+    pubmed:
+      journals: ["Am J Respir Crit Care Med", "Ann Am Thorac Soc"]
+      title_terms: ["American Thoracic Society", "ATS"]
+
+  - id: ers
+    name: European Respiratory Society
+    abbr: ERS
+    specialty: Pulmonology
+    pubmed:
+      journals: ["Eur Respir J"]
+      title_terms: ["ERS", "European Respiratory Society"]
+
+  # ---------------------------------------------- Gastroenterology/Hepatology
+  - id: acg
+    name: American College of Gastroenterology
+    abbr: ACG
+    specialty: Gastroenterology & Hepatology
+    pubmed:
+      journals: ["Am J Gastroenterol"]
+      title_terms: ["ACG", "American College of Gastroenterology"]
+
+  - id: aga
+    name: American Gastroenterological Association
+    abbr: AGA
+    specialty: Gastroenterology & Hepatology
+    pubmed:
+      journals: ["Gastroenterology", "Clin Gastroenterol Hepatol"]
+      title_terms: ["AGA", "American Gastroenterological Association"]
+
+  - id: aasld
+    name: American Association for the Study of Liver Diseases
+    abbr: AASLD
+    specialty: Gastroenterology & Hepatology
+    pubmed:
+      journals: ["Hepatology"]
+      title_terms: ["AASLD", "American Association for the Study of Liver Diseases"]
+
+  - id: easl
+    name: European Association for the Study of the Liver
+    abbr: EASL
+    specialty: Gastroenterology & Hepatology
+    pubmed:
+      journals: ["J Hepatol"]
+      title_terms: ["EASL"]
+
+  # ------------------------------------------------------------- Nephrology
+  - id: kdigo
+    name: Kidney Disease Improving Global Outcomes
+    abbr: KDIGO
+    specialty: Nephrology
+    pubmed:
+      journals: ["Kidney Int", "Kidney Int Suppl (2011)"]
+      title_terms: ["KDIGO"]
+
+  # ------------------------------------------------------ Oncology/Hematology
+  - id: asco
+    name: American Society of Clinical Oncology
+    abbr: ASCO
+    specialty: Oncology
+    pubmed:
+      journals: ["J Clin Oncol", "JCO Oncol Pract"]
+      title_terms: ["ASCO", "American Society of Clinical Oncology"]
+
+  - id: esmo
+    name: European Society for Medical Oncology
+    abbr: ESMO
+    specialty: Oncology
+    pubmed:
+      journals: ["Ann Oncol", "ESMO Open"]
+      title_terms: ["ESMO"]
+
+  - id: nccn
+    name: National Comprehensive Cancer Network
+    abbr: NCCN
+    specialty: Oncology
+    pubmed:
+      query: '"J Natl Compr Canc Netw"[ta] AND ("NCCN Guidelines"[ti] OR "Guidelines Insights"[ti])'
+
+  - id: ash
+    name: American Society of Hematology
+    abbr: ASH
+    specialty: Hematology
+    pubmed:
+      journals: ["Blood Adv"]
+      title_terms: ["American Society of Hematology", "ASH"]
+
+  # -------------------------------------------------------------- Neurology
+  - id: aan
+    name: American Academy of Neurology
+    abbr: AAN
+    specialty: Neurology
+    pubmed:
+      journals: ["Neurology"]
+      title_terms: ["AAN", "American Academy of Neurology"]
+
+  # ------------------------------------------------------------- Psychiatry
+  - id: apa-psych
+    name: American Psychiatric Association
+    abbr: APA
+    specialty: Psychiatry
+    pubmed:
+      journals: ["Am J Psychiatry"]
+      title_terms: ["American Psychiatric Association"]
+
+  # ------------------------------------------------------ Internal medicine
+  - id: acp
+    name: American College of Physicians
+    abbr: ACP
+    specialty: Internal Medicine
+    pubmed:
+      journals: ["Ann Intern Med"]
+      title_terms: ["American College of Physicians"]
+
+  # ---------------------------------------------------------- Critical care
+  - id: sccm
+    name: Society of Critical Care Medicine / Surviving Sepsis Campaign
+    abbr: SCCM
+    specialty: Critical Care
+    pubmed:
+      journals: ["Crit Care Med", "Intensive Care Med"]
+      title_terms: ["Society of Critical Care Medicine", "Surviving Sepsis Campaign", "SCCM"]
+
+  # ------------------------------------------------------ Allergy/Immunology
+  - id: aaaai-acaai
+    name: AAAAI / ACAAI Joint Task Force on Practice Parameters
+    abbr: AAAAI/ACAAI
+    specialty: Allergy & Immunology
+    pubmed:
+      query: '("J Allergy Clin Immunol"[ta] OR "Ann Allergy Asthma Immunol"[ta] OR "J Allergy Clin Immunol Pract"[ta]) AND ("practice parameter"[ti] OR "Joint Task Force"[ti] OR (guideline*[ti] AND (AAAAI[ti] OR ACAAI[ti])))'
+
+  # ------------------------------------------------------------ Dermatology
+  - id: aad
+    name: American Academy of Dermatology
+    abbr: AAD
+    specialty: Dermatology
+    pubmed:
+      query: '"J Am Acad Dermatol"[ta] AND ("guidelines of care"[ti] OR (guideline*[ti] AND (AAD[ti] OR "American Academy of Dermatology"[ti])))'
+
+  - id: bad
+    name: British Association of Dermatologists
+    abbr: BAD
+    specialty: Dermatology
+    pubmed:
+      journals: ["Br J Dermatol"]
+      title_terms: ["British Association of Dermatologists"]
+
+  # ----------------------------------------------------- Obstetrics/Gynecology
+  - id: acog
+    name: American College of Obstetricians and Gynecologists
+    abbr: ACOG
+    specialty: Obstetrics & Gynecology
+    pubmed:
+      query: '"Obstet Gynecol"[ta] AND ("Practice Bulletin"[ti] OR "Clinical Practice Guideline No"[ti] OR "Clinical Consensus No"[ti])'
+
+  # -------------------------------------------------------------- Pediatrics
+  - id: aap
+    name: American Academy of Pediatrics
+    abbr: AAP
+    specialty: Pediatrics
+    pubmed:
+      query: '"Pediatrics"[ta] AND ("clinical practice guideline"[ti] OR "clinical report"[ti] OR "policy statement"[ti])'
+
+  # ---------------------------------------------------------------- Urology
+  - id: aua
+    name: American Urological Association
+    abbr: AUA
+    specialty: Urology
+    pubmed:
+      journals: ["J Urol"]
+      title_terms: ["AUA", "American Urological Association"]
+
+  - id: eau
+    name: European Association of Urology
+    abbr: EAU
+    specialty: Urology
+    pubmed:
+      journals: ["Eur Urol"]
+      title_terms: ["EAU", "European Association of Urology"]
+
+  # ----------------------------------------------------------- Ophthalmology
+  - id: aao
+    name: American Academy of Ophthalmology
+    abbr: AAO
+    specialty: Ophthalmology
+    pubmed:
+      query: '"Ophthalmology"[ta] AND "Preferred Practice Pattern"[ti]'

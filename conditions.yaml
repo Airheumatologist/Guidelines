@@ -1,0 +1,240 @@
+# Condition dictionary used to tag guidelines.
+#
+# A guideline is tagged with a condition when any `match` phrase appears in
+# its title, MeSH headings or keywords (case-insensitive, whole words;
+# regular expressions are allowed). The condition's specialty is added to the
+# guideline's specialties, so NICE and WHO guidelines land under the right
+# specialty too. Guidelines matching nothing appear under "Other guidelines".
+#
+# Add a condition by copying an entry. Keep names as they should be shown.
+
+# ---------------------------------------------------------------- Rheumatology
+- {name: Rheumatoid Arthritis, specialty: Rheumatology, match: [rheumatoid arthritis]}
+- {name: Systemic Lupus Erythematosus, specialty: Rheumatology, match: [systemic lupus, lupus erythematosus, lupus nephritis, '\bSLE\b']}
+- {name: Gout, specialty: Rheumatology, match: [gout, hyperuricemia, hyperuricaemia]}
+- {name: Psoriatic Arthritis, specialty: Rheumatology, match: [psoriatic arthritis]}
+- {name: Axial Spondyloarthritis, specialty: Rheumatology, match: [spondyloarthritis, ankylosing spondylitis, 'spondyloarthropath\w*']}
+- {name: Osteoarthritis, specialty: Rheumatology, match: [osteoarthritis]}
+- {name: Osteoporosis, specialty: Rheumatology, match: [osteoporosis, bone mineral density, 'fragility fracture\w*']}
+- {name: Systemic Sclerosis, specialty: Rheumatology, match: [systemic sclerosis, scleroderma]}
+- {name: Sjögren Disease, specialty: Rheumatology, match: ['sj[öo]gren']}
+- {name: Vasculitis, specialty: Rheumatology, match: [vasculitis, vasculitides, ANCA, giant cell arteritis, takayasu, polyarteritis, granulomatosis with polyangiitis, polymyalgia rheumatica, behçet, behcet, kawasaki]}
+- {name: Idiopathic Inflammatory Myopathies, specialty: Rheumatology, match: [myositis, dermatomyositis, polymyositis, 'inflammatory myopath\w*']}
+- {name: Antiphospholipid Syndrome, specialty: Rheumatology, match: [antiphospholipid]}
+- {name: Juvenile Idiopathic Arthritis, specialty: Rheumatology, match: [juvenile idiopathic arthritis]}
+- {name: Fibromyalgia, specialty: Rheumatology, match: [fibromyalgia]}
+- {name: Glucocorticoid-Induced Osteoporosis, specialty: Rheumatology, match: [glucocorticoid-induced osteoporosis]}
+
+# ------------------------------------------------------------------ Cardiology
+- {name: Hypertension, specialty: Cardiology, match: [hypertension, high blood pressure, blood pressure]}
+- {name: Heart Failure, specialty: Cardiology, match: [heart failure, 'cardiomyopath\w*']}
+- {name: Atrial Fibrillation, specialty: Cardiology, match: [atrial fibrillation, atrial flutter]}
+- {name: Coronary Artery Disease, specialty: Cardiology, match: [coronary artery disease, coronary heart disease, chronic coronary, angina, ischemic heart disease, ischaemic heart disease]}
+- {name: Acute Coronary Syndromes, specialty: Cardiology, match: ['acute coronary syndrome\w*', myocardial infarction, STEMI, NSTEMI]}
+- {name: Dyslipidemia, specialty: Cardiology, match: ['dyslipid\w*', cholesterol, 'hypercholesterol\w*', 'lipid\w* management', hypertriglyceridemia]}
+- {name: Valvular Heart Disease, specialty: Cardiology, match: [valvular heart disease, aortic stenosis, mitral regurgitation, valve disease]}
+- {name: Ventricular Arrhythmias and Sudden Death, specialty: Cardiology, match: ['ventricular arrhythmia\w*', sudden cardiac death, ventricular tachycardia]}
+- {name: Syncope, specialty: Cardiology, match: [syncope]}
+- {name: Peripheral Artery Disease, specialty: Cardiology, match: ['peripheral arter\w* disease', 'lower extremity arter\w* disease']}
+- {name: Aortic Disease, specialty: Cardiology, match: [aortic disease, aortic aneurysm, aortic dissection]}
+- {name: Pericarditis, specialty: Cardiology, match: ['pericardi\w*']}
+- {name: Infective Endocarditis, specialty: Cardiology, match: [endocarditis]}
+- {name: Cardiovascular Disease Prevention, specialty: Cardiology, match: [cardiovascular disease prevention, primary prevention of cardiovascular, cardiovascular risk]}
+- {name: Cardiac Arrest and Resuscitation, specialty: Cardiology, match: [cardiac arrest, cardiopulmonary resuscitation, resuscitation]}
+- {name: Cardiovascular-Kidney-Metabolic Syndrome, specialty: Cardiology, match: [cardiovascular-kidney-metabolic]}
+- {name: Myocarditis, specialty: Cardiology, match: [myocarditis]}
+- {name: Cardiac Rehabilitation, specialty: Cardiology, match: [cardiac rehabilitation]}
+- {name: Congenital Heart Disease, specialty: Cardiology, match: [congenital heart disease]}
+- {name: Cardio-Oncology, specialty: Cardiology, match: [cardio-oncology, cardiotoxicity]}
+
+# --------------------------------------------------------------- Endocrinology
+- {name: Diabetes Mellitus, specialty: Endocrinology, match: ['standards of (medical )?care in diabetes', diabetes]}
+- {name: Type 1 Diabetes, specialty: Endocrinology, match: [type 1 diabetes]}
+- {name: Obesity, specialty: Endocrinology, match: [obesity, overweight, weight management]}
+- {name: Thyroid Disease, specialty: Endocrinology, match: [thyroid, hypothyroidism, hyperthyroidism, graves]}
+- {name: Adrenal Disorders, specialty: Endocrinology, match: [adrenal, cushing, pheochromocytoma, aldosteronism]}
+- {name: Pituitary Disorders, specialty: Endocrinology, match: [pituitary, acromegaly, prolactinoma, hypopituitarism]}
+- {name: Hypogonadism, specialty: Endocrinology, match: [hypogonadism, testosterone]}
+- {name: Polycystic Ovary Syndrome, specialty: Endocrinology, match: [polycystic ovary]}
+- {name: Hypoglycemia, specialty: Endocrinology, match: ['hypoglyc\w*']}
+- {name: Primary Hyperparathyroidism, specialty: Endocrinology, match: [hyperparathyroidism, parathyroid]}
+- {name: Vitamin D Deficiency, specialty: Endocrinology, match: [vitamin d]}
+- {name: Menopause, specialty: Endocrinology, match: ['menopaus\w*']}
+- {name: Gender-Affirming Care, specialty: Endocrinology, match: [gender dysphoria, gender-affirming, transgender, gender incongruence]}
+
+# --------------------------------------------------------- Infectious Diseases
+- {name: HIV, specialty: Infectious Diseases, match: ['\bHIV\b', human immunodeficiency virus, pre-exposure prophylaxis]}
+- {name: Tuberculosis, specialty: Infectious Diseases, match: [tuberculosis, '\bTB\b']}
+- {name: Malaria, specialty: Infectious Diseases, match: [malaria]}
+- {name: COVID-19, specialty: Infectious Diseases, match: [covid-19, sars-cov-2, coronavirus disease 2019]}
+- {name: RSV Infection, specialty: Infectious Diseases, match: ['\bRSV\b', respiratory syncytial]}
+- {name: Influenza, specialty: Infectious Diseases, match: [influenza]}
+- {name: Viral Hepatitis, specialty: Gastroenterology & Hepatology, match: [hepatitis b, hepatitis c, hepatitis e, hepatitis delta, '\bHBV\b', '\bHCV\b', viral hepatitis]}
+- {name: Sepsis and Septic Shock, specialty: Critical Care, match: [sepsis, septic shock]}
+- {name: Pneumonia, specialty: Infectious Diseases, match: [pneumonia]}
+- {name: Urinary Tract Infection, specialty: Infectious Diseases, match: ['urinary tract infection\w*', cystitis, pyelonephritis, bacteriuria]}
+- {name: Clostridioides difficile Infection, specialty: Infectious Diseases, match: [clostridioides difficile, clostridium difficile, 'c\. difficile']}
+- {name: Skin and Soft Tissue Infections, specialty: Infectious Diseases, match: ['skin and soft tissue infection\w*', cellulitis, 'diabetic foot infection\w*']}
+- {name: Fungal Infections, specialty: Infectious Diseases, match: [aspergillosis, candidiasis, 'cryptococc\w*', histoplasmosis, 'fungal infection\w*', coccidioidomycosis, mucormycosis]}
+- {name: Antimicrobial Resistance, specialty: Infectious Diseases, match: [antimicrobial resistance, antimicrobial-resistant, multidrug-resistant, carbapenem-resistant, 'gram-negative infection\w*', antimicrobial stewardship]}
+- {name: Sexually Transmitted Infections, specialty: Infectious Diseases, match: [sexually transmitted, syphilis, 'gonorrh\w*', chlamydia]}
+- {name: Lyme Disease, specialty: Infectious Diseases, match: [lyme]}
+- {name: Bone and Joint Infections, specialty: Infectious Diseases, match: [osteomyelitis, prosthetic joint infection, septic arthritis]}
+- {name: Vaccination, specialty: Preventive Medicine, match: ['vaccin\w*', 'immuni[sz]ation\w*']}
+- {name: Neglected Tropical Diseases, specialty: Infectious Diseases, match: [leishmaniasis, schistosomiasis, dengue, chagas, trypanosomiasis, leprosy, rabies]}
+- {name: Febrile Neutropenia, specialty: Hematology, match: [febrile neutropenia, 'neutropeni\w*']}
+
+# ------------------------------------------------------------------ Pulmonology
+- {name: Asthma, specialty: Pulmonology, match: [asthma]}
+- {name: COPD, specialty: Pulmonology, match: [chronic obstructive pulmonary, '\bCOPD\b']}
+- {name: Interstitial Lung Disease, specialty: Pulmonology, match: [interstitial lung disease, pulmonary fibrosis, idiopathic pulmonary fibrosis, '\bILD\b', sarcoidosis]}
+- {name: Pulmonary Hypertension, specialty: Pulmonology, match: [pulmonary hypertension, pulmonary arterial hypertension]}
+- {name: Venous Thromboembolism, specialty: Hematology, match: [venous thromboembolism, pulmonary embolism, deep vein thrombosis, thromboprophylaxis, '\bVTE\b', 'anticoagula\w*', antithrombotic]}
+- {name: Obstructive Sleep Apnea, specialty: Pulmonology, match: [sleep apnea, sleep apnoea, sleep-disordered breathing]}
+- {name: Bronchiectasis, specialty: Pulmonology, match: [bronchiectasis]}
+- {name: Cystic Fibrosis, specialty: Pulmonology, match: [cystic fibrosis]}
+- {name: Lung Cancer, specialty: Oncology, match: [lung cancer, non-small cell lung, small cell lung, '\bNSCLC\b']}
+- {name: Chronic Cough, specialty: Pulmonology, match: [chronic cough, cough]}
+- {name: Pleural Disease, specialty: Pulmonology, match: [pleural]}
+- {name: Acute Respiratory Distress Syndrome, specialty: Critical Care, match: [acute respiratory distress syndrome, '\bARDS\b', mechanical ventilation, respiratory failure]}
+- {name: Smoking Cessation, specialty: Preventive Medicine, match: [smoking cessation, tobacco, nicotine]}
+
+# --------------------------------------------------- Gastroenterology/Hepatology
+- {name: Inflammatory Bowel Disease, specialty: Gastroenterology & Hepatology, match: [inflammatory bowel disease, 'crohn\w*', ulcerative colitis]}
+- {name: Gastroesophageal Reflux Disease, specialty: Gastroenterology & Hepatology, match: [gastroesophageal reflux, gastro-oesophageal reflux, '\bGERD\b', barrett]}
+- {name: Helicobacter pylori Infection, specialty: Gastroenterology & Hepatology, match: [helicobacter pylori, 'h\. pylori']}
+- {name: Irritable Bowel Syndrome, specialty: Gastroenterology & Hepatology, match: [irritable bowel]}
+- {name: Celiac Disease, specialty: Gastroenterology & Hepatology, match: [celiac, coeliac]}
+- {name: Eosinophilic Esophagitis, specialty: Gastroenterology & Hepatology, match: [eosinophilic esophagitis, eosinophilic oesophagitis]}
+- {name: Gastrointestinal Bleeding, specialty: Gastroenterology & Hepatology, match: [gastrointestinal bleeding, gastrointestinal hemorrhage, upper GI bleeding, lower GI bleeding]}
+- {name: Pancreatitis, specialty: Gastroenterology & Hepatology, match: [pancreatitis]}
+- {name: Cirrhosis and Portal Hypertension, specialty: Gastroenterology & Hepatology, match: [cirrhosis, portal hypertension, ascites, hepatic encephalopathy, 'varice\w*']}
+- {name: Steatotic Liver Disease (MASLD), specialty: Gastroenterology & Hepatology, match: [MASLD, MASH, NAFLD, NASH, fatty liver, steatotic liver, steatohepatitis]}
+- {name: Alcohol-Related Liver Disease, specialty: Gastroenterology & Hepatology, match: [alcohol-related liver, alcohol-associated liver, alcoholic hepatitis, alcoholic liver]}
+- {name: Autoimmune and Cholestatic Liver Disease, specialty: Gastroenterology & Hepatology, match: [autoimmune hepatitis, primary biliary, primary sclerosing cholangitis, cholestatic]}
+- {name: Colorectal Cancer and Screening, specialty: Oncology, match: [colorectal cancer, colon cancer, rectal cancer, colonoscopy, colorectal neoplasia]}
+- {name: Hepatocellular Carcinoma, specialty: Oncology, match: [hepatocellular carcinoma, liver cancer]}
+- {name: Acute Liver Failure, specialty: Gastroenterology & Hepatology, match: [acute liver failure, 'liver transplant\w*']}
+- {name: Dyspepsia and Gastroparesis, specialty: Gastroenterology & Hepatology, match: [dyspepsia, gastroparesis]}
+- {name: Diverticulitis, specialty: Gastroenterology & Hepatology, match: [diverticul\w*]}
+- {name: Colorectal Polyps and Polyposis, specialty: Gastroenterology & Hepatology, match: [polyps, polyposis, polypectomy]}
+- {name: Pancreatic Cysts and Ampullary Lesions, specialty: Gastroenterology & Hepatology, match: [pancreatic cyst\w*, ampullary]}
+- {name: Constipation, specialty: Gastroenterology & Hepatology, match: [constipation]}
+
+# ------------------------------------------------------------------ Nephrology
+- {name: Chronic Kidney Disease, specialty: Nephrology, match: [chronic kidney disease, kidney disease, kidney health, '\bCKD\b', kidney failure, dialysis, 'kidney transplant\w*']}
+- {name: Acute Kidney Injury, specialty: Nephrology, match: [acute kidney injury]}
+- {name: Glomerular Diseases, specialty: Nephrology, match: ['glomerul\w*', IgA nephropathy, nephrotic syndrome, membranous nephropathy]}
+- {name: Kidney Stones, specialty: Urology, match: ['kidney stone\w*', nephrolithiasis, urolithiasis]}
+- {name: Anemia in CKD, specialty: Nephrology, match: [anemia in chronic kidney, anaemia in chronic kidney]}
+- {name: Polycystic Kidney Disease, specialty: Nephrology, match: [polycystic kidney]}
+- {name: Electrolyte Disorders, specialty: Nephrology, match: [hyponatremia, hyponatraemia, hyperkalemia, hyperkalaemia, electrolyte]}
+
+# ----------------------------------------------------------- Oncology/Hematology
+- {name: Breast Cancer, specialty: Oncology, match: [breast cancer]}
+- {name: Prostate Cancer, specialty: Oncology, match: [prostate cancer]}
+- {name: Ovarian Cancer, specialty: Oncology, match: [ovarian cancer]}
+- {name: Cervical Cancer and Screening, specialty: Oncology, match: [cervical cancer, cervical screening, human papillomavirus, '\bHPV\b']}
+- {name: Endometrial Cancer, specialty: Oncology, match: [endometrial cancer, uterine cancer]}
+- {name: Pancreatic Cancer, specialty: Oncology, match: [pancreatic cancer, pancreatic adenocarcinoma]}
+- {name: Gastric and Esophageal Cancer, specialty: Oncology, match: [gastric cancer, esophageal cancer, oesophageal cancer, gastroesophageal cancer, esophagogastric junction, esophageal and esophagogastric]}
+- {name: Melanoma and Skin Cancer, specialty: Oncology, match: [melanoma, basal cell carcinoma, squamous cell carcinoma of the skin, skin cancer]}
+- {name: Head and Neck Cancer, specialty: Oncology, match: [head and neck cancer, oropharyngeal cancer, nasopharyngeal]}
+- {name: Bladder and Kidney Cancer, specialty: Oncology, match: [bladder cancer, urothelial, renal cell carcinoma, kidney cancer]}
+- {name: Lymphoma, specialty: Hematology, match: [lymphoma]}
+- {name: Leukemia, specialty: Hematology, match: [leukemia, leukaemia]}
+- {name: Multiple Myeloma, specialty: Hematology, match: [myeloma]}
+- {name: Myelodysplastic and Myeloproliferative Neoplasms, specialty: Hematology, match: [myelodysplastic, myeloproliferative, polycythemia vera, myelofibrosis, essential thrombocythemia]}
+- {name: Amyloidosis, specialty: Hematology, match: [amyloidosis]}
+- {name: Sickle Cell Disease, specialty: Hematology, match: [sickle cell]}
+- {name: Thalassemia and Anemia, specialty: Hematology, match: ['thalass\w*', iron deficiency, anemia, anaemia]}
+- {name: Immune Thrombocytopenia, specialty: Hematology, match: [immune thrombocytopenia, 'thrombocytopeni\w*']}
+- {name: Hemophilia and Bleeding Disorders, specialty: Hematology, match: [hemophilia, haemophilia, von willebrand, 'bleeding disorder\w*']}
+- {name: Transfusion Medicine, specialty: Hematology, match: [transfusion, blood management]}
+- {name: Immune-Related Adverse Events, specialty: Oncology, match: [immune-related adverse, 'immune checkpoint inhibitor\w*']}
+- {name: Cancer Survivorship and Supportive Care, specialty: Oncology, match: [survivorship, supportive care, 'antiemetic\w*', cancer pain, cachexia]}
+- {name: Cancer Screening, specialty: Preventive Medicine, match: [cancer screening]}
+- {name: Sarcoma, specialty: Oncology, match: [sarcoma]}
+- {name: Brain Tumors, specialty: Oncology, match: [glioma, glioblastoma, 'brain tumou?r\w*', 'brain metastas\w*']}
+- {name: Thyroid Cancer, specialty: Oncology, match: [thyroid cancer, thyroid carcinoma, 'thyroid nodule\w*']}
+
+# ------------------------------------------------------------------- Neurology
+- {name: Stroke, specialty: Neurology, match: [stroke, transient ischemic attack, intracerebral hemorrhage, subarachnoid hemorrhage]}
+- {name: Epilepsy, specialty: Neurology, match: ['epilep\w*', 'seizure\w*', status epilepticus]}
+- {name: Multiple Sclerosis, specialty: Neurology, match: [multiple sclerosis, neuromyelitis optica]}
+- {name: Parkinson Disease, specialty: Neurology, match: ['parkinson\w*']}
+- {name: Dementia, specialty: Neurology, match: [dementia, 'alzheimer\w*', cognitive impairment]}
+- {name: Migraine and Headache, specialty: Neurology, match: [migraine, headache]}
+- {name: Neuromuscular Disorders, specialty: Neurology, match: [myasthenia, amyotrophic lateral sclerosis, 'guillain-barr[ée]', neuropathy, muscular dystrophy, spinal muscular atrophy]}
+- {name: Traumatic Brain Injury, specialty: Neurology, match: [traumatic brain injury, concussion]}
+
+# ------------------------------------------------------------------ Psychiatry
+- {name: Depression, specialty: Psychiatry, match: ['depress\w*']}
+- {name: Schizophrenia, specialty: Psychiatry, match: [schizophrenia, psychosis]}
+- {name: Bipolar Disorder, specialty: Psychiatry, match: [bipolar]}
+- {name: Anxiety Disorders, specialty: Psychiatry, match: [anxiety, panic disorder, post-traumatic stress, '\bPTSD\b', obsessive-compulsive]}
+- {name: Substance Use Disorders, specialty: Psychiatry, match: [substance use, alcohol use disorder, opioid use disorder, addiction, unhealthy alcohol use]}
+- {name: Eating Disorders, specialty: Psychiatry, match: ['eating disorder\w*', anorexia nervosa, bulimia]}
+- {name: ADHD, specialty: Psychiatry, match: [attention-deficit, '\bADHD\b']}
+- {name: Autism Spectrum Disorder, specialty: Pediatrics, match: [autism]}
+- {name: Suicide Prevention, specialty: Psychiatry, match: ['suicid\w*', self-harm]}
+- {name: Delirium, specialty: Psychiatry, match: [delirium]}
+
+# ----------------------------------------------------------- Allergy/Immunology
+- {name: Anaphylaxis, specialty: Allergy & Immunology, match: [anaphylaxis]}
+- {name: Food Allergy, specialty: Allergy & Immunology, match: [food allergy, peanut allergy]}
+- {name: Allergic Rhinitis and Chronic Rhinosinusitis, specialty: Allergy & Immunology, match: [rhinitis, rhinosinusitis]}
+- {name: Urticaria and Angioedema, specialty: Allergy & Immunology, match: [urticaria, angioedema]}
+- {name: Drug Allergy, specialty: Allergy & Immunology, match: [drug allergy, drug hypersensitivity, penicillin allergy]}
+- {name: Primary Immunodeficiency, specialty: Allergy & Immunology, match: ['immunodeficienc\w*', inborn errors of immunity]}
+
+# ----------------------------------------------------------------- Dermatology
+- {name: Psoriasis, specialty: Dermatology, match: [psoriasis]}
+- {name: Atopic Dermatitis, specialty: Dermatology, match: [atopic dermatitis, eczema]}
+- {name: Acne and Rosacea, specialty: Dermatology, match: [acne, rosacea]}
+- {name: Hidradenitis Suppurativa, specialty: Dermatology, match: [hidradenitis]}
+- {name: Alopecia, specialty: Dermatology, match: [alopecia]}
+- {name: Bullous Diseases, specialty: Dermatology, match: ['pemphig\w*']}
+- {name: Vitiligo, specialty: Dermatology, match: [vitiligo]}
+
+# ------------------------------------------------------ Obstetrics & Gynecology
+- {name: Hypertensive Disorders of Pregnancy, specialty: Obstetrics & Gynecology, match: [preeclampsia, pre-eclampsia, eclampsia, hypertension in pregnancy, gestational hypertension]}
+- {name: Gestational Diabetes, specialty: Obstetrics & Gynecology, match: [gestational diabetes]}
+- {name: Pregnancy and Antenatal Care, specialty: Obstetrics & Gynecology, match: ['pregnan\w*', antenatal, prenatal, intrapartum, labor induction, induction of labour, postpartum, cesarean, caesarean, preterm birth]}
+- {name: Postpartum Hemorrhage, specialty: Obstetrics & Gynecology, match: [postpartum hemorrhage, postpartum haemorrhage]}
+- {name: Contraception, specialty: Obstetrics & Gynecology, match: ['contracept\w*', family planning]}
+- {name: Endometriosis, specialty: Obstetrics & Gynecology, match: [endometriosis]}
+- {name: Infertility, specialty: Obstetrics & Gynecology, match: [infertility, fertility]}
+- {name: Abnormal Uterine Bleeding, specialty: Obstetrics & Gynecology, match: [uterine bleeding, heavy menstrual bleeding, fibroids, leiomyoma]}
+- {name: Pelvic Floor Disorders, specialty: Urology, match: [pelvic organ prolapse, urinary incontinence, overactive bladder]}
+
+# ------------------------------------------------------------------ Pediatrics
+- {name: Neonatal Care, specialty: Pediatrics, match: ['neonat\w*', newborn, 'preterm infant\w*', hyperbilirubinemia]}
+- {name: Bronchiolitis, specialty: Pediatrics, match: [bronchiolitis]}
+- {name: Acute Otitis Media, specialty: Pediatrics, match: [otitis media]}
+- {name: Febrile Infant, specialty: Pediatrics, match: ['febrile infant\w*', 'fever in (infants|children)']}
+- {name: Child Growth and Nutrition, specialty: Pediatrics, match: [malnutrition, breastfeeding, infant feeding, wasting, stunting, child growth]}
+
+# --------------------------------------------------------------------- Urology
+- {name: Benign Prostatic Hyperplasia, specialty: Urology, match: [benign prostatic, lower urinary tract symptoms, '\bLUTS\b']}
+- {name: Erectile Dysfunction, specialty: Urology, match: [erectile dysfunction]}
+- {name: Male Infertility, specialty: Urology, match: [male infertility]}
+- {name: Neurogenic Bladder, specialty: Urology, match: [neuro-urology, neurourology, neurogenic bladder, neurogenic lower urinary]}
+- {name: Microhematuria, specialty: Urology, match: [hematuria, haematuria]}
+
+# --------------------------------------------------------------- Ophthalmology
+- {name: Glaucoma, specialty: Ophthalmology, match: [glaucoma]}
+- {name: Diabetic Retinopathy, specialty: Ophthalmology, match: [diabetic retinopathy]}
+- {name: Age-Related Macular Degeneration, specialty: Ophthalmology, match: [macular degeneration]}
+- {name: Cataract, specialty: Ophthalmology, match: [cataract]}
+- {name: Dry Eye and Ocular Surface Disease, specialty: Ophthalmology, match: [dry eye, blepharitis, conjunctivitis, keratitis]}
+- {name: Uveitis, specialty: Ophthalmology, match: [uveitis]}
+
+# -------------------------------------------------------- Critical Care/General
+- {name: Perioperative Care, specialty: Internal Medicine, match: [perioperative, preoperative, postoperative]}
+- {name: Pain Management and Opioids, specialty: Internal Medicine, match: [opioid prescribing, chronic pain, low back pain, pain management, 'analgesi\w*']}
+- {name: Palliative and End-of-Life Care, specialty: Internal Medicine, match: [palliative, end of life, end-of-life]}
+- {name: Nutrition, specialty: Internal Medicine, match: [nutrition, enteral, parenteral, 'diet\b', dietary]}
+- {name: Physical Activity, specialty: Preventive Medicine, match: [physical activity, sedentary]}
+- {name: Fluid and Shock Management, specialty: Critical Care, match: [fluid therapy, 'resuscitation fluid\w*', 'shock\b']}
+- {name: Older Adults and Frailty, specialty: Internal Medicine, match: [frailty, older adults, falls prevention, polypharmacy]}

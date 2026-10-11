@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!-- Synthetic test fixture; not real guideline data. -->
+<PubmedArticleSet>
+<PubmedArticle>
+  <MedlineCitation>
+    <PMID>1000001</PMID>
+    <Article>
+      <Journal><JournalIssue><PubDate><Year>2024</Year><Month>Apr</Month></PubDate></JournalIssue>
+        <Title>Test Journal</Title><ISOAbbreviation>Test J</ISOAbbreviation></Journal>
+      <ArticleTitle>Example <i>society</i> guideline for rheumatoid arthritis.</ArticleTitle>
+      <ELocationID EIdType="doi">10.1000/EXAMPLE.1</ELocationID>
+      <PublicationTypeList><PublicationType>Practice Guideline</PublicationType></PublicationTypeList>
+      <ArticleDate DateType="Electronic"><Year>2024</Year><Month>03</Month><Day>05</Day></ArticleDate>
+    </Article>
+    <MeshHeadingList><MeshHeading><DescriptorName>Arthritis, Rheumatoid</DescriptorName></MeshHeading></MeshHeadingList>
+  </MedlineCitation>
+  <PubmedData><ArticleIdList><ArticleId IdType="pubmed">1000001</ArticleId></ArticleIdList></PubmedData>
+</PubmedArticle>
+<PubmedBookArticle>
+  <BookDocument>
+    <PMID>1000002</PMID>
+    <Book>
+      <Publisher><PublisherName>World Health Organization</PublisherName></Publisher>
+      <BookTitle>Example WHO guideline</BookTitle>
+      <PubDate><Year>2023</Year><Month>Jul</Month></PubDate>
+    </Book>
+  </BookDocument>
+</PubmedBookArticle>
+</PubmedArticleSet>
