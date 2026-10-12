@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-11T19:28:18+00:00",
+ "generated": "2026-10-12T13:19:02+00:00",
  "sources": [
   {
    "id": "who",
@@ -711,8 +711,8 @@
    "id": "ers",
    "abbr": "ERS",
    "pubmed": {
-    "matches": 92,
-    "kept": 91
+    "matches": 93,
+    "kept": 92
    },
    "rss": null,
    "web": null,
@@ -1581,8 +1581,8 @@
    "id": "aao-hns",
    "abbr": "AAO-HNS",
    "pubmed": {
-    "matches": 30,
-    "kept": 30
+    "matches": 33,
+    "kept": 33
    },
    "rss": null,
    "web": null,
@@ -3250,6 +3250,25 @@
    "first_seen": "2026-10-11"
   },
   {
+   "id": "pmid-42860272",
+   "title": "ERS/ESRS clinical practice guideline for continuous positive airway pressure for the treatment of adult obstructive sleep apnoea",
+   "url": "https://doi.org/10.1183/13993003.01186-2026",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42860272/",
+   "doi": "10.1183/13993003.01186-2026",
+   "journal": "Eur Respir J",
+   "date": "2026-10-11",
+   "sources": [
+    "ers"
+   ],
+   "specialties": [
+    "Pulmonology"
+   ],
+   "conditions": [
+    "Obstructive Sleep Apnea"
+   ],
+   "first_seen": "2026-10-12"
+  },
+  {
    "id": "pmid-42858041",
    "title": "Guideline-Directed Treatment Eligibility and Burden of Untreated Stage-1 Hypertension Under the 2025 American College of Cardiology/American Heart Association Hypertension Guideline: Insights From NHANES 2015 to 2020",
    "url": "https://doi.org/10.1161/jaha.125.049525",
@@ -3783,6 +3802,23 @@
    "first_seen": "2026-10-11"
   },
   {
+   "id": "pmid-42861475",
+   "title": "Plain Language Summary: Clinical Practice Guideline: Tinnitus Update",
+   "url": "https://doi.org/10.1002/ohn.70419",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42861475/",
+   "doi": "10.1002/ohn.70419",
+   "journal": "Otolaryngol Head Neck Surg",
+   "date": "2026-10-01",
+   "sources": [
+    "aao-hns"
+   ],
+   "specialties": [
+    "Otolaryngology"
+   ],
+   "conditions": [],
+   "first_seen": "2026-10-12"
+  },
+  {
    "id": "pmid-42843933",
    "title": "Mental Health in Eosinophilic Gastrointestinal Disorders: A Work Group Report of the AAAAI Eosinophilic Gastrointestinal Disorders Committee",
    "url": "https://doi.org/10.1016/j.jaip.2026.06.047",
@@ -3821,6 +3857,23 @@
    "first_seen": "2026-10-11"
   },
   {
+   "id": "pmid-42861486",
+   "title": "Executive Summary of the Clinical Practice Guideline on Tinnitus Update",
+   "url": "https://doi.org/10.1002/ohn.70418",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42861486/",
+   "doi": "10.1002/ohn.70418",
+   "journal": "Otolaryngol Head Neck Surg",
+   "date": "2026-10-01",
+   "sources": [
+    "aao-hns"
+   ],
+   "specialties": [
+    "Otolaryngology"
+   ],
+   "conditions": [],
+   "first_seen": "2026-10-12"
+  },
+  {
    "id": "pmid-42851210",
    "title": "Diagnosis and Management of Infectious Encephalitis in Adults: Guidelines From the European Academy of Neurology and European Society of Clinical Microbiology and Infectious Diseases",
    "url": "https://doi.org/10.1111/ene.70647",
@@ -3836,6 +3889,23 @@
    ],
    "conditions": [],
    "first_seen": "2026-10-11"
+  },
+  {
+   "id": "pmid-42861423",
+   "title": "Clinical Practice Guideline: Tinnitus Update",
+   "url": "https://doi.org/10.1002/ohn.70417",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42861423/",
+   "doi": "10.1002/ohn.70417",
+   "journal": "Otolaryngol Head Neck Surg",
+   "date": "2026-10-01",
+   "sources": [
+    "aao-hns"
+   ],
+   "specialties": [
+    "Otolaryngology"
+   ],
+   "conditions": [],
+   "first_seen": "2026-10-12"
   },
   {
    "id": "pmid-42803578",
