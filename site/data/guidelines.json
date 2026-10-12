@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T13:19:02+00:00",
+ "generated": "2026-10-12T19:22:58+00:00",
  "sources": [
   {
    "id": "who",
@@ -2279,13 +2279,13 @@
   "Fluid and Shock Management": [
    "fluid therapy",
    "resuscitation fluid",
-   "shock",
    "fluid resuscitation",
    "intravenous fluid",
    "volume resuscitation",
    "crystalloid",
    "colloid",
-   "fluid overload"
+   "fluid overload",
+   "vasopressor"
   ],
   "Delirium": [
    "delirium"
@@ -2759,7 +2759,7 @@
    "DVT"
   ],
   "Stroke": [
-   "stroke",
+   "<!heat strokes",
    "transient isch ae mic attack",
    "intracerebral h ae morrhage",
    "subarachnoid h ae morrhage",
@@ -2808,7 +2808,7 @@
    "spinal muscular atrophy",
    "CIDP",
    "charcot-marie-tooth",
-   "myopath"
+   "<!inflammatory <!necrotizing <!necrotising <!autoimmune myopath"
   ],
   "Traumatic Brain Injury": [
    "traumatic brain injury",
@@ -3068,7 +3068,6 @@
    "breast feeding",
    "breast milk",
    "human milk",
-   "lactation",
    "infant feeding",
    "infant nutrition",
    "failure to thrive",
@@ -3194,7 +3193,6 @@
    "cancer pain",
    "pain management",
    "pain medicine",
-   "analgesi",
    "interventional pain"
   ],
   "Older Adults and Frailty": [
@@ -5953,11 +5951,9 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Heart Failure"
    ],
    "first_seen": "2026-10-11"
@@ -6671,7 +6667,7 @@
   },
   {
    "id": "pmid-42617965",
-   "title": "Executive Summary for The Society of Thoracic Surgeons (STS) / World Society for Pediatric and Congenital Heart Surgery (WSPCHS) / European Congenital Heart Surgeons Association (ECHSA) 2026 (1) Clinical Practice Guidelines on Indications and Timing of Pulmonary Valve Replacement in Repaired Tetralogy of Fallot; (2) Expert Consensus Document on Timing, Indications, and Options for Pulmonary Valve Replacement in Children with Repaired Tetralogy of Fallot; and (3) Expert Opinion on The Role of Exercise Testing in Determining Optimal Timing of Pulmonary Valve Replacement in Tetralogy of Fallot",
+   "title": "Executive Summary for The Society of Thoracic Surgeons (STS)/World Society for Pediatric and Congenital Heart Surgery (WSPCHS)/European Congenital Heart Surgeons Association (ECHSA) 2026 (1) Clinical Practice Guidelines on Indications and Timing of Pulmonary Valve Replacement in Repaired Tetralogy of Fallot; (2) Expert Consensus Document on Timing, Indications, and Options for Pulmonary Valve Replacement in Children With Repaired Tetralogy of Fallot; and (3) Expert Opinion on the Role of Exercise Testing in Determining Optimal Timing of Pulmonary Valve Replacement in Tetralogy of Fallot",
    "url": "https://doi.org/10.1016/j.athoracsur.2026.08.002",
    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42617965/",
    "doi": "10.1016/j.athoracsur.2026.08.002",
@@ -7206,11 +7202,9 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Heart Failure"
    ],
    "first_seen": "2026-10-11"
@@ -7658,12 +7652,9 @@
     "aha-acc"
    ],
    "specialties": [
-    "Anesthesiology",
     "Cardiology"
    ],
-   "conditions": [
-    "Pain Management and Opioids"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -12889,7 +12880,6 @@
     "Critical Care"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -12909,7 +12899,6 @@
     "Critical Care"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -15242,7 +15231,6 @@
     "Critical Care"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -15374,7 +15362,6 @@
     "Critical Care"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -15394,7 +15381,6 @@
     "Critical Care"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -15629,7 +15615,6 @@
     "Internal Medicine"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Palliative and End-of-Life Care",
     "Sepsis and Septic Shock"
    ],
@@ -15778,9 +15763,7 @@
    "specialties": [
     "Critical Care"
    ],
-   "conditions": [
-    "Fluid and Shock Management"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -19199,12 +19182,9 @@
     "sccm"
    ],
    "specialties": [
-    "Anesthesiology",
     "Critical Care"
    ],
-   "conditions": [
-    "Pain Management and Opioids"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -22378,13 +22358,11 @@
     "nice"
    ],
    "specialties": [
-    "Anesthesiology",
     "Obstetrics & Gynecology",
     "Pediatrics"
    ],
    "conditions": [
     "Neonatal Care",
-    "Pain Management and Opioids",
     "Postpartum Hemorrhage",
     "Pregnancy and Antenatal Care"
    ],
@@ -22404,9 +22382,7 @@
    "specialties": [
     "Critical Care"
    ],
-   "conditions": [
-    "Fluid and Shock Management"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -24331,12 +24307,10 @@
     "sccm"
    ],
    "specialties": [
-    "Anesthesiology",
     "Critical Care"
    ],
    "conditions": [
-    "Delirium",
-    "Pain Management and Opioids"
+    "Delirium"
    ],
    "first_seen": "2026-10-11"
   },
@@ -24394,11 +24368,9 @@
    ],
    "specialties": [
     "Cardiology",
-    "Cardiothoracic Surgery",
-    "Critical Care"
+    "Cardiothoracic Surgery"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Heart Failure"
    ],
    "first_seen": "2026-10-11"
@@ -24710,12 +24682,9 @@
     "acog"
    ],
    "specialties": [
-    "Obstetrics & Gynecology",
-    "Pediatrics"
+    "Obstetrics & Gynecology"
    ],
-   "conditions": [
-    "Child Growth and Nutrition"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -26741,11 +26710,9 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Heart Failure"
    ],
    "first_seen": "2026-10-11"
@@ -30957,11 +30924,9 @@
     "scai"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Heart Failure"
    ],
    "first_seen": "2026-10-11"
@@ -31162,12 +31127,10 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
-    "Cardiac Arrest and Resuscitation",
-    "Fluid and Shock Management"
+    "Cardiac Arrest and Resuscitation"
    ],
    "first_seen": "2026-10-11"
   },
@@ -32577,12 +32540,9 @@
     "eular"
    ],
    "specialties": [
-    "Pediatrics",
     "Rheumatology"
    ],
-   "conditions": [
-    "Child Growth and Nutrition"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -33058,12 +33018,9 @@
     "eular"
    ],
    "specialties": [
-    "Pediatrics",
     "Rheumatology"
    ],
-   "conditions": [
-    "Child Growth and Nutrition"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -34478,12 +34435,10 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
-    "Cardiac Arrest and Resuscitation",
-    "Fluid and Shock Management"
+    "Cardiac Arrest and Resuscitation"
    ],
    "first_seen": "2026-10-11"
   },
@@ -34499,13 +34454,11 @@
     "acp"
    ],
    "specialties": [
-    "Anesthesiology",
     "Internal Medicine",
     "Neurology"
    ],
    "conditions": [
-    "Migraine and Headache",
-    "Pain Management and Opioids"
+    "Migraine and Headache"
    ],
    "first_seen": "2026-10-11"
   },
@@ -34580,12 +34533,10 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
     "Acute Coronary Syndromes",
-    "Fluid and Shock Management",
     "Heart Failure"
    ],
    "first_seen": "2026-10-11"
@@ -35618,12 +35569,9 @@
     "sccm"
    ],
    "specialties": [
-    "Critical Care",
-    "Neurology"
+    "Critical Care"
    ],
-   "conditions": [
-    "Stroke"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -35692,12 +35640,9 @@
     "sccm"
    ],
    "specialties": [
-    "Critical Care",
-    "Neurology"
+    "Critical Care"
    ],
-   "conditions": [
-    "Stroke"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -37827,9 +37772,7 @@
    "specialties": [
     "Anesthesiology"
    ],
-   "conditions": [
-    "Pain Management and Opioids"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -39952,12 +39895,9 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
-   "conditions": [
-    "Fluid and Shock Management"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -47888,7 +47828,6 @@
     "Obstetrics & Gynecology"
    ],
    "conditions": [
-    "Pain Management and Opioids",
     "Pregnancy and Antenatal Care"
    ],
    "first_seen": "2026-10-11"
@@ -50417,11 +50356,9 @@
     "nice"
    ],
    "specialties": [
-    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
-    "Pain Management and Opioids",
     "Pregnancy and Antenatal Care"
    ],
    "first_seen": "2026-10-11"
@@ -51230,7 +51167,6 @@
     "Infectious Diseases"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -52662,11 +52598,9 @@
    ],
    "specialties": [
     "Cardiology",
-    "Critical Care",
     "Geriatrics"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Heart Failure",
     "Older Adults and Frailty"
    ],
@@ -54254,7 +54188,6 @@
     "Critical Care"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -54400,7 +54333,6 @@
    ],
    "conditions": [
     "Acute Respiratory Distress Syndrome",
-    "Fluid and Shock Management",
     "Pneumonia",
     "Sepsis and Septic Shock"
    ],
@@ -58513,11 +58445,9 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Heart Failure",
     "Valvular Heart Disease"
    ],
@@ -61816,12 +61746,10 @@
     "acr"
    ],
    "specialties": [
-    "Neurology",
     "Rheumatology"
    ],
    "conditions": [
-    "Idiopathic Inflammatory Myopathies",
-    "Neuromuscular Disorders"
+    "Idiopathic Inflammatory Myopathies"
    ],
    "first_seen": "2026-10-11"
   },
@@ -63134,11 +63062,9 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Heart Failure"
    ],
    "first_seen": "2026-10-11"
@@ -65012,7 +64938,6 @@
     "Obstetrics & Gynecology"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Hypertensive Disorders of Pregnancy",
     "Sepsis and Septic Shock",
     "Venous Thromboembolism"
@@ -67478,12 +67403,9 @@
     "acsm"
    ],
    "specialties": [
-    "Neurology",
     "Sports Medicine"
    ],
-   "conditions": [
-    "Stroke"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -67920,7 +67842,6 @@
     "Critical Care"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -72929,11 +72850,9 @@
     "sogc"
    ],
    "specialties": [
-    "Critical Care",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Postpartum Hemorrhage",
     "Pregnancy and Antenatal Care"
    ],
@@ -77886,14 +77805,12 @@
     "acr"
    ],
    "specialties": [
-    "Neurology",
     "Oncology",
     "Rheumatology"
    ],
    "conditions": [
     "Idiopathic Inflammatory Myopathies",
-    "Melanoma and Skin Cancer",
-    "Neuromuscular Disorders"
+    "Melanoma and Skin Cancer"
    ],
    "first_seen": "2026-10-11"
   },
@@ -78583,11 +78500,9 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Heart Failure"
    ],
    "first_seen": "2026-10-11"
@@ -81740,13 +81655,11 @@
     "bsr"
    ],
    "specialties": [
-    "Neurology",
     "Rheumatology"
    ],
    "conditions": [
     "Idiopathic Inflammatory Myopathies",
-    "Juvenile Idiopathic Arthritis",
-    "Neuromuscular Disorders"
+    "Juvenile Idiopathic Arthritis"
    ],
    "first_seen": "2026-10-11"
   },
@@ -84117,7 +84030,6 @@
     "Pediatrics"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -85634,12 +85546,10 @@
     "acr"
    ],
    "specialties": [
-    "Neurology",
     "Rheumatology"
    ],
    "conditions": [
-    "Idiopathic Inflammatory Myopathies",
-    "Neuromuscular Disorders"
+    "Idiopathic Inflammatory Myopathies"
    ],
    "first_seen": "2026-10-11"
   },
@@ -85868,12 +85778,9 @@
     "scai"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
-   "conditions": [
-    "Fluid and Shock Management"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -89169,11 +89076,9 @@
     "nice"
    ],
    "specialties": [
-    "Anesthesiology"
+    "General"
    ],
-   "conditions": [
-    "Pain Management and Opioids"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -89402,7 +89307,6 @@
     "Critical Care"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -89558,7 +89462,6 @@
     "Critical Care"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -92638,12 +92541,9 @@
     "smfm"
    ],
    "specialties": [
-    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
-   "conditions": [
-    "Pain Management and Opioids"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -99949,7 +99849,6 @@
     "Obstetrics & Gynecology"
    ],
    "conditions": [
-    "Pain Management and Opioids",
     "Pregnancy and Antenatal Care"
    ],
    "first_seen": "2026-10-11"
@@ -100608,13 +100507,11 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
     "Acute Coronary Syndromes",
     "Cardiac Arrest and Resuscitation",
-    "Fluid and Shock Management",
     "Heart Failure"
    ],
    "first_seen": "2026-10-11"
@@ -100978,12 +100875,10 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
     "Acute Coronary Syndromes",
-    "Fluid and Shock Management",
     "Heart Failure"
    ],
    "first_seen": "2026-10-11"
@@ -101921,7 +101816,6 @@
     "Infectious Diseases"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -112656,11 +112550,9 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Heart Failure"
    ],
    "first_seen": "2026-10-11"
@@ -119773,12 +119665,10 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
     "Acute Coronary Syndromes",
-    "Fluid and Shock Management",
     "Heart Failure"
    ],
    "first_seen": "2026-10-11"
@@ -121387,7 +121277,6 @@
     "Critical Care"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -121589,7 +121478,6 @@
     "Critical Care"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -125401,10 +125289,12 @@
     "aha-acc"
    ],
    "specialties": [
-    "Cardiology"
+    "Cardiology",
+    "Critical Care"
    ],
    "conditions": [
-    "Cardiac Arrest and Resuscitation"
+    "Cardiac Arrest and Resuscitation",
+    "Fluid and Shock Management"
    ],
    "first_seen": "2026-10-11"
   },
@@ -125570,12 +125460,10 @@
     "eular"
    ],
    "specialties": [
-    "Neurology",
     "Rheumatology"
    ],
    "conditions": [
-    "Idiopathic Inflammatory Myopathies",
-    "Neuromuscular Disorders"
+    "Idiopathic Inflammatory Myopathies"
    ],
    "first_seen": "2026-10-11"
   },
@@ -128464,12 +128352,10 @@
     "hrs"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
     "Cardiac Arrest and Resuscitation",
-    "Fluid and Shock Management",
     "Ventricular Arrhythmias and Sudden Death"
    ],
    "first_seen": "2026-10-11"
@@ -131633,12 +131519,9 @@
     "sogc"
    ],
    "specialties": [
-    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
-   "conditions": [
-    "Pain Management and Opioids"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -132394,11 +132277,9 @@
     "scai"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Heart Failure"
    ],
    "first_seen": "2026-10-11"
@@ -134472,12 +134353,9 @@
     "acog"
    ],
    "specialties": [
-    "Obstetrics & Gynecology",
-    "Pediatrics"
+    "Obstetrics & Gynecology"
    ],
-   "conditions": [
-    "Child Growth and Nutrition"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -134492,12 +134370,9 @@
     "acog"
    ],
    "specialties": [
-    "Obstetrics & Gynecology",
-    "Pediatrics"
+    "Obstetrics & Gynecology"
    ],
-   "conditions": [
-    "Child Growth and Nutrition"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -135622,11 +135497,9 @@
     "acog"
    ],
    "specialties": [
-    "Anesthesiology",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
-    "Pain Management and Opioids",
     "Pregnancy and Antenatal Care"
    ],
    "first_seen": "2026-10-11"
@@ -138765,12 +138638,10 @@
     "esc"
    ],
    "specialties": [
-    "Cardiology",
-    "Critical Care"
+    "Cardiology"
    ],
    "conditions": [
-    "Acute Coronary Syndromes",
-    "Fluid and Shock Management"
+    "Acute Coronary Syndromes"
    ],
    "first_seen": "2026-10-11"
   },
@@ -139565,11 +139436,9 @@
     "sogc"
    ],
    "specialties": [
-    "Critical Care",
     "Obstetrics & Gynecology"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Pregnancy and Antenatal Care"
    ],
    "first_seen": "2026-10-11"
@@ -143705,7 +143574,6 @@
     "Hematology"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Thalassemia and Anemia",
     "Transfusion Medicine"
    ],
@@ -143771,7 +143639,6 @@
     "Hematology"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Thalassemia and Anemia",
     "Transfusion Medicine"
    ],
@@ -144703,13 +144570,11 @@
    ],
    "specialties": [
     "Cardiology",
-    "Critical Care",
     "Neurology",
     "Pulmonology"
    ],
    "conditions": [
     "Atrial Fibrillation",
-    "Fluid and Shock Management",
     "Stroke"
    ],
    "first_seen": "2026-10-11"
@@ -146207,7 +146072,6 @@
     "Critical Care"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -148395,7 +148259,6 @@
     "Infectious Diseases"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -150035,7 +149898,6 @@
     "Critical Care"
    ],
    "conditions": [
-    "Fluid and Shock Management",
     "Sepsis and Septic Shock"
    ],
    "first_seen": "2026-10-11"
@@ -150933,9 +150795,7 @@
    "specialties": [
     "Anesthesiology"
    ],
-   "conditions": [
-    "Pain Management and Opioids"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
@@ -154086,9 +153946,7 @@
    "specialties": [
     "Anesthesiology"
    ],
-   "conditions": [
-    "Pain Management and Opioids"
-   ],
+   "conditions": [],
    "first_seen": "2026-10-11"
   },
   {
