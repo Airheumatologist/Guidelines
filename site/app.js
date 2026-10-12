@@ -77,23 +77,8 @@
     return html + "</ul>";
   }
 
-  function guidelinesBlock(list, sortable = true, specName) {
-    const id = "gl" + Math.random().toString(36).slice(2, 8);
-    setTimeout(() => {
-      const box = document.getElementById(id);
-      if (!box) return;
-      const render = (mode) => {
-        const arr = [...list];
-        if (mode === "az") arr.sort((a, b) => a.title.localeCompare(b.title));
-        box.querySelector(".items").innerHTML = arr.map((g) => guidelineHTML(g, specName)).join("") || '<p class="empty">No guidelines.</p>';
-        box.querySelectorAll(".seg button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.mode === mode));
-      };
-      box.querySelectorAll(".seg button").forEach((b) => b.addEventListener("click", () => render(b.dataset.mode)));
-      render("date");
-    });
-    return `<div id="${id}">${sortable && list.length > 1 ? `<div class="seg">
-      <button data-mode="date">Newest</button><button data-mode="az">A–Z</button></div>` : ""}
-      <div class="items"></div></div>`;
+  function guidelinesBlock(list, specName) {
+    return list.map((g) => guidelineHTML(g, specName)).join("") || '<p class="empty">No guidelines.</p>';
   }
 
   // ------------------------------------------------------------- views
@@ -168,7 +153,7 @@
     const list = inSpec.filter((g) => (condName === OTHER ? !g.conditions.length : g.conditions.includes(condName)));
     return `<a class="crumb" href="#/specialty/${slug(specName)}">‹ ${esc(specName)}</a>
       <h2>${esc(condName)}</h2><p class="sub">${plural(list.length, "guideline")}</p>
-      ${guidelinesBlock(list, true, specName)}`;
+      ${guidelinesBlock(list, specName)}`;
   }
 
   function viewRecent() {
