@@ -28,7 +28,9 @@ every issuing society.
   Set `enabled: false` to pause a source.
 * **Add a condition / change tagging:** edit `conditions.yaml`. A guideline is
   tagged with a condition when one of its `match` phrases appears in the title,
-  major-topic MeSH headings or keywords; the condition's specialty is added too.
+  major-topic MeSH headings or keywords. Each condition has one home specialty.
+  Specialty pages list a condition only under that specialty, so a guideline
+  about two diseases does not show the second disease as a topic of the first.
 * After a change, run the **Refresh guidelines** workflow manually (Actions tab →
   *Refresh guidelines* → *Run workflow*) or wait for the daily run. The
   *Sources and coverage* page in the app shows how many guidelines each source

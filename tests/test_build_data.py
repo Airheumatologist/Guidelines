@@ -248,8 +248,38 @@ class TaggingTests(unittest.TestCase):
         names, _ = self.tag("Guidelines for shivering in hospital wards")
         self.assertNotIn("HIV", names)
 
+    def test_cross_specialty_phrases_stay_put(self):
+        # Inflammatory myopathy is rheumatology, not a neurologic myopathy.
+        names, specs = self.tag("2023 guideline for idiopathic inflammatory myopathies")
+        self.assertIn("Idiopathic Inflammatory Myopathies", names)
+        self.assertNotIn("Neuromuscular Disorders", names)
+        self.assertIn("Rheumatology", specs)
+        self.assertNotIn("Neurology", specs)
+        # Adult "pregnancy and lactation" drug guidance is not child nutrition.
+        names, _ = self.tag("Recommendations for antirheumatic drugs in pregnancy and lactation")
+        self.assertNotIn("Child Growth and Nutrition", names)
+        # Cardiogenic shock is heart failure, not a fluids guideline.
+        names, _ = self.tag("Guideline for cardiogenic shock")
+        self.assertNotIn("Fluid and Shock Management", names)
+        self.assertIn("Heart Failure", names)
+        # Procedural analgesia is not the pain-management topic.
+        names, _ = self.tag("Labour epidural analgesia guideline")
+        self.assertNotIn("Pain Management and Opioids", names)
+        names, _ = self.tag("Guidelines for the treatment of heat stroke")
+        self.assertNotIn("Stroke", names)
+        names, _ = self.tag("Guideline for acute ischemic stroke")
+        self.assertIn("Stroke", names)
+
     def test_all_patterns_compile(self):
         self.assertGreater(len(self.tagger.conditions), 100)
+
+    def test_condition_specialties_are_unique(self):
+        rows = yaml.safe_load((ROOT / "conditions.yaml").read_text())
+        names = [c["name"] for c in rows]
+        self.assertEqual(len(names), len(set(names)))
+        for c in rows:
+            self.assertTrue(c["specialty"] and c["specialty"] != "multi", c["name"])
+            self.assertTrue(c["match"], c["name"])
 
 
 class MergeTests(unittest.TestCase):

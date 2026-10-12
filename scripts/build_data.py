@@ -894,15 +894,21 @@ def main(argv: list[str] | None = None) -> int:
     if args.dry_run:
         return 0
 
+    condition_rows = yaml.safe_load(CONDITIONS_FILE.read_text())
     payload = {
         "generated": now.isoformat(),
         "sources": [{k: s[k] for k in ("id", "name", "abbr", "specialty")} for s in cfg["sources"]
                     if s.get("enabled", True)],
         "report": report,
         # Plain synonyms per condition so the app's search finds "ankylosing" etc.
+        # condition_specialties is the canonical home of each topic. The specialty
+        # page lists only conditions whose home is that specialty, so a guideline
+        # that mentions two diseases does not file the second disease under the
+        # first disease's specialty.
         "condition_terms": {c["name"]: [t for t in (" ".join(re.sub(r"\\[wbds]|[\\()?*+|\[\]^${}.:]", " ", m).split())
                                                     for m in c["match"]) if t]
-                            for c in yaml.safe_load(CONDITIONS_FILE.read_text())},
+                            for c in condition_rows},
+        "condition_specialties": {c["name"]: c["specialty"] for c in condition_rows},
         "guidelines": guidelines,
     }
     DATA_FILE.parent.mkdir(parents=True, exist_ok=True)

@@ -129,14 +129,23 @@
     const name = [...bySpecialty.keys()].find((x) => slug(x) === s);
     if (!name) return notFound();
     const list = bySpecialty.get(name);
+    // A guideline can mention several diseases. Only diseases whose home
+    // specialty is this one are topics of the specialty; the others stay
+    // under their own specialty. Untagged society guidelines stay as Other.
+    const homes = data.condition_specialties || null;
     const conds = new Map();
-    for (const g of list) for (const c of (g.conditions.length ? g.conditions : [OTHER])) {
-      conds.set(c, (conds.get(c) || 0) + 1);
+    for (const g of list) {
+      const tags = g.conditions.length ? g.conditions : [OTHER];
+      for (const c of tags) {
+        if (c !== OTHER && homes && homes[c] !== name) continue;
+        conds.set(c, (conds.get(c) || 0) + 1);
+      }
     }
     const condItems = sortedKeys(conds).map((c) => ({ href: `#/condition/${slug(c)}`, label: c, count: conds.get(c) }));
+    const topicCount = [...conds.keys()].filter((c) => c !== OTHER).length;
     return `<a class="crumb" href="#/specialties">‹ Specialties</a>
-      <h2>${esc(name)}</h2><p class="sub">${plural(list.length, "guideline")} · ${plural(conds.size, "condition")}</p>
-      <h3>Conditions</h3>${listHTML(condItems, false)}
+      <h2>${esc(name)}</h2><p class="sub">${plural(list.length, "guideline")} · ${plural(topicCount, "condition")}</p>
+      ${condItems.length ? `<h3>Conditions</h3>${listHTML(condItems, false)}` : ""}
       <h3>All ${esc(name)} guidelines</h3>${guidelinesBlock(list)}`;
   }
 

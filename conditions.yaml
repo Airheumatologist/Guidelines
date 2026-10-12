@@ -2,9 +2,11 @@
 #
 # A guideline is tagged with a condition when any `match` phrase appears in
 # its title, major-topic MeSH headings or keywords (case-insensitive, whole
-# words; regular expressions are allowed). The condition's specialty is added to the
-# guideline's specialties, so NICE and WHO guidelines land under the right
-# specialty too. Guidelines matching nothing appear under "Other guidelines".
+# words; regular expressions are allowed). The condition's specialty is its
+# home: it is added to the guideline, and the specialty page lists the
+# condition only under that home specialty. A guideline that matches several
+# conditions does not file the other diseases under this one. Guidelines
+# matching nothing appear under "Other guidelines".
 #
 # Add a condition by copying an entry. Keep names as they should be shown.
 
@@ -102,7 +104,7 @@
 # ---------------------------------------------------------------- Critical Care
 - {name: Sepsis and Septic Shock, specialty: Critical Care, match: [sepsis, septic shock, 'shock, septic', septicemia, septicaemia]}
 - {name: Acute Respiratory Distress Syndrome, specialty: Critical Care, match: [acute respiratory distress syndrome, '\bARDS\b', acute lung injury]}
-- {name: Fluid and Shock Management, specialty: Critical Care, match: [fluid therapy, 'resuscitation fluid\w*', 'shock\b', fluid resuscitation, 'intravenous fluid\w*', volume resuscitation, 'crystalloid\w*', 'colloid\w*', fluid overload]}
+- {name: Fluid and Shock Management, specialty: Critical Care, match: [fluid therapy, 'resuscitation fluid\w*', fluid resuscitation, 'intravenous fluid\w*', volume resuscitation, 'crystalloid\w*', 'colloid\w*', fluid overload, 'vasopressor\w*']}
 - {name: Delirium, specialty: Critical Care, match: [delirium]}
 
 # ------------------------------------------------ Gastroenterology & Hepatology
@@ -167,13 +169,13 @@
 - {name: Venous Thromboembolism, specialty: Hematology, match: [venous thromboembolism, 'venous thrombos\w*', pulmonary embolism, 'pulmonary thromboembol\w*', 'deep vein thrombos\w*', 'deep venous thrombos\w*', thromboprophylaxis, '\bVTE\b', '\bDVT\b']}
 
 # -------------------------------------------------------------------- Neurology
-- {name: Stroke, specialty: Neurology, match: [stroke, 'transient isch[ae]mic attack', 'intracerebral h[ae]morrhage', 'subarachnoid h[ae]morrhage', 'intracranial h[ae]morrhage', cerebrovascular accident, cerebrovascular]}
+- {name: Stroke, specialty: Neurology, match: ['(?<!heat )\bstrokes?\b', 'transient isch[ae]mic attack', 'intracerebral h[ae]morrhage', 'subarachnoid h[ae]morrhage', 'intracranial h[ae]morrhage', cerebrovascular accident, cerebrovascular]}
 - {name: Epilepsy, specialty: Neurology, match: ['epilep\w*', 'seizure\w*', status epilepticus]}
 - {name: Multiple Sclerosis, specialty: Neurology, match: [multiple sclerosis, neuromyelitis optica]}
 - {name: Parkinson Disease, specialty: Neurology, match: ['parkinson\w*']}
 - {name: Dementia, specialty: Neurology, match: [dementia, 'alzheimer\w*', cognitive impairment, cognitive decline, cognitive dysfunction, neurocognitive, 'lewy bod\w*']}
 - {name: Migraine and Headache, specialty: Neurology, match: ['migraine\w*', 'headache\w*', 'cephalalg\w*']}
-- {name: Neuromuscular Disorders, specialty: Neurology, match: [myasthenia, 'myasthenic\w*', amyotrophic lateral sclerosis, motor neuron disease, motor neurone disease, '\bALS\b', 'guillain-barr[ée]', 'peripheral neuropath\w*', 'polyneuropath\w*', muscular dystrophy, duchenne, spinal muscular atrophy, '\bCIDP\b', charcot-marie-tooth, 'myopath\w*']}
+- {name: Neuromuscular Disorders, specialty: Neurology, match: [myasthenia, 'myasthenic\w*', amyotrophic lateral sclerosis, motor neuron disease, motor neurone disease, '\bALS\b', 'guillain-barr[ée]', 'peripheral neuropath\w*', 'polyneuropath\w*', muscular dystrophy, duchenne, spinal muscular atrophy, '\bCIDP\b', charcot-marie-tooth, '(?<!inflammatory )(?<!necrotizing )(?<!necrotising )(?<!autoimmune )\bmyopath\w*']}
 - {name: Traumatic Brain Injury, specialty: Neurology, match: [traumatic brain injury, concussion, 'head injur\w*', head trauma, brain trauma]}
 
 # ------------------------------------------------------------------- Psychiatry
@@ -220,7 +222,7 @@
 - {name: Bronchiolitis, specialty: Pediatrics, match: [acute bronchiolitis, viral bronchiolitis, bronchiolitis in children, bronchiolitis in infants, paediatric bronchiolitis, pediatric bronchiolitis, infantile bronchiolitis, 'bronchiolitis, viral']}
 - {name: Acute Otitis Media, specialty: Pediatrics, match: [acute otitis media, 'otitis media, acute', 'otitis media, suppurative', suppurative otitis media]}
 - {name: Febrile Infant, specialty: Pediatrics, match: ['febrile infant\w*', 'febrile neonate\w*', 'fever in (infants|children)', 'fever without (a )?source']}
-- {name: Child Growth and Nutrition, specialty: Pediatrics, match: [malnutrition, undernutrition, breastfeeding, breast feeding, breast milk, human milk, lactation, infant feeding, infant nutrition, failure to thrive, faltering growth, growth faltering, wasting, stunting, child growth]}
+- {name: Child Growth and Nutrition, specialty: Pediatrics, match: [malnutrition, undernutrition, breastfeeding, breast feeding, breast milk, human milk, infant feeding, infant nutrition, failure to thrive, faltering growth, growth faltering, wasting, stunting, child growth]}
 - {name: Autism Spectrum Disorder, specialty: Pediatrics, match: [autism, autistic, 'asperger\w*']}
 
 # ---------------------------------------------------------------------- Urology
@@ -242,7 +244,7 @@
 
 # --------------------------------------------------------------- Anesthesiology
 - {name: Perioperative Care, specialty: Anesthesiology, match: [perioperative, peri-operative, preoperative, pre-operative, postoperative, post-operative, intraoperative, periprocedural, peri-procedural]}
-- {name: Pain Management and Opioids, specialty: Anesthesiology, match: ['opioid\w*', chronic pain, low back pain, neuropathic pain, cancer pain, pain management, pain medicine, 'analgesi\w*', interventional pain]}
+- {name: Pain Management and Opioids, specialty: Anesthesiology, match: ['opioid\w*', chronic pain, low back pain, neuropathic pain, cancer pain, pain management, pain medicine, interventional pain]}
 
 # ------------------------------------------------------------------- Geriatrics
 - {name: Older Adults and Frailty, specialty: Geriatrics, match: [frailty, 'geriatric\w*', older adults, older people, elderly, falls prevention, polypharmacy, deprescribing]}
