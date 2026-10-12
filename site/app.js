@@ -145,8 +145,7 @@
     const topicCount = [...conds.keys()].filter((c) => c !== OTHER).length;
     return `<a class="crumb" href="#/specialties">‹ Specialties</a>
       <h2>${esc(name)}</h2><p class="sub">${plural(list.length, "guideline")} · ${plural(topicCount, "condition")}</p>
-      ${condItems.length ? `<h3>Conditions</h3>${listHTML(condItems, false)}` : ""}
-      <h3>All ${esc(name)} guidelines</h3>${guidelinesBlock(list)}`;
+      ${condItems.length ? listHTML(condItems, false) : '<p class="empty">No conditions in this specialty.</p>'}`;
   }
 
   function viewRecent() {
