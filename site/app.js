@@ -44,10 +44,14 @@
 
   // ------------------------------------------------------------ fragments
 
-  function guidelineHTML(g) {
+  function guidelineHTML(g, specName) {
     const orgs = g.sources.map((s) => `<span class="badge" title="${esc(sourcesById[s]?.name)}">${esc(sourcesById[s]?.abbr || s)}</span>`).join("");
+    const homes = data.condition_specialties || {};
+    const condHref = (c) => (specName && homes[c] === specName)
+      ? `#/specialty/${slug(specName)}/${slug(c)}`
+      : `#/condition/${slug(c)}`;
     const tags = [
-      ...g.conditions.map((c) => `<a href="#/condition/${slug(c)}">${esc(c)}</a>`),
+      ...g.conditions.map((c) => `<a href="${condHref(c)}">${esc(c)}</a>`),
       ...g.specialties.map((s) => `<a href="#/specialty/${slug(s)}">${esc(s)}</a>`),
     ].join("");
     return `<article class="g">
@@ -73,7 +77,7 @@
     return html + "</ul>";
   }
 
-  function guidelinesBlock(list, sortable = true) {
+  function guidelinesBlock(list, sortable = true, specName) {
     const id = "gl" + Math.random().toString(36).slice(2, 8);
     setTimeout(() => {
       const box = document.getElementById(id);
@@ -81,7 +85,7 @@
       const render = (mode) => {
         const arr = [...list];
         if (mode === "az") arr.sort((a, b) => a.title.localeCompare(b.title));
-        box.querySelector(".items").innerHTML = arr.map(guidelineHTML).join("") || '<p class="empty">No guidelines.</p>';
+        box.querySelector(".items").innerHTML = arr.map((g) => guidelineHTML(g, specName)).join("") || '<p class="empty">No guidelines.</p>';
         box.querySelectorAll(".seg button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.mode === mode));
       };
       box.querySelectorAll(".seg button").forEach((b) => b.addEventListener("click", () => render(b.dataset.mode)));
@@ -141,11 +145,30 @@
         conds.set(c, (conds.get(c) || 0) + 1);
       }
     }
-    const condItems = sortedKeys(conds).map((c) => ({ href: `#/condition/${slug(c)}`, label: c, count: conds.get(c) }));
+    const condItems = sortedKeys(conds).map((c) => ({
+      href: `#/specialty/${slug(name)}/${slug(c)}`, label: c, count: conds.get(c),
+    }));
     const topicCount = [...conds.keys()].filter((c) => c !== OTHER).length;
     return `<a class="crumb" href="#/specialties">‹ Specialties</a>
       <h2>${esc(name)}</h2><p class="sub">${plural(list.length, "guideline")} · ${plural(topicCount, "condition")}</p>
       ${condItems.length ? listHTML(condItems, false) : '<p class="empty">No conditions in this specialty.</p>'}`;
+  }
+
+  function viewSpecialtyTopic(specSlug, condSlug) {
+    setTab("specialties");
+    const specName = [...bySpecialty.keys()].find((x) => slug(x) === specSlug);
+    if (!specName) return notFound();
+    const inSpec = bySpecialty.get(specName);
+    const condName = condSlug === slug(OTHER)
+      ? OTHER
+      : [...inSpec.flatMap((g) => g.conditions)].find((c) => slug(c) === condSlug);
+    if (!condName) return notFound();
+    const homes = data.condition_specialties || null;
+    if (condName !== OTHER && homes && homes[condName] !== specName) return notFound();
+    const list = inSpec.filter((g) => (condName === OTHER ? !g.conditions.length : g.conditions.includes(condName)));
+    return `<a class="crumb" href="#/specialty/${slug(specName)}">‹ ${esc(specName)}</a>
+      <h2>${esc(condName)}</h2><p class="sub">${plural(list.length, "guideline")}</p>
+      ${guidelinesBlock(list, true, specName)}`;
   }
 
   function viewRecent() {
@@ -205,11 +228,12 @@
   function route() {
     if (!data) return;
     const term = q.value.trim();
-    const [, page, arg] = location.hash.replace(/^#/, "").split("/");
+    const [, page, arg, sub] = location.hash.replace(/^#/, "").split("/");
     let html;
     if (term && !page) html = viewSearch(term);
     else if (page === "specialties") html = viewSpecialties();
     else if (page === "condition") html = viewCondition(arg);
+    else if (page === "specialty" && sub) html = viewSpecialtyTopic(arg, sub);
     else if (page === "specialty") html = viewSpecialty(arg);
     else if (page === "recent") html = viewRecent();
     else if (page === "sources") html = viewSources();
