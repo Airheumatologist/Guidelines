@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T20:41:09+00:00",
+ "generated": "2026-10-13T12:50:38+00:00",
  "sources": [
   {
    "id": "who",
@@ -1218,8 +1218,8 @@
    "id": "eshre",
    "abbr": "ESHRE",
    "pubmed": {
-    "matches": 34,
-    "kept": 34
+    "matches": 35,
+    "kept": 35
    },
    "rss": null,
    "web": null,
@@ -1548,8 +1548,8 @@
    "id": "escmid",
    "abbr": "ESCMID",
    "pubmed": {
-    "matches": 46,
-    "kept": 44
+    "matches": 47,
+    "kept": 45
    },
    "rss": null,
    "web": null,
@@ -3447,6 +3447,44 @@
    "first_seen": "2026-10-11"
   },
   {
+   "id": "pmid-42862606",
+   "title": "Structured reporting of diagnostic hysteroscopy findings in women with reproductive disorders: an ESGE-ESHRE-IFFS international consensus†ǂ",
+   "url": "https://doi.org/10.1093/humrep/deag143",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42862606/",
+   "doi": "10.1093/humrep/deag143",
+   "journal": "Hum Reprod",
+   "date": "2026-10-12",
+   "sources": [
+    "eshre"
+   ],
+   "specialties": [
+    "Obstetrics & Gynecology"
+   ],
+   "conditions": [
+    "Infertility"
+   ],
+   "first_seen": "2026-10-13"
+  },
+  {
+   "id": "pmid-42863756",
+   "title": "Mechanism and nomenclature of methicillin resistance in Staphylococcus aureus and implications for testing interpretation and management. A position statement on behalf of the Staphylococcus aureus working groups ISAC-SAWG and ESCMID-ESGS",
+   "url": "https://doi.org/10.1016/j.cmi.2026.09.030",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42863756/",
+   "doi": "10.1016/j.cmi.2026.09.030",
+   "journal": "Clin Microbiol Infect",
+   "date": "2026-10-12",
+   "sources": [
+    "escmid"
+   ],
+   "specialties": [
+    "Infectious Diseases"
+   ],
+   "conditions": [
+    "Antimicrobial Resistance"
+   ],
+   "first_seen": "2026-10-13"
+  },
+  {
    "id": "pmid-42860272",
    "title": "ERS/ESRS clinical practice guideline for continuous positive airway pressure for the treatment of adult obstructive sleep apnoea",
    "url": "https://doi.org/10.1183/13993003.01186-2026",
@@ -5169,8 +5207,7 @@
     "Cardiology"
    ],
    "conditions": [
-    "Infective Endocarditis",
-    "Valvular Heart Disease"
+    "Infective Endocarditis"
    ],
    "first_seen": "2026-10-11"
   },
