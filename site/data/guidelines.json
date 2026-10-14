@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-13T12:50:38+00:00",
+ "generated": "2026-10-14T10:23:41+00:00",
  "sources": [
   {
    "id": "who",
@@ -589,8 +589,8 @@
    "id": "who",
    "abbr": "WHO",
    "pubmed": {
-    "matches": 196,
-    "kept": 196
+    "matches": 197,
+    "kept": 197
    },
    "rss": null,
    "web": 13,
@@ -644,8 +644,8 @@
    "id": "aha-acc",
    "abbr": "AHA/ACC",
    "pubmed": {
-    "matches": 852,
-    "kept": 828
+    "matches": 853,
+    "kept": 829
    },
    "rss": 4,
    "web": null,
@@ -656,8 +656,8 @@
    "id": "esc",
    "abbr": "ESC",
    "pubmed": {
-    "matches": 683,
-    "kept": 651
+    "matches": 684,
+    "kept": 652
    },
    "rss": null,
    "web": null,
@@ -1438,8 +1438,8 @@
    "id": "bsr",
    "abbr": "BSR",
    "pubmed": {
-    "matches": 51,
-    "kept": 49
+    "matches": 52,
+    "kept": 50
    },
    "rss": null,
    "web": null,
@@ -3447,6 +3447,46 @@
    "first_seen": "2026-10-11"
   },
   {
+   "id": "pmid-42867067",
+   "title": "The 'ten commandments' for the 2025 European Society of Cardiology guidelines on myocarditis and pericarditis",
+   "url": "https://doi.org/10.1093/eurheartj/ehag766",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42867067/",
+   "doi": "10.1093/eurheartj/ehag766",
+   "journal": "Eur Heart J",
+   "date": "2026-10-13",
+   "sources": [
+    "esc"
+   ],
+   "specialties": [
+    "Cardiology"
+   ],
+   "conditions": [
+    "Myocarditis",
+    "Pericarditis"
+   ],
+   "first_seen": "2026-10-14"
+  },
+  {
+   "id": "pmid-42866888",
+   "title": "Multidisciplinary Approach to Antiplatelet Management in Coronary Syndromes: A Scientific Statement From the American Heart Association",
+   "url": "https://doi.org/10.1161/cir.0000000000001478",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42866888/",
+   "doi": "10.1161/cir.0000000000001478",
+   "journal": "Circulation",
+   "date": "2026-10-13",
+   "sources": [
+    "aha-acc"
+   ],
+   "specialties": [
+    "Cardiology"
+   ],
+   "conditions": [
+    "Acute Coronary Syndromes",
+    "Coronary Artery Disease"
+   ],
+   "first_seen": "2026-10-14"
+  },
+  {
    "id": "pmid-42862606",
    "title": "Structured reporting of diagnostic hysteroscopy findings in women with reproductive disorders: an ESGE-ESHRE-IFFS international consensus†ǂ",
    "url": "https://doi.org/10.1093/humrep/deag143",
@@ -4035,6 +4075,25 @@
     "Urinary Tract Infection"
    ],
    "first_seen": "2026-10-11"
+  },
+  {
+   "id": "pmid-42869454",
+   "title": "The 2026 British Society for Rheumatology guideline for the treatment of polymyalgia rheumatica",
+   "url": "https://doi.org/10.1093/rheumatology/keag502",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42869454/",
+   "doi": "10.1093/rheumatology/keag502",
+   "journal": "Rheumatology (Oxford)",
+   "date": "2026-10-01",
+   "sources": [
+    "bsr"
+   ],
+   "specialties": [
+    "Rheumatology"
+   ],
+   "conditions": [
+    "Vasculitis"
+   ],
+   "first_seen": "2026-10-14"
   },
   {
    "id": "pmid-42861475",
@@ -20151,6 +20210,25 @@
     "Cervical Cancer and Screening"
    ],
    "first_seen": "2026-10-11"
+  },
+  {
+   "id": "pmid-42866503",
+   "title": "WHO consolidated guidelines on tuberculosis: Module 4: treatment and care",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42866503/",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42866503/",
+   "doi": null,
+   "journal": "World Health Organization",
+   "date": "2026-01-01",
+   "sources": [
+    "who"
+   ],
+   "specialties": [
+    "Infectious Diseases"
+   ],
+   "conditions": [
+    "Tuberculosis"
+   ],
+   "first_seen": "2026-10-14"
   },
   {
    "id": "pmid-42160652",
@@ -38126,25 +38204,6 @@
    "title": "WHO consolidated guidelines on tuberculosis: Module 6: Tuberculosis and comorbidities",
    "url": "https://pubmed.ncbi.nlm.nih.gov/41264753/",
    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/41264753/",
-   "doi": null,
-   "journal": "World Health Organization",
-   "date": "2025-01-01",
-   "sources": [
-    "who"
-   ],
-   "specialties": [
-    "Infectious Diseases"
-   ],
-   "conditions": [
-    "Tuberculosis"
-   ],
-   "first_seen": "2026-10-11"
-  },
-  {
-   "id": "pmid-40163610",
-   "title": "WHO consolidated guidelines on tuberculosis: Module 4: Treatment and care",
-   "url": "https://pubmed.ncbi.nlm.nih.gov/40163610/",
-   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/40163610/",
    "doi": null,
    "journal": "World Health Organization",
    "date": "2025-01-01",
