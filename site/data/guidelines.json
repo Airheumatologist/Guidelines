@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T10:23:41+00:00",
+ "generated": "2026-10-15T10:06:22+00:00",
  "sources": [
   {
    "id": "who",
@@ -733,13 +733,12 @@
   {
    "id": "aga",
    "abbr": "AGA",
-   "pubmed": {
-    "matches": 161,
-    "kept": 159
-   },
+   "pubmed": null,
    "rss": null,
    "web": null,
-   "errors": []
+   "errors": [
+    "pubmed: Search Backend failed: An error occurred while processing request. Status: 500. Source: /api/search/?r= Details: Search is temporarily unavailable. Please try again later."
+   ]
   },
   {
    "id": "aasld",
@@ -766,20 +765,19 @@
   {
    "id": "kdigo",
    "abbr": "KDIGO",
-   "pubmed": {
-    "matches": 101,
-    "kept": 92
-   },
+   "pubmed": null,
    "rss": null,
    "web": null,
-   "errors": []
+   "errors": [
+    "pubmed: Search Backend failed: An error occurred while processing request. Status: 500. Source: /api/search/?r= Details: Search is temporarily unavailable. Please try again later. Details: Cannot connect to SOLR : null"
+   ]
   },
   {
    "id": "asco",
    "abbr": "ASCO",
    "pubmed": {
-    "matches": 277,
-    "kept": 274
+    "matches": 278,
+    "kept": 275
    },
    "rss": null,
    "web": null,
@@ -800,8 +798,8 @@
    "id": "nccn",
    "abbr": "NCCN",
    "pubmed": {
-    "matches": 127,
-    "kept": 126
+    "matches": 128,
+    "kept": 127
    },
    "rss": null,
    "web": null,
@@ -811,8 +809,8 @@
    "id": "ash",
    "abbr": "ASH",
    "pubmed": {
-    "matches": 60,
-    "kept": 57
+    "matches": 61,
+    "kept": 58
    },
    "rss": null,
    "web": null,
@@ -1184,13 +1182,12 @@
   {
    "id": "smfm",
    "abbr": "SMFM",
-   "pubmed": {
-    "matches": 127,
-    "kept": 126
-   },
+   "pubmed": null,
    "rss": null,
    "web": null,
-   "errors": []
+   "errors": [
+    "pubmed: Search Backend failed: An error occurred while processing request. Status: 500. Source: /api/search/?r= Details: Search is temporarily unavailable. Please try again later. Details: Cannot connect to SOLR : null"
+   ]
   },
   {
    "id": "sogc",
@@ -3447,6 +3444,42 @@
    "first_seen": "2026-10-11"
   },
   {
+   "id": "pmid-42874012",
+   "title": "Treatment of Advanced Biliary Tract Cancer: ASCO Living Guideline, Version 2026.1.0",
+   "url": "https://doi.org/10.1200/jco-26-02462",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42874012/",
+   "doi": "10.1200/jco-26-02462",
+   "journal": "J Clin Oncol",
+   "date": "2026-10-14",
+   "sources": [
+    "asco"
+   ],
+   "specialties": [
+    "Oncology"
+   ],
+   "conditions": [],
+   "first_seen": "2026-10-15"
+  },
+  {
+   "id": "pmid-42873117",
+   "title": "American Society of Hematology 2026 Guidelines for the Management of Myelofibrosis in Adults",
+   "url": "https://doi.org/10.1182/bloodadvances.2026021650",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42873117/",
+   "doi": "10.1182/bloodadvances.2026021650",
+   "journal": "Blood Adv",
+   "date": "2026-10-14",
+   "sources": [
+    "ash"
+   ],
+   "specialties": [
+    "Hematology"
+   ],
+   "conditions": [
+    "Myelodysplastic and Myeloproliferative Neoplasms"
+   ],
+   "first_seen": "2026-10-15"
+  },
+  {
    "id": "pmid-42867067",
    "title": "The 'ten commandments' for the 2025 European Society of Cardiology guidelines on myocarditis and pericarditis",
    "url": "https://doi.org/10.1093/eurheartj/ehag766",
@@ -4111,6 +4144,26 @@
    ],
    "conditions": [],
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "pmid-42874666",
+   "title": "NCCN Guidelines® Insights: Hepatocellular Carcinoma, Version 2.2026",
+   "url": "https://doi.org/10.6004/jnccn.2026.0047",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42874666/",
+   "doi": "10.6004/jnccn.2026.0047",
+   "journal": "J Natl Compr Canc Netw",
+   "date": "2026-10-01",
+   "sources": [
+    "nccn"
+   ],
+   "specialties": [
+    "Gastroenterology & Hepatology",
+    "Oncology"
+   ],
+   "conditions": [
+    "Hepatocellular Carcinoma"
+   ],
+   "first_seen": "2026-10-15"
   },
   {
    "id": "pmid-42843933",
@@ -7704,7 +7757,6 @@
    "journal": "Am J Kidney Dis",
    "date": "2026-08-01",
    "sources": [
-    "kdigo",
     "nkf"
    ],
    "specialties": [
@@ -9841,12 +9893,12 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "pmid-42366997",
+   "id": "pmid-42370864",
    "title": "AHA/ACC/ESC/WHF Expert Consensus Document: Second Universal Definition of Heart Failure (2026)",
-   "url": "https://doi.org/10.1161/cir.0000000000001455",
-   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42366997/",
-   "doi": "10.1161/cir.0000000000001455",
-   "journal": "Circulation",
+   "url": "https://doi.org/10.1016/j.jacc.2026.05.036",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42370864/",
+   "doi": "10.1016/j.jacc.2026.05.036",
+   "journal": "J Am Coll Cardiol",
    "date": "2026-06-29",
    "sources": [
     "aha-acc",
@@ -9858,7 +9910,7 @@
    "conditions": [
     "Heart Failure"
    ],
-   "first_seen": "2026-10-11"
+   "first_seen": "2026-10-15"
   },
   {
    "id": "pmid-42364818",
@@ -12540,7 +12592,6 @@
    "journal": "Am J Kidney Dis",
    "date": "2026-05-07",
    "sources": [
-    "kdigo",
     "nkf"
    ],
    "specialties": [
@@ -12562,7 +12613,6 @@
    "journal": "Am J Kidney Dis",
    "date": "2026-05-07",
    "sources": [
-    "kdigo",
     "nkf"
    ],
    "specialties": [
@@ -13078,7 +13128,6 @@
    "journal": "Am J Kidney Dis",
    "date": "2026-05-01",
    "sources": [
-    "kdigo",
     "nkf"
    ],
    "specialties": [
@@ -14690,7 +14739,6 @@
    "journal": "Am J Kidney Dis",
    "date": "2026-04-01",
    "sources": [
-    "kdigo",
     "nkf"
    ],
    "specialties": [
@@ -18902,7 +18950,6 @@
    "journal": "Am J Kidney Dis",
    "date": "2026-02-01",
    "sources": [
-    "kdigo",
     "nkf"
    ],
    "specialties": [
@@ -40390,7 +40437,6 @@
    "journal": "Am J Kidney Dis",
    "date": "2024-11-18",
    "sources": [
-    "kdigo",
     "nkf"
    ],
    "specialties": [
@@ -55805,7 +55851,6 @@
    "journal": "Am J Kidney Dis",
    "date": "2023-12-21",
    "sources": [
-    "kdigo",
     "nkf"
    ],
    "specialties": [
@@ -63817,7 +63862,6 @@
    "journal": "Am J Kidney Dis",
    "date": "2023-06-21",
    "sources": [
-    "kdigo",
     "nkf"
    ],
    "specialties": [
@@ -64776,8 +64820,7 @@
    "journal": "Gastroenterology",
    "date": "2023-06-01",
    "sources": [
-    "acg",
-    "aga"
+    "acg"
    ],
    "specialties": [
     "Gastroenterology & Hepatology"
@@ -73018,8 +73061,7 @@
    "journal": "Diabetes Care",
    "date": "2022-12-01",
    "sources": [
-    "ada",
-    "kdigo"
+    "ada"
    ],
    "specialties": [
     "Endocrinology",
@@ -85195,7 +85237,6 @@
    "journal": "Am J Kidney Dis",
    "date": "2022-02-07",
    "sources": [
-    "kdigo",
     "nkf"
    ],
    "specialties": [
@@ -86464,7 +86505,6 @@
    "journal": "Am J Kidney Dis",
    "date": "2022-01-18",
    "sources": [
-    "kdigo",
     "nkf"
    ],
    "specialties": [
@@ -100401,7 +100441,6 @@
    "journal": "Am J Kidney Dis",
    "date": "2021-03-18",
    "sources": [
-    "kdigo",
     "nkf"
    ],
    "specialties": [
@@ -116349,16 +116388,15 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "pmid-32359563",
-   "title": "Technical Review on the Management of Eosinophilic Esophagitis: A Report From the AGA Institute and the Joint Task Force on Allergy-Immunology Practice Parameters",
-   "url": "https://doi.org/10.1053/j.gastro.2020.02.039",
-   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/32359563/",
-   "doi": "10.1053/j.gastro.2020.02.039",
-   "journal": "Gastroenterology",
+   "id": "pmid-32336463",
+   "title": "Technical review on the management of eosinophilic esophagitis: a report from the AGA institute and the joint task force on allergy-immunology practice parameters",
+   "url": "https://doi.org/10.1016/j.anai.2020.03.021",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/32336463/",
+   "doi": "10.1016/j.anai.2020.03.021",
+   "journal": "Ann Allergy Asthma Immunol",
    "date": "2020-05-01",
    "sources": [
-    "aaaai-acaai",
-    "aga"
+    "aaaai-acaai"
    ],
    "specialties": [
     "Allergy & Immunology",
@@ -116369,7 +116407,7 @@
     "Eosinophilic Esophagitis",
     "Nutrition"
    ],
-   "first_seen": "2026-10-11"
+   "first_seen": "2026-10-15"
   },
   {
    "id": "pmid-32198653",
@@ -116872,16 +116910,15 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "pmid-32359562",
-   "title": "AGA Institute and the Joint Task Force on Allergy-Immunology Practice Parameters Clinical Guidelines for the Management of Eosinophilic Esophagitis",
-   "url": "https://doi.org/10.1053/j.gastro.2020.02.038",
-   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/32359562/",
-   "doi": "10.1053/j.gastro.2020.02.038",
-   "journal": "Gastroenterology",
+   "id": "pmid-32336462",
+   "title": "AGA institute and the joint task force on allergy-immunology practice parameters clinical guidelines for the management of eosinophilic esophagitis",
+   "url": "https://doi.org/10.1016/j.anai.2020.03.020",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/32336462/",
+   "doi": "10.1016/j.anai.2020.03.020",
+   "journal": "Ann Allergy Asthma Immunol",
    "date": "2020-05-01",
    "sources": [
-    "aaaai-acaai",
-    "aga"
+    "aaaai-acaai"
    ],
    "specialties": [
     "Allergy & Immunology",
@@ -116890,7 +116927,7 @@
    "conditions": [
     "Eosinophilic Esophagitis"
    ],
-   "first_seen": "2026-10-11"
+   "first_seen": "2026-10-15"
   },
   {
    "id": "pmid-32349542",
@@ -118021,7 +118058,6 @@
    "journal": "Am J Kidney Dis",
    "date": "2020-04-09",
    "sources": [
-    "kdigo",
     "nkf"
    ],
    "specialties": [
@@ -121856,7 +121892,6 @@
    "journal": "Am J Kidney Dis",
    "date": "2020-01-29",
    "sources": [
-    "kdigo",
     "nkf"
    ],
    "specialties": [
