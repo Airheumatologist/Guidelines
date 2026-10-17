@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16T09:58:05+00:00",
+ "generated": "2026-10-17T09:32:50+00:00",
  "sources": [
   {
    "id": "who",
@@ -789,8 +789,8 @@
    "id": "esmo",
    "abbr": "ESMO",
    "pubmed": {
-    "matches": 186,
-    "kept": 184
+    "matches": 187,
+    "kept": 185
    },
    "rss": null,
    "web": null,
@@ -1614,8 +1614,8 @@
    "id": "aafp",
    "abbr": "AAFP",
    "pubmed": {
-    "matches": 9,
-    "kept": 9
+    "matches": 10,
+    "kept": 10
    },
    "rss": null,
    "web": null,
@@ -3428,6 +3428,25 @@
  },
  "guidelines": [
   {
+   "id": "pmid-42887130",
+   "title": "Pan-Asian adapted ESMO Clinical Practice Guidelines for the diagnosis, treatment and follow-up of patients with early and locally advanced non-small-cell lung cancer",
+   "url": "https://doi.org/10.1016/j.esmoop.2026.108533",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42887130/",
+   "doi": "10.1016/j.esmoop.2026.108533",
+   "journal": "ESMO Open",
+   "date": "2027-12-31",
+   "sources": [
+    "esmo"
+   ],
+   "specialties": [
+    "Oncology"
+   ],
+   "conditions": [
+    "Lung Cancer"
+   ],
+   "first_seen": "2026-10-17"
+  },
+  {
    "id": "pmid-42805503",
    "title": "EASL-EASD-EASO Guidance for the Use of Resmetirom and Semaglutide as MASH-Targeted Therapy",
    "url": "https://doi.org/10.1016/j.jhep.2026.08.028",
@@ -3464,6 +3483,25 @@
     "Menopause"
    ],
    "first_seen": "2026-10-16"
+  },
+  {
+   "id": "pmid-42617047",
+   "title": "American Society of Hematology 2026 guidelines for immune thrombocytopenia: initial and second-line therapy for adults with primary ITP",
+   "url": "https://doi.org/10.1182/bloodadvances.2026021269",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42617047/",
+   "doi": "10.1182/bloodadvances.2026021269",
+   "journal": "Blood Adv",
+   "date": "2026-10-27",
+   "sources": [
+    "ash"
+   ],
+   "specialties": [
+    "Hematology"
+   ],
+   "conditions": [
+    "Immune Thrombocytopenia"
+   ],
+   "first_seen": "2026-10-11"
   },
   {
    "id": "pmid-42877955",
@@ -4230,6 +4268,26 @@
     "Vasculitis"
    ],
    "first_seen": "2026-10-14"
+  },
+  {
+   "id": "pmid-42886184",
+   "title": "Practice Alert: AAFP 2026-2027 Respiratory Vaccine Recommendations for Adults",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42886184/",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42886184/",
+   "doi": null,
+   "journal": "Am Fam Physician",
+   "date": "2026-10-01",
+   "sources": [
+    "aafp"
+   ],
+   "specialties": [
+    "Family Medicine",
+    "Preventive Medicine"
+   ],
+   "conditions": [
+    "Vaccination"
+   ],
+   "first_seen": "2026-10-17"
   },
   {
    "id": "pmid-42861475",
@@ -6975,25 +7033,6 @@
    ],
    "conditions": [
     "Multiple Myeloma"
-   ],
-   "first_seen": "2026-10-11"
-  },
-  {
-   "id": "pmid-42617047",
-   "title": "American Society of Hematology 2026 Guidelines for Immune Thrombocytopenia (ITP): Initial and Second-Line Therapy in Adults with Primary ITP",
-   "url": "https://doi.org/10.1182/bloodadvances.2026021269",
-   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42617047/",
-   "doi": "10.1182/bloodadvances.2026021269",
-   "journal": "Blood Adv",
-   "date": "2026-08-19",
-   "sources": [
-    "ash"
-   ],
-   "specialties": [
-    "Hematology"
-   ],
-   "conditions": [
-    "Immune Thrombocytopenia"
    ],
    "first_seen": "2026-10-11"
   },
@@ -10352,9 +10391,12 @@
     "aasld"
    ],
    "specialties": [
+    "Anesthesiology",
     "Gastroenterology & Hepatology"
    ],
-   "conditions": [],
+   "conditions": [
+    "Perioperative Care"
+   ],
    "first_seen": "2026-10-11"
   },
   {
