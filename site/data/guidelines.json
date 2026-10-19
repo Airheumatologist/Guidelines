@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-18T09:45:40+00:00",
+ "generated": "2026-10-19T10:57:41+00:00",
  "sources": [
   {
    "id": "who",
@@ -910,8 +910,8 @@
    "id": "aap",
    "abbr": "AAP",
    "pubmed": {
-    "matches": 418,
-    "kept": 417
+    "matches": 420,
+    "kept": 419
    },
    "rss": null,
    "web": null,
@@ -3502,6 +3502,40 @@
     "Immune Thrombocytopenia"
    ],
    "first_seen": "2026-10-11"
+  },
+  {
+   "id": "pmid-42894310",
+   "title": "Oral Health for Adolescents: Technical Report",
+   "url": "https://doi.org/10.1542/peds.2026-077688",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42894310/",
+   "doi": "10.1542/peds.2026-077688",
+   "journal": "Pediatrics",
+   "date": "2026-10-19",
+   "sources": [
+    "aap"
+   ],
+   "specialties": [
+    "Pediatrics"
+   ],
+   "conditions": [],
+   "first_seen": "2026-10-19"
+  },
+  {
+   "id": "pmid-42894291",
+   "title": "Oral Health for Adolescents: Clinical Report",
+   "url": "https://doi.org/10.1542/peds.2026-079040",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42894291/",
+   "doi": "10.1542/peds.2026-079040",
+   "journal": "Pediatrics",
+   "date": "2026-10-19",
+   "sources": [
+    "aap"
+   ],
+   "specialties": [
+    "Pediatrics"
+   ],
+   "conditions": [],
+   "first_seen": "2026-10-19"
   },
   {
    "id": "pmid-42877955",
