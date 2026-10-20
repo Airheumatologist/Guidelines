@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-19T10:57:41+00:00",
+ "generated": "2026-10-20T10:13:14+00:00",
  "sources": [
   {
    "id": "who",
@@ -644,8 +644,8 @@
    "id": "aha-acc",
    "abbr": "AHA/ACC",
    "pubmed": {
-    "matches": 855,
-    "kept": 831
+    "matches": 856,
+    "kept": 832
    },
    "rss": 4,
    "web": null,
@@ -656,8 +656,8 @@
    "id": "esc",
    "abbr": "ESC",
    "pubmed": {
-    "matches": 684,
-    "kept": 652
+    "matches": 685,
+    "kept": 653
    },
    "rss": null,
    "web": null,
@@ -899,8 +899,8 @@
    "id": "acog",
    "abbr": "ACOG",
    "pubmed": {
-    "matches": 395,
-    "kept": 381
+    "matches": 396,
+    "kept": 382
    },
    "rss": null,
    "web": null,
@@ -1119,8 +1119,8 @@
    "id": "esicm",
    "abbr": "ESICM",
    "pubmed": {
-    "matches": 34,
-    "kept": 34
+    "matches": 35,
+    "kept": 35
    },
    "rss": null,
    "web": null,
@@ -3504,6 +3504,40 @@
    "first_seen": "2026-10-11"
   },
   {
+   "id": "pmid-42895021",
+   "title": "Standardization of Collected Biobank Data to Facilitate Cardiovascular Research: A Scientific Statement From the American Heart Association",
+   "url": "https://doi.org/10.1161/hcg.0000000000000102",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42895021/",
+   "doi": "10.1161/hcg.0000000000000102",
+   "journal": "Circ Genom Precis Med",
+   "date": "2026-10-19",
+   "sources": [
+    "aha-acc"
+   ],
+   "specialties": [
+    "Cardiology"
+   ],
+   "conditions": [],
+   "first_seen": "2026-10-20"
+  },
+  {
+   "id": "pmid-42895539",
+   "title": "Promoting equity, diversity and inclusion in intensive Care: a position paper of the European Society of Intensive Care Medicine",
+   "url": "https://doi.org/10.1007/s00134-026-08653-6",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42895539/",
+   "doi": "10.1007/s00134-026-08653-6",
+   "journal": "Intensive Care Med",
+   "date": "2026-10-19",
+   "sources": [
+    "esicm"
+   ],
+   "specialties": [
+    "Critical Care"
+   ],
+   "conditions": [],
+   "first_seen": "2026-10-20"
+  },
+  {
    "id": "pmid-42894310",
    "title": "Oral Health for Adolescents: Technical Report",
    "url": "https://doi.org/10.1542/peds.2026-077688",
@@ -3536,6 +3570,25 @@
    ],
    "conditions": [],
    "first_seen": "2026-10-19"
+  },
+  {
+   "id": "pmid-42895118",
+   "title": "Management of Heart transplant recipients for the non Heart Transplant health care provider. A Clinical Consensus Statement of the Heart Failure Association (HFA) and the Association of Cardiovascular Nursing & Allied Professions (ACNAP) of the ESC",
+   "url": "https://doi.org/10.1093/ejhf/xuag326",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42895118/",
+   "doi": "10.1093/ejhf/xuag326",
+   "journal": "Eur J Heart Fail",
+   "date": "2026-10-19",
+   "sources": [
+    "esc"
+   ],
+   "specialties": [
+    "Cardiology"
+   ],
+   "conditions": [
+    "Heart Failure"
+   ],
+   "first_seen": "2026-10-20"
   },
   {
    "id": "pmid-42877955",
@@ -5178,11 +5231,9 @@
    ],
    "specialties": [
     "Cardiology",
-    "Endocrinology",
     "Neurology"
    ],
    "conditions": [
-    "Diabetes Mellitus",
     "Stroke"
    ],
    "first_seen": "2026-10-11"
@@ -5222,6 +5273,26 @@
     "Bladder and Kidney Cancer"
    ],
    "first_seen": "2026-10-11"
+  },
+  {
+   "id": "pmid-42743436",
+   "title": "Hormonal Options for Perimenopause: A Clinician Toolkit",
+   "url": "https://doi.org/10.1097/aog.0000000000006436",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42743436/",
+   "doi": "10.1097/aog.0000000000006436",
+   "journal": "Obstet Gynecol",
+   "date": "2026-09-15",
+   "sources": [
+    "acog"
+   ],
+   "specialties": [
+    "Obstetrics & Gynecology"
+   ],
+   "conditions": [
+    "Contraception",
+    "Menopause"
+   ],
+   "first_seen": "2026-10-20"
   },
   {
    "id": "pmid-42744915",
