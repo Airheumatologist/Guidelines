@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T10:13:14+00:00",
+ "generated": "2026-10-21T10:21:07+00:00",
  "sources": [
   {
    "id": "who",
@@ -822,8 +822,8 @@
    "id": "aan",
    "abbr": "AAN",
    "pubmed": {
-    "matches": 63,
-    "kept": 46
+    "matches": 62,
+    "kept": 45
    },
    "rss": null,
    "web": 2,
@@ -877,8 +877,8 @@
    "id": "aad",
    "abbr": "AAD",
    "pubmed": {
-    "matches": 32,
-    "kept": 32
+    "matches": 33,
+    "kept": 33
    },
    "rss": null,
    "web": null,
@@ -1020,8 +1020,8 @@
    "id": "sts",
    "abbr": "STS",
    "pubmed": {
-    "matches": 77,
-    "kept": 77
+    "matches": 78,
+    "kept": 78
    },
    "rss": null,
    "web": null,
@@ -3504,6 +3504,48 @@
    "first_seen": "2026-10-11"
   },
   {
+   "id": "pmid-42901411",
+   "title": "The Society of Thoracic Surgeons (2026) Expert Consensus Document on Management of Borderline Left Heart Excluding Unbalanced Atrioventricular Septal Defect and Strategies for Biventricular Conversion",
+   "url": "https://doi.org/10.1016/j.athoracsur.2026.09.059",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42901411/",
+   "doi": "10.1016/j.athoracsur.2026.09.059",
+   "journal": "Ann Thorac Surg",
+   "date": "2026-10-20",
+   "sources": [
+    "sts"
+   ],
+   "specialties": [
+    "Cardiothoracic Surgery"
+   ],
+   "conditions": [],
+   "first_seen": "2026-10-21"
+  },
+  {
+   "id": "pmid-42900024",
+   "title": "Joint American Academy of Dermatology-Hidradenitis Suppurativa Foundation guidelines of care for the management of hidradenitis suppurativa",
+   "url": "https://doi.org/10.1016/j.jaad.2026.08.125",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42900024/",
+   "doi": "10.1016/j.jaad.2026.08.125",
+   "journal": "J Am Acad Dermatol",
+   "date": "2026-10-20",
+   "sources": [
+    "aad"
+   ],
+   "specialties": [
+    "Anesthesiology",
+    "Dermatology",
+    "Endocrinology",
+    "Preventive Medicine"
+   ],
+   "conditions": [
+    "Hidradenitis Suppurativa",
+    "Pain Management and Opioids",
+    "Smoking Cessation",
+    "Vitamin D Deficiency"
+   ],
+   "first_seen": "2026-10-21"
+  },
+  {
    "id": "pmid-42895021",
    "title": "Standardization of Collected Biobank Data to Facilitate Cardiovascular Research: A Scientific Statement From the American Heart Association",
    "url": "https://doi.org/10.1161/hcg.0000000000000102",
@@ -3768,7 +3810,7 @@
   },
   {
    "id": "pmid-42863756",
-   "title": "Mechanism and nomenclature of methicillin resistance in Staphylococcus aureus and implications for testing interpretation and management. A position statement on behalf of the Staphylococcus aureus working groups ISAC-SAWG and ESCMID-ESGS",
+   "title": "Mechanism and nomenclature of methicillin resistance in Staphylococcus aureus and implications for testing interpretation and management: a position statement on behalf of the Staphylococcus aureus working groups ISAC-SAWG and ESCMID-ESGS",
    "url": "https://doi.org/10.1016/j.cmi.2026.09.030",
    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42863756/",
    "doi": "10.1016/j.cmi.2026.09.030",
@@ -28892,23 +28934,6 @@
    "url": "https://doi.org/10.1212/wnl.0000000000210114",
    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/40638882/",
    "doi": "10.1212/wnl.0000000000210114",
-   "journal": "Neurology",
-   "date": "2025-07-10",
-   "sources": [
-    "aan"
-   ],
-   "specialties": [
-    "Neurology"
-   ],
-   "conditions": [],
-   "first_seen": "2026-10-11"
-  },
-  {
-   "id": "pmid-40638879",
-   "title": "Editors' Note: Teratogenesis, Perinatal, and Neurodevelopmental Outcomes After In Utero Exposure to Antiseizure Medication: Practice Guideline From the AAN, AES, and SMFM",
-   "url": "https://doi.org/10.1212/wnl.0000000000213924",
-   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/40638879/",
-   "doi": "10.1212/wnl.0000000000213924",
    "journal": "Neurology",
    "date": "2025-07-10",
    "sources": [
