@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-21T10:21:07+00:00",
+ "generated": "2026-10-22T10:21:17+00:00",
  "sources": [
   {
    "id": "who",
@@ -589,8 +589,8 @@
    "id": "who",
    "abbr": "WHO",
    "pubmed": {
-    "matches": 197,
-    "kept": 197
+    "matches": 199,
+    "kept": 199
    },
    "rss": null,
    "web": 13,
@@ -20536,6 +20536,44 @@
    ],
    "conditions": [],
    "first_seen": "2026-10-11"
+  },
+  {
+   "id": "pmid-42902615",
+   "title": "WHO guideline on the integrated management of obesity in children",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42902615/",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42902615/",
+   "doi": null,
+   "journal": "World Health Organization",
+   "date": "2026-01-01",
+   "sources": [
+    "who"
+   ],
+   "specialties": [
+    "Endocrinology"
+   ],
+   "conditions": [
+    "Obesity"
+   ],
+   "first_seen": "2026-10-22"
+  },
+  {
+   "id": "pmid-42902622",
+   "title": "WHO guideline on the integrated management of obesity in adolescents",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42902622/",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42902622/",
+   "doi": null,
+   "journal": "World Health Organization",
+   "date": "2026-01-01",
+   "sources": [
+    "who"
+   ],
+   "specialties": [
+    "Endocrinology"
+   ],
+   "conditions": [
+    "Obesity"
+   ],
+   "first_seen": "2026-10-22"
   },
   {
    "id": "pmid-42118904",
@@ -156139,26 +156177,6 @@
    "conditions": [
     "COVID-19",
     "Vaccination"
-   ],
-   "first_seen": "2026-10-11",
-   "web": true
-  },
-  {
-   "id": "t-who-guidelines-on-the-integrated-management-of-obesity-in-adolescents",
-   "title": "WHO guidelines on the integrated management of obesity in adolescents",
-   "url": "https://www.who.int/publications/i/item/9789240123878",
-   "pubmed": null,
-   "doi": null,
-   "journal": "WHO website",
-   "date": null,
-   "sources": [
-    "who"
-   ],
-   "specialties": [
-    "Endocrinology"
-   ],
-   "conditions": [
-    "Obesity"
    ],
    "first_seen": "2026-10-11",
    "web": true
