@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T10:21:17+00:00",
+ "generated": "2026-10-23T10:15:23+00:00",
  "sources": [
   {
    "id": "who",
@@ -822,8 +822,8 @@
    "id": "aan",
    "abbr": "AAN",
    "pubmed": {
-    "matches": 62,
-    "kept": 45
+    "matches": 60,
+    "kept": 43
    },
    "rss": null,
    "web": 2,
@@ -943,8 +943,8 @@
    "id": "aao",
    "abbr": "AAO",
    "pubmed": {
-    "matches": 119,
-    "kept": 118
+    "matches": 120,
+    "kept": 119
    },
    "rss": null,
    "web": null,
@@ -1262,8 +1262,8 @@
    "id": "estro",
    "abbr": "ESTRO",
    "pubmed": {
-    "matches": 79,
-    "kept": 75
+    "matches": 81,
+    "kept": 77
    },
    "rss": null,
    "web": null,
@@ -1284,8 +1284,8 @@
    "id": "mascc",
    "abbr": "MASCC",
    "pubmed": {
-    "matches": 62,
-    "kept": 54
+    "matches": 61,
+    "kept": 53
    },
    "rss": null,
    "web": null,
@@ -1350,8 +1350,8 @@
    "id": "eha",
    "abbr": "EHA",
    "pubmed": {
-    "matches": 22,
-    "kept": 21
+    "matches": 23,
+    "kept": 22
    },
    "rss": null,
    "web": null,
@@ -1405,8 +1405,8 @@
    "id": "nkf",
    "abbr": "NKF/KDOQI",
    "pubmed": {
-    "matches": 29,
-    "kept": 29
+    "matches": 30,
+    "kept": 30
    },
    "rss": null,
    "web": null,
@@ -3466,6 +3466,27 @@
    "first_seen": "2026-10-11"
   },
   {
+   "id": "pmid-42907045",
+   "title": "KDOQI Commentary on the 2025 AHA/ACC Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults",
+   "url": "https://doi.org/10.1053/j.ajkd.2026.07.006",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42907045/",
+   "doi": "10.1053/j.ajkd.2026.07.006",
+   "journal": "Am J Kidney Dis",
+   "date": "2026-11-01",
+   "sources": [
+    "nkf"
+   ],
+   "specialties": [
+    "Cardiology",
+    "Nephrology"
+   ],
+   "conditions": [
+    "Chronic Kidney Disease",
+    "Hypertension"
+   ],
+   "first_seen": "2026-10-23"
+  },
+  {
    "id": "pmid-42878500",
    "title": "ACOG Clinical Practice Guideline: Management of Menopause-Related Vasomotor, Sleep, and Mood Symptoms",
    "url": "https://doi.org/10.1097/aog.0000000000006428",
@@ -3502,6 +3523,62 @@
     "Immune Thrombocytopenia"
    ],
    "first_seen": "2026-10-11"
+  },
+  {
+   "id": "pmid-42905039",
+   "title": "OCT to Assess Risk of Progression of Multiple Sclerosis: A Report by the American Academy of Ophthalmology",
+   "url": "https://doi.org/10.1016/j.ophtha.2026.08.009",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42905039/",
+   "doi": "10.1016/j.ophtha.2026.08.009",
+   "journal": "Ophthalmology",
+   "date": "2026-10-21",
+   "sources": [
+    "aao"
+   ],
+   "specialties": [
+    "Neurology",
+    "Ophthalmology"
+   ],
+   "conditions": [
+    "Multiple Sclerosis"
+   ],
+   "first_seen": "2026-10-23"
+  },
+  {
+   "id": "pmid-42906635",
+   "title": "How to plan and deliver lung cancer reirradiation: A consensus approach from the ESTRO reirradiation and lung focus groups and ReCOG",
+   "url": "https://doi.org/10.1016/j.radonc.2026.111837",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42906635/",
+   "doi": "10.1016/j.radonc.2026.111837",
+   "journal": "Radiother Oncol",
+   "date": "2026-10-21",
+   "sources": [
+    "estro"
+   ],
+   "specialties": [
+    "Oncology"
+   ],
+   "conditions": [
+    "Lung Cancer"
+   ],
+   "first_seen": "2026-10-23"
+  },
+  {
+   "id": "pmid-42906638",
+   "title": "Harmonizing spatially fractionated radiation therapy: consensus and roadmap from an ESTRO workshop",
+   "url": "https://doi.org/10.1016/j.radonc.2026.111829",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42906638/",
+   "doi": "10.1016/j.radonc.2026.111829",
+   "journal": "Radiother Oncol",
+   "date": "2026-10-21",
+   "sources": [
+    "estro"
+   ],
+   "specialties": [
+    "Oncology"
+   ],
+   "conditions": [],
+   "first_seen": "2026-10-23"
   },
   {
    "id": "pmid-42901411",
@@ -3612,6 +3689,25 @@
    ],
    "conditions": [],
    "first_seen": "2026-10-19"
+  },
+  {
+   "id": "pmid-42903357",
+   "title": "Newly diagnosed and relapsed follicular lymphoma: EHA Clinical Practice Guidelines for diagnosis, treatment, and follow-up",
+   "url": "https://doi.org/10.1002/hem3.70507",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42903357/",
+   "doi": "10.1002/hem3.70507",
+   "journal": "Hemasphere",
+   "date": "2026-10-19",
+   "sources": [
+    "eha"
+   ],
+   "specialties": [
+    "Hematology"
+   ],
+   "conditions": [
+    "Lymphoma"
+   ],
+   "first_seen": "2026-10-23"
   },
   {
    "id": "pmid-42895118",
@@ -63409,23 +63505,6 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "pmid-37429722",
-   "title": "Editors' Note: Gender Representation Among Physician Authors of Practice Guidelines Developed, Endorsed, or Affirmed by the American Academy of Neurology",
-   "url": "https://doi.org/10.1212/wnl.0000000000207574",
-   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37429722/",
-   "doi": "10.1212/wnl.0000000000207574",
-   "journal": "Neurology",
-   "date": "2023-07-11",
-   "sources": [
-    "aan"
-   ],
-   "specialties": [
-    "Neurology"
-   ],
-   "conditions": [],
-   "first_seen": "2026-10-11"
-  },
-  {
    "id": "pmid-37429720",
    "title": "Author Response: Gender Representation Among Physician Authors of Practice Guidelines Developed, Endorsed, or Affirmed by the American Academy of Neurology",
    "url": "https://doi.org/10.1212/wnl.0000000000207576",
@@ -102042,23 +102121,6 @@
    "first_seen": "2026-10-11"
   },
   {
-   "id": "pmid-38124248",
-   "title": "Editors' Note: AAN Position Statement: Ethical Issues in Clinical Research in Neurology",
-   "url": "https://doi.org/10.1212/wnl.0000000000011540",
-   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/38124248/",
-   "doi": "10.1212/wnl.0000000000011540",
-   "journal": "Neurology",
-   "date": "2021-02-23",
-   "sources": [
-    "aan"
-   ],
-   "specialties": [
-    "Neurology"
-   ],
-   "conditions": [],
-   "first_seen": "2026-10-11"
-  },
-  {
    "id": "pmid-38124246",
    "title": "Author Response: AAN Position Statement: Ethical Issues in Clinical Research in Neurology",
    "url": "https://doi.org/10.1212/wnl.0000000000011475",
@@ -116736,23 +116798,6 @@
     "Nutrition"
    ],
    "first_seen": "2026-10-16"
-  },
-  {
-   "id": "pmid-32198653",
-   "title": "Special Section on the MASCC/ISOO Clinical Practice Guidelines for the Management of Mucositis - 2019 Update Part 2 : Guest Editor: Sharon Elad, DMD MSc",
-   "url": "https://doi.org/10.1007/s00520-020-05360-w",
-   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/32198653/",
-   "doi": "10.1007/s00520-020-05360-w",
-   "journal": "Support Care Cancer",
-   "date": "2020-05-01",
-   "sources": [
-    "mascc"
-   ],
-   "specialties": [
-    "Oncology"
-   ],
-   "conditions": [],
-   "first_seen": "2026-10-11"
   },
   {
    "id": "pmid-32301770",
