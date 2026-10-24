@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-23T10:15:23+00:00",
+ "generated": "2026-10-24T09:40:13+00:00",
  "sources": [
   {
    "id": "who",
@@ -644,8 +644,8 @@
    "id": "aha-acc",
    "abbr": "AHA/ACC",
    "pubmed": {
-    "matches": 856,
-    "kept": 832
+    "matches": 857,
+    "kept": 833
    },
    "rss": 4,
    "web": null,
@@ -734,8 +734,8 @@
    "id": "aga",
    "abbr": "AGA",
    "pubmed": {
-    "matches": 161,
-    "kept": 159
+    "matches": 162,
+    "kept": 160
    },
    "rss": null,
    "web": null,
@@ -745,8 +745,8 @@
    "id": "aasld",
    "abbr": "AASLD",
    "pubmed": {
-    "matches": 72,
-    "kept": 62
+    "matches": 73,
+    "kept": 63
    },
    "rss": null,
    "web": null,
@@ -789,8 +789,8 @@
    "id": "esmo",
    "abbr": "ESMO",
    "pubmed": {
-    "matches": 187,
-    "kept": 185
+    "matches": 189,
+    "kept": 187
    },
    "rss": null,
    "web": null,
@@ -888,8 +888,8 @@
    "id": "bad",
    "abbr": "BAD",
    "pubmed": {
-    "matches": 32,
-    "kept": 32
+    "matches": 33,
+    "kept": 33
    },
    "rss": null,
    "web": null,
@@ -1101,7 +1101,7 @@
     "kept": 71
    },
    "rss": null,
-   "web": null,
+   "web": 1,
    "errors": []
   },
   {
@@ -1255,7 +1255,7 @@
     "kept": 23
    },
    "rss": null,
-   "web": null,
+   "web": 1,
    "errors": []
   },
   {
@@ -1636,7 +1636,7 @@
    "id": "sages",
    "abbr": "SAGES",
    "pubmed": {
-    "matches": 67,
+    "matches": 68,
     "kept": 62
    },
    "rss": null,
@@ -3487,6 +3487,26 @@
    "first_seen": "2026-10-23"
   },
   {
+   "id": "pmid-42914292",
+   "title": "AGA/AASLD Clinical Practice Guideline on Management of Primary Biliary Cholangitis",
+   "url": "https://doi.org/10.1053/j.gastro.2026.08.025",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42914292/",
+   "doi": "10.1053/j.gastro.2026.08.025",
+   "journal": "Gastroenterology",
+   "date": "2026-11-01",
+   "sources": [
+    "aga"
+   ],
+   "specialties": [
+    "Gastroenterology & Hepatology"
+   ],
+   "conditions": [
+    "Autoimmune and Cholestatic Liver Disease",
+    "Cirrhosis and Portal Hypertension"
+   ],
+   "first_seen": "2026-10-24"
+  },
+  {
    "id": "pmid-42878500",
    "title": "ACOG Clinical Practice Guideline: Management of Menopause-Related Vasomotor, Sleep, and Mood Symptoms",
    "url": "https://doi.org/10.1097/aog.0000000000006428",
@@ -3523,6 +3543,80 @@
     "Immune Thrombocytopenia"
    ],
    "first_seen": "2026-10-11"
+  },
+  {
+   "id": "t-retinopathy-of-prematurity-strategies-to-optimize-screening-and-management",
+   "title": "Retinopathy of prematurity: Strategies to optimize screening and management",
+   "url": "https://cps.ca/en/documents/position/retinopathy-of-prematurity-screening",
+   "pubmed": null,
+   "doi": null,
+   "journal": "CPS website",
+   "date": "2026-10-24",
+   "sources": [
+    "cps"
+   ],
+   "specialties": [
+    "Pediatrics"
+   ],
+   "conditions": [],
+   "first_seen": "2026-10-24",
+   "web": true
+  },
+  {
+   "id": "pmid-42910416",
+   "title": "Multidisciplinary Collaboration in the Performance of Aortic Surgery: A Scientific Statement From the American Heart Association",
+   "url": "https://doi.org/10.1161/cir.0000000000001490",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42910416/",
+   "doi": "10.1161/cir.0000000000001490",
+   "journal": "Circulation",
+   "date": "2026-10-22",
+   "sources": [
+    "aha-acc"
+   ],
+   "specialties": [
+    "Cardiology",
+    "Vascular Surgery"
+   ],
+   "conditions": [
+    "Aortic Disease"
+   ],
+   "first_seen": "2026-10-24"
+  },
+  {
+   "id": "pmid-42910426",
+   "title": "British Association of Dermatologists guideline for managing fungal nail infection (onychomycosis) 2026",
+   "url": "https://doi.org/10.1093/bjd/ljag318",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42910426/",
+   "doi": "10.1093/bjd/ljag318",
+   "journal": "Br J Dermatol",
+   "date": "2026-10-22",
+   "sources": [
+    "bad"
+   ],
+   "specialties": [
+    "Dermatology"
+   ],
+   "conditions": [],
+   "first_seen": "2026-10-24"
+  },
+  {
+   "id": "pmid-42910434",
+   "title": "AASLD AGA clinical Practice Guideline on management of primary biliary cholangitis",
+   "url": "https://doi.org/10.1097/hep.0000000000001875",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42910434/",
+   "doi": "10.1097/hep.0000000000001875",
+   "journal": "Hepatology",
+   "date": "2026-10-22",
+   "sources": [
+    "aasld"
+   ],
+   "specialties": [
+    "Gastroenterology & Hepatology"
+   ],
+   "conditions": [
+    "Autoimmune and Cholestatic Liver Disease"
+   ],
+   "first_seen": "2026-10-24"
   },
   {
    "id": "pmid-42905039",
@@ -4532,6 +4626,25 @@
    "first_seen": "2026-10-12"
   },
   {
+   "id": "pmid-42914499",
+   "title": "Pan-Asian adapted ESMO Clinical Practice Guidelines for the diagnosis, treatment and follow-up of patients with renal cell carcinoma",
+   "url": "https://doi.org/10.1016/j.esmoop.2026.108552",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42914499/",
+   "doi": "10.1016/j.esmoop.2026.108552",
+   "journal": "ESMO Open",
+   "date": "2026-10-01",
+   "sources": [
+    "esmo"
+   ],
+   "specialties": [
+    "Oncology"
+   ],
+   "conditions": [
+    "Bladder and Kidney Cancer"
+   ],
+   "first_seen": "2026-10-24"
+  },
+  {
    "id": "pmid-42874666",
    "title": "NCCN Guidelines® Insights: Hepatocellular Carcinoma, Version 2.2026",
    "url": "https://doi.org/10.6004/jnccn.2026.0047",
@@ -4837,7 +4950,7 @@
   },
   {
    "id": "pmid-42810688",
-   "title": "Impact of C-terminal amidation on platelet activation by PAR1 and PAR4 activating peptides: Communication from the ISTH SSC Subcommittee on Platelets in Health and Disease",
+   "title": "Impact of C-terminal amidation on platelet activation by protease-activated receptors 1 and 4 activating peptides: communication from the ISTH SSC Subcommittee on Platelets in Health and Disease",
    "url": "https://doi.org/10.1016/j.jtha.2026.09.030",
    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42810688/",
    "doi": "10.1016/j.jtha.2026.09.030",
@@ -5066,6 +5179,25 @@
    ],
    "conditions": [],
    "first_seen": "2026-10-11"
+  },
+  {
+   "id": "pmid-42914498",
+   "title": "Cervical cancer: ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up",
+   "url": "https://doi.org/10.1016/j.esmoop.2026.108364",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42914498/",
+   "doi": "10.1016/j.esmoop.2026.108364",
+   "journal": "ESMO Open",
+   "date": "2026-09-24",
+   "sources": [
+    "esmo"
+   ],
+   "specialties": [
+    "Oncology"
+   ],
+   "conditions": [
+    "Cervical Cancer and Screening"
+   ],
+   "first_seen": "2026-10-24"
   },
   {
    "id": "pmid-42772756",
@@ -5550,8 +5682,27 @@
    "first_seen": "2026-10-11"
   },
   {
+   "id": "pmid-42720640",
+   "title": "AGA Clinical Practice Update on Management of Ampullary Neoplasms: Expert Review",
+   "url": "https://doi.org/10.1016/j.cgh.2026.07.013",
+   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42720640/",
+   "doi": "10.1016/j.cgh.2026.07.013",
+   "journal": "Clin Gastroenterol Hepatol",
+   "date": "2026-09-10",
+   "sources": [
+    "aga"
+   ],
+   "specialties": [
+    "Gastroenterology & Hepatology"
+   ],
+   "conditions": [
+    "Pancreatic Cysts and Ampullary Lesions"
+   ],
+   "first_seen": "2026-10-11"
+  },
+  {
    "id": "pmid-42716226",
-   "title": "Recommendations for harmonizing definition, recording and reporting of the annual bleeding rate (ABR) in hemophilia: Communication from the ISTH SSC Subcommittee on Factor VIII, Factor IX and Rare Coagulation Disorders.\"",
+   "title": "Recommendations for harmonizing definition, recording, and reporting of the annual bleeding rate in hemophilia: communication from the ISTH SSC Subcommittee on Factor VIII, Factor IX and Rare Coagulation Disorders",
    "url": "https://doi.org/10.1016/j.jtha.2026.08.034",
    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42716226/",
    "doi": "10.1016/j.jtha.2026.08.034",
@@ -5605,25 +5756,6 @@
    ],
    "conditions": [
     "Hemophilia and Bleeding Disorders"
-   ],
-   "first_seen": "2026-10-11"
-  },
-  {
-   "id": "pmid-42720640",
-   "title": "AGA Clinical Practice Update on Management of Ampullary Neoplasms: Expert Review",
-   "url": "https://doi.org/10.1016/j.cgh.2026.07.013",
-   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42720640/",
-   "doi": "10.1016/j.cgh.2026.07.013",
-   "journal": "Clin Gastroenterol Hepatol",
-   "date": "2026-09-09",
-   "sources": [
-    "aga"
-   ],
-   "specialties": [
-    "Gastroenterology & Hepatology"
-   ],
-   "conditions": [
-    "Pancreatic Cysts and Ampullary Lesions"
    ],
    "first_seen": "2026-10-11"
   },
@@ -5956,7 +6088,9 @@
    "specialties": [
     "Gastroenterology & Hepatology"
    ],
-   "conditions": [],
+   "conditions": [
+    "Autoimmune and Cholestatic Liver Disease"
+   ],
    "first_seen": "2026-10-11"
   },
   {
@@ -88877,25 +89011,6 @@
     "Pulmonology"
    ],
    "conditions": [],
-   "first_seen": "2026-10-11"
-  },
-  {
-   "id": "pmid-34864348",
-   "title": "Pan-Asian adapted ESMO Clinical Practice Guidelines for the diagnosis, treatment and follow-up of patients with renal cell carcinoma",
-   "url": "https://doi.org/10.1016/j.esmoop.2021.100304",
-   "pubmed": "https://pubmed.ncbi.nlm.nih.gov/34864348/",
-   "doi": "10.1016/j.esmoop.2021.100304",
-   "journal": "ESMO Open",
-   "date": "2021-12-01",
-   "sources": [
-    "esmo"
-   ],
-   "specialties": [
-    "Oncology"
-   ],
-   "conditions": [
-    "Bladder and Kidney Cancer"
-   ],
    "first_seen": "2026-10-11"
   },
   {
